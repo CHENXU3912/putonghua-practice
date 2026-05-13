@@ -1,0 +1,2437 @@
+[
+  {
+    "id": "s001",
+    "char": "蹦",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s002",
+    "char": "耍",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s003",
+    "char": "德",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s004",
+    "char": "扰",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s005",
+    "char": "直",
+    "pinyin": "zhi2",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)"
+    ],
+    "tags": [
+      "翘舌音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "s006",
+    "char": "返",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s007",
+    "char": "凝",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s008",
+    "char": "秋",
+    "pinyin": "qiu1",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(一声)"
+    ],
+    "tags": [
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "s009",
+    "char": "淡",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s010",
+    "char": "丝",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音"
+    ],
+    "tags": [
+      "平舌音"
+    ]
+  },
+  {
+    "id": "s011",
+    "char": "炯",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s012",
+    "char": "粗",
+    "pinyin": "cu1",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(一声)"
+    ],
+    "tags": [
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "s013",
+    "char": "袄",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s014",
+    "char": "瓮",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s015",
+    "char": "癣",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s016",
+    "char": "儿",
+    "pinyin": "er2",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(二声)"
+    ],
+    "tags": [
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "s017",
+    "char": "履",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s018",
+    "char": "告",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s019",
+    "char": "筒",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s020",
+    "char": "猫",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s021",
+    "char": "驯",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s022",
+    "char": "辱",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s023",
+    "char": "碟",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s024",
+    "char": "栓",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s025",
+    "char": "来",
+    "pinyin": "lai2",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(二声)"
+    ],
+    "tags": [
+      "边音(l)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "s026",
+    "char": "顶",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s027",
+    "char": "墩",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s028",
+    "char": "忙",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s029",
+    "char": "哀",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s030",
+    "char": "霎",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s031",
+    "char": "果",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s032",
+    "char": "憋",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s033",
+    "char": "捺",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s034",
+    "char": "装",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s035",
+    "char": "群",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音"
+    ],
+    "tags": [
+      "前鼻音"
+    ]
+  },
+  {
+    "id": "s036",
+    "char": "精",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音"
+    ],
+    "tags": [
+      "后鼻音"
+    ]
+  },
+  {
+    "id": "s037",
+    "char": "唇",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s038",
+    "char": "亮",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s039",
+    "char": "馆",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s040",
+    "char": "符",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s041",
+    "char": "肉",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音"
+    ],
+    "tags": [
+      "翘舌音"
+    ]
+  },
+  {
+    "id": "s042",
+    "char": "梯",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s043",
+    "char": "船",
+    "pinyin": "chuan2",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(二声)"
+    ],
+    "tags": [
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "s044",
+    "char": "溺",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s045",
+    "char": "北",
+    "pinyin": "bei3",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(三声)"
+    ],
+    "tags": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "s046",
+    "char": "剖",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s047",
+    "char": "民",
+    "pinyin": "min2",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)"
+    ],
+    "tags": [
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "s048",
+    "char": "邀",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s049",
+    "char": "旷",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s050",
+    "char": "暖",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s051",
+    "char": "快",
+    "pinyin": "kuai4",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(四声)"
+    ],
+    "tags": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s052",
+    "char": "酒",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s053",
+    "char": "除",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s054",
+    "char": "缺",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s055",
+    "char": "杂",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音"
+    ],
+    "tags": [
+      "平舌音"
+    ]
+  },
+  {
+    "id": "s056",
+    "char": "搜",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s057",
+    "char": "税",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s058",
+    "char": "脾",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s059",
+    "char": "锋",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s060",
+    "char": "日",
+    "pinyin": "ri4",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)"
+    ],
+    "tags": [
+      "翘舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s061",
+    "char": "贼",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s062",
+    "char": "孔",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s063",
+    "char": "哲",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s064",
+    "char": "许",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s065",
+    "char": "尘",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s066",
+    "char": "谓",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s067",
+    "char": "忍",
+    "pinyin": "",
+    "difficulty": "hard",
+    "errorType": [
+      "翘舌音",
+      "前鼻音"
+    ],
+    "tags": [
+      "翘舌音",
+      "前鼻音"
+    ]
+  },
+  {
+    "id": "s068",
+    "char": "填",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s069",
+    "char": "颇",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s070",
+    "char": "残",
+    "pinyin": "",
+    "difficulty": "hard",
+    "errorType": [
+      "平舌音",
+      "前鼻音"
+    ],
+    "tags": [
+      "平舌音",
+      "前鼻音"
+    ]
+  },
+  {
+    "id": "s071",
+    "char": "涧",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s072",
+    "char": "穷",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s073",
+    "char": "歪",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s074",
+    "char": "雅",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s075",
+    "char": "捉",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s076",
+    "char": "凑",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s077",
+    "char": "怎",
+    "pinyin": "",
+    "difficulty": "hard",
+    "errorType": [
+      "平舌音",
+      "前鼻音"
+    ],
+    "tags": [
+      "平舌音",
+      "前鼻音"
+    ]
+  },
+  {
+    "id": "s078",
+    "char": "虾",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s079",
+    "char": "冷",
+    "pinyin": "leng3",
+    "difficulty": "hard",
+    "errorType": [
+      "后鼻音",
+      "边音(l)",
+      "声调(三声)"
+    ],
+    "tags": [
+      "后鼻音",
+      "边音(l)"
+    ]
+  },
+  {
+    "id": "s080",
+    "char": "躬",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s081",
+    "char": "莫",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s082",
+    "char": "虽",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音"
+    ],
+    "tags": [
+      "平舌音"
+    ]
+  },
+  {
+    "id": "s083",
+    "char": "绢",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s084",
+    "char": "挖",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s085",
+    "char": "伙",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s086",
+    "char": "聘",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s087",
+    "char": "英",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音"
+    ],
+    "tags": [
+      "后鼻音"
+    ]
+  },
+  {
+    "id": "s088",
+    "char": "条",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s089",
+    "char": "笨",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s090",
+    "char": "敛",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s091",
+    "char": "墙",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s092",
+    "char": "岳",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s093",
+    "char": "黑",
+    "pinyin": "hei1",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)"
+    ],
+    "tags": [
+      "f/h混淆",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "s094",
+    "char": "巨",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s095",
+    "char": "访",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s096",
+    "char": "自",
+    "pinyin": "zi4",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ],
+    "tags": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s097",
+    "char": "毁",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s098",
+    "char": "郑",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s099",
+    "char": "浑",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s100",
+    "char": "卧",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s101",
+    "char": "鸟",
+    "pinyin": "niao3",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(三声)"
+    ],
+    "tags": [
+      "鼻音(n)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "s102",
+    "char": "纱",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s103",
+    "char": "悔",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s104",
+    "char": "掠",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s105",
+    "char": "酉",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s106",
+    "char": "终",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s107",
+    "char": "撤",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s108",
+    "char": "甩",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s109",
+    "char": "蓄",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s110",
+    "char": "秧",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s111",
+    "char": "四",
+    "pinyin": "si4",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ],
+    "tags": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s112",
+    "char": "仍",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s113",
+    "char": "叫",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s114",
+    "char": "台",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s115",
+    "char": "婶",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s116",
+    "char": "耕",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音"
+    ],
+    "tags": [
+      "后鼻音"
+    ]
+  },
+  {
+    "id": "s117",
+    "char": "半",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音"
+    ],
+    "tags": [
+      "前鼻音"
+    ]
+  },
+  {
+    "id": "s118",
+    "char": "掐",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s119",
+    "char": "布",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s120",
+    "char": "翁",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s121",
+    "char": "弱",
+    "pinyin": "ruo4",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(四声)"
+    ],
+    "tags": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s122",
+    "char": "刷",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音"
+    ],
+    "tags": [
+      "翘舌音"
+    ]
+  },
+  {
+    "id": "s123",
+    "char": "允",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s124",
+    "char": "床",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s125",
+    "char": "改",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s126",
+    "char": "逃",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s127",
+    "char": "舂",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s128",
+    "char": "驳",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s129",
+    "char": "纯",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s130",
+    "char": "导",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s131",
+    "char": "棒",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s132",
+    "char": "伍",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s133",
+    "char": "知",
+    "pinyin": "zhi1",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)"
+    ],
+    "tags": [
+      "翘舌音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "s134",
+    "char": "末",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s135",
+    "char": "枪",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s136",
+    "char": "港",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s137",
+    "char": "评",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音"
+    ],
+    "tags": [
+      "后鼻音"
+    ]
+  },
+  {
+    "id": "s138",
+    "char": "犬",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s139",
+    "char": "课",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s140",
+    "char": "淮",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s141",
+    "char": "循",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s142",
+    "char": "纺",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s143",
+    "char": "拴",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s144",
+    "char": "李",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s145",
+    "char": "赛",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音"
+    ],
+    "tags": [
+      "平舌音"
+    ]
+  },
+  {
+    "id": "s146",
+    "char": "捡",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s147",
+    "char": "呕",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s148",
+    "char": "绳",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s149",
+    "char": "揭",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s150",
+    "char": "陇",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s151",
+    "char": "搓",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音"
+    ],
+    "tags": [
+      "平舌音"
+    ]
+  },
+  {
+    "id": "s152",
+    "char": "二",
+    "pinyin": "er4",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(四声)"
+    ],
+    "tags": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s153",
+    "char": "棉",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s154",
+    "char": "桩",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s155",
+    "char": "皿",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s156",
+    "char": "宋",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s157",
+    "char": "狭",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s158",
+    "char": "内",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s159",
+    "char": "啃",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s160",
+    "char": "字",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音"
+    ],
+    "tags": [
+      "平舌音"
+    ]
+  },
+  {
+    "id": "s161",
+    "char": "环",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s162",
+    "char": "州",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s163",
+    "char": "秒",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s164",
+    "char": "抛",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s165",
+    "char": "代",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s166",
+    "char": "关",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s167",
+    "char": "停",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音"
+    ],
+    "tags": [
+      "后鼻音"
+    ]
+  },
+  {
+    "id": "s168",
+    "char": "祛",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s169",
+    "char": "孙",
+    "pinyin": "",
+    "difficulty": "hard",
+    "errorType": [
+      "平舌音",
+      "前鼻音"
+    ],
+    "tags": [
+      "平舌音",
+      "前鼻音"
+    ]
+  },
+  {
+    "id": "s170",
+    "char": "旧",
+    "pinyin": "jiu4",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(四声)"
+    ],
+    "tags": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s171",
+    "char": "崔",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音"
+    ],
+    "tags": [
+      "平舌音"
+    ]
+  },
+  {
+    "id": "s172",
+    "char": "烈",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s173",
+    "char": "倪",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s174",
+    "char": "荆",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s175",
+    "char": "擒",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s176",
+    "char": "案",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s177",
+    "char": "砸",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s178",
+    "char": "垮",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s179",
+    "char": "焚",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s180",
+    "char": "帝",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s181",
+    "char": "聊",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s182",
+    "char": "颠",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s183",
+    "char": "涌",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s184",
+    "char": "牛",
+    "pinyin": "niu2",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(二声)"
+    ],
+    "tags": [
+      "鼻音(n)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "s185",
+    "char": "汝",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s186",
+    "char": "粤",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s187",
+    "char": "篇",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s188",
+    "char": "竹",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s189",
+    "char": "草",
+    "pinyin": "cao3",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)"
+    ],
+    "tags": [
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "s190",
+    "char": "迟",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音"
+    ],
+    "tags": [
+      "翘舌音"
+    ]
+  },
+  {
+    "id": "s191",
+    "char": "泛",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s192",
+    "char": "老",
+    "pinyin": "lao3",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(三声)"
+    ],
+    "tags": [
+      "边音(l)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "s193",
+    "char": "腮",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s194",
+    "char": "洽",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s195",
+    "char": "恩",
+    "pinyin": "",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音"
+    ],
+    "tags": [
+      "前鼻音"
+    ]
+  },
+  {
+    "id": "s196",
+    "char": "曹",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s197",
+    "char": "恒",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s198",
+    "char": "踪",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  },
+  {
+    "id": "s199",
+    "char": "夏",
+    "pinyin": "xia4",
+    "difficulty": "easy",
+    "errorType": [
+      "声调(四声)"
+    ],
+    "tags": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "s200",
+    "char": "拨",
+    "pinyin": "",
+    "difficulty": "easy",
+    "errorType": [
+      "常用字"
+    ],
+    "tags": [
+      "常用字"
+    ]
+  }
+]
