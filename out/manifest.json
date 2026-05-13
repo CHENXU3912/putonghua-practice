@@ -1,0 +1,22 @@
+{
+  "name": "普通话每日练",
+  "short_name": "普通话练习",
+  "description": "普通话水平测试练习工具",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F6F6F6",
+  "theme_color": "#07C160",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
