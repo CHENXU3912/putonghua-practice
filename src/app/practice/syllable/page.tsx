@@ -1,5 +1,5 @@
 'use client';
-import { useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Recorder from '@/components/Recorder';
@@ -8,7 +8,6 @@ import ScoreDisplay from '@/components/ScoreDisplay';
 import { scoreSyllable, compareCharByChar, cleanText } from '@/lib/scorer';
 import { saveRecord } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
-import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
 import type { SyllableItem, UserResult, ScoreResult } from '@/lib/types';
 import syllableData from '@/data/syllable.json';
 
@@ -21,64 +20,67 @@ export default function SyllablePage() {
   const router = useRouter();
   const [items] = useState<SyllableItem[]>(() => pickRandom(syllableData as SyllableItem[], 10));
   const [currentIdx, setCurrentIdx] = useState(0);
-  // 每个字的录音时长
-  const durationsRef = useRef<number[]>([]);
-  // 每个字的 STT 文本
-  const transcriptsRef = useRef<string[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
-  const [isRecording, setIsRecording] = useState(false);
-  const stt = useSpeechRecognition();
-  const sttAvailable = isSTTSupported();
+  const [showWrongAdd, setShowWrongAdd] = useState(false);
+  // ref 存储，不受重渲染影响
+  const resultsRef = useRef<UserResult[]>([]);
+  // 防止重复触发
+  const advancingRef = useRef(false);
+  // 本次录音时长
+  const lastDurationRef = useRef(0);
 
   const item = items[currentIdx] ?? null;
 
-  // 录音完成回调：存储时长，自动跳下一个
+  // 录音完成 → 自动前进
   const handleRecordDone = useCallback((_blob: Blob, duration: number) => {
-    durationsRef.current[currentIdx] = duration;
-    // 收集 STT 识别文本
-    if (stt.transcript) {
-      transcriptsRef.current[currentIdx] = cleanText(stt.transcript);
-    }
-    stt.reset();
-    setIsRecording(false);
+    if (advancingRef.current) return; // 防重复
+    advancingRef.current = true;
+    lastDurationRef.current = duration;
+
+    // 存储结果
+    resultsRef.current[currentIdx] = {
+      itemId: items[currentIdx].id,
+      audioDuration: duration,
+      selfRating: true,
+    };
 
     if (currentIdx < items.length - 1) {
-      setTimeout(() => setCurrentIdx(currentIdx + 1), 400);
-    } else {
-      // 全部完成
       setTimeout(() => {
-        const newResults: UserResult[] = items.map((it, i) => ({
-          itemId: it.id,
-          audioDuration: durationsRef.current[i] || 1.5,
-          selfRating: true, // 默认值，STT 覆盖
-        }));
-        const joinedTranscript = transcriptsRef.current.filter(Boolean).join('');
-        // 用 STT 逐字比对
-        const expected = items.map(i => i.char).join('');
-        const cmp = compareCharByChar(expected, joinedTranscript);
-        // 更新 selfRating 为 STT 结果
-        cmp.details.forEach((d, i) => {
-          if (newResults[i]) newResults[i].selfRating = d.ok;
-        });
-
-        const s = scoreSyllable(items, newResults, joinedTranscript || undefined);
-        setScoreResult(s);
-        setShowResult(true);
-        saveRecord({
-          type: 'syllable',
-          questionSummary: `单音节字词练习（${items.length}字）`,
-          questionIds: items.map(i => i.id),
-          audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)),
-          score: s.score,
-          scoreDetail: s.scoreDetail,
-          wrongItems: s.wrongItems,
-          createdAt: Date.now(),
-        });
-        doCheckin();
-      }, 300);
+        setCurrentIdx(prev => prev + 1);
+        advancingRef.current = false;
+      }, 500);
+    } else {
+      setTimeout(() => {
+        advancingRef.current = false;
+        finishAll();
+      }, 500);
     }
-  }, [currentIdx, items, stt.transcript, stt.reset]);
+  }, [currentIdx, items]); // eslint-disable-line
+
+  const finishAll = useCallback(() => {
+    const newResults = [...resultsRef.current];
+    const expected = items.map(i => i.char).join('');
+    const cmp = compareCharByChar(expected, '');
+    cmp.details.forEach((d, i) => {
+      if (newResults[i]) newResults[i].selfRating = d.ok;
+    });
+    const s = scoreSyllable(items, newResults);
+    setScoreResult(s);
+    setShowResult(true);
+    saveRecord({
+      type: 'syllable',
+      questionSummary: `单音节字词练习（${items.length}字）`,
+      questionIds: items.map(i => i.id),
+      audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)),
+      score: s.score,
+      scoreDetail: s.scoreDetail,
+      wrongItems: s.wrongItems,
+      createdAt: Date.now(),
+    });
+    doCheckin();
+    if (s.wrongItems.length > 0) setShowWrongAdd(true);
+  }, [items]);
 
   if (!item) {
     return (<div className="px-4 py-10 text-center text-gray-400">题库加载中...<div className="mt-4"><Link href="/" className="text-green-500">返回首页</Link></div></div>);
@@ -92,25 +94,17 @@ export default function SyllablePage() {
           <p className="text-sm text-gray-400">单音节字词 · {items.length}字</p>
         </div>
         <ScoreDisplay result={scoreResult} />
-        {/* 逐字报告 */}
         <div className="bg-white rounded-xl p-4 shadow-sm text-sm">
           <h3 className="font-medium text-gray-700 mb-3">📋 逐字报告</h3>
           <div className="space-y-2">
             {items.map((it, i) => {
-              const ok = scoreResult.wrongItems.findIndex(w => w.content === it.char) === -1;
+              const res = resultsRef.current[i];
+              const percent = res ? Math.min(100, Math.round((res.audioDuration / 1.5) * 50 + 50)) : 0;
               return (
                 <div key={it.id} className="flex items-center gap-3 py-1.5 border-b border-gray-50 last:border-0">
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${ok ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-500'}`}>
-                    {ok ? '✓' : '✗'}
-                  </span>
                   <span className="text-lg font-bold text-gray-800 w-10">{it.char}</span>
                   <span className="text-sm text-gray-400">{it.pinyin}</span>
-                  <div className="flex flex-wrap gap-1">
-                    {it.errorType.slice(0, 2).map((t, j) => (
-                      <span key={j} className="px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded text-2xs">{t}</span>
-                    ))}
-                  </div>
-                  {!ok && <span className="ml-auto text-red-400 text-xs">需练习</span>}
+                  <span className="text-xs text-gray-300">{res?.audioDuration ? `${res.audioDuration.toFixed(1)}秒` : '未录音'}</span>
                 </div>
               );
             })}
@@ -123,7 +117,7 @@ export default function SyllablePage() {
           </div>
         )}
         <div className="flex gap-3">
-          <button onClick={() => { setCurrentIdx(0); setShowResult(false); setScoreResult(null); durationsRef.current = []; transcriptsRef.current = []; }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
+          <button onClick={() => { setCurrentIdx(0); setShowResult(false); setScoreResult(null); setShowWrongAdd(false); resultsRef.current = []; advancingRef.current = false; }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
           <button onClick={() => router.push('/')} className="flex-1 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium active:bg-gray-50 transition">返回首页</button>
         </div>
       </div>
@@ -162,22 +156,14 @@ export default function SyllablePage() {
         {item.tips && <p className="text-xs text-gray-400 mt-2">{item.tips}</p>}
       </div>
 
-      {/* 录音 */}
+      {/* 录音 —— 用 key 强制每个字一个独立 Recorder */}
       <div className="mt-8 mb-4">
-        <Recorder
-          onResult={handleRecordDone}
-          onStart={() => { setIsRecording(true); stt.start(); }}
-          onStop={() => stt.stop()}
-          maxDuration={10}
-        />
+        <Recorder key={currentIdx} onResult={handleRecordDone} maxDuration={10} />
       </div>
+      <p className="text-xs text-gray-400 text-center">先听 🔊 示范 → 点 🎤 录音 → 读完点停止 → 自动下一个</p>
 
-      {/* STT 实时反馈 */}
-      {sttAvailable && isRecording && (
-        <div className="text-center text-xs text-blue-500 animate-pulse mb-4">🤖 AI 聆听中...</div>
-      )}
-      {!sttAvailable && (
-        <p className="text-xs text-gray-400 text-center mb-4">读完点击停止 → 自动下一个</p>
+      {currentIdx === items.length - 1 && (
+        <button onClick={finishAll} className="mt-3 px-6 py-2 bg-green-500 text-white rounded-lg text-sm">提前结束，查看成绩</button>
       )}
     </div>
   );

@@ -5,10 +5,9 @@ import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreWord, compareCharByChar, cleanText } from '@/lib/scorer';
+import { scoreWord } from '@/lib/scorer';
 import { saveRecord } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
-import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
 import type { WordItem, UserResult, ScoreResult } from '@/lib/types';
 import wordData from '@/data/word.json';
 
@@ -21,57 +20,55 @@ export default function WordPage() {
   const router = useRouter();
   const [items] = useState<WordItem[]>(() => pickRandom(wordData as WordItem[], 10));
   const [currentIdx, setCurrentIdx] = useState(0);
-  const durationsRef = useRef<number[]>([]);
-  const transcriptsRef = useRef<string[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
-  const [isRecording, setIsRecording] = useState(false);
-  const stt = useSpeechRecognition();
-  const sttAvailable = isSTTSupported();
+  const [showWrongAdd, setShowWrongAdd] = useState(false);
+  const resultsRef = useRef<UserResult[]>([]);
+  const advancingRef = useRef(false);
 
   const item = items[currentIdx] ?? null;
 
   const handleRecordDone = useCallback((_blob: Blob, duration: number) => {
-    durationsRef.current[currentIdx] = duration;
-    if (stt.transcript) {
-      transcriptsRef.current[currentIdx] = cleanText(stt.transcript);
-    }
-    stt.reset();
-    setIsRecording(false);
+    if (advancingRef.current) return;
+    advancingRef.current = true;
+
+    resultsRef.current[currentIdx] = {
+      itemId: items[currentIdx].id,
+      audioDuration: duration,
+      selfRating: true,
+    };
 
     if (currentIdx < items.length - 1) {
-      setTimeout(() => setCurrentIdx(currentIdx + 1), 400);
+      setTimeout(() => {
+        setCurrentIdx(prev => prev + 1);
+        advancingRef.current = false;
+      }, 500);
     } else {
       setTimeout(() => {
-        const newResults: UserResult[] = items.map((it, i) => ({
-          itemId: it.id,
-          audioDuration: durationsRef.current[i] || 2.0,
-          selfRating: true,
-        }));
-        const joinedTranscript = transcriptsRef.current.filter(Boolean).join('');
-        const expected = items.map(i => i.word).join('');
-        const cmp = compareCharByChar(expected, joinedTranscript);
-        cmp.details.forEach((d, i) => {
-          if (newResults[i]) newResults[i].selfRating = d.ok;
-        });
-
-        const s = scoreWord(items, newResults, joinedTranscript || undefined);
-        setScoreResult(s);
-        setShowResult(true);
-        saveRecord({
-          type: 'word',
-          questionSummary: `多音节词语练习（${items.length}词）`,
-          questionIds: items.map(i => i.id),
-          audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)),
-          score: s.score,
-          scoreDetail: s.scoreDetail,
-          wrongItems: s.wrongItems,
-          createdAt: Date.now(),
-        });
-        doCheckin();
-      }, 300);
+        advancingRef.current = false;
+        finishAll();
+      }, 500);
     }
-  }, [currentIdx, items, stt.transcript, stt.reset]);
+  }, [currentIdx, items]); // eslint-disable-line
+
+  const finishAll = useCallback(() => {
+    const newResults = [...resultsRef.current];
+    const s = scoreWord(items, newResults);
+    setScoreResult(s);
+    setShowResult(true);
+    saveRecord({
+      type: 'word',
+      questionSummary: `多音节词语练习（${items.length}词）`,
+      questionIds: items.map(i => i.id),
+      audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)),
+      score: s.score,
+      scoreDetail: s.scoreDetail,
+      wrongItems: s.wrongItems,
+      createdAt: Date.now(),
+    });
+    doCheckin();
+    if (s.wrongItems.length > 0) setShowWrongAdd(true);
+  }, [items]);
 
   if (!item) return (<div className="px-4 py-10 text-center text-gray-400">题库加载中...<div className="mt-4"><Link href="/" className="text-green-500">返回首页</Link></div></div>);
 
@@ -84,18 +81,12 @@ export default function WordPage() {
           <h3 className="font-medium text-gray-700 mb-3">📋 逐词报告</h3>
           <div className="space-y-2">
             {items.map((it, i) => {
-              const ok = scoreResult.wrongItems.findIndex(w => w.content === it.word) === -1;
+              const res = resultsRef.current[i];
               return (
                 <div key={it.id} className="flex items-center gap-3 py-1.5 border-b border-gray-50 last:border-0">
-                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${ok ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-500'}`}>{ok ? '✓' : '✗'}</span>
                   <span className="text-base font-bold text-gray-800">{it.word}</span>
                   <span className="text-sm text-gray-400">{it.pinyin}</span>
-                  <div className="flex flex-wrap gap-1">
-                    {it.errorType.slice(0, 2).map((t, j) => (
-                      <span key={j} className="px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded text-2xs">{t}</span>
-                    ))}
-                  </div>
-                  {!ok && <span className="ml-auto text-red-400 text-xs">需练习</span>}
+                  <span className="text-xs text-gray-300 ml-auto">{res?.audioDuration ? `${res.audioDuration.toFixed(1)}秒` : '未录音'}</span>
                 </div>
               );
             })}
@@ -108,7 +99,7 @@ export default function WordPage() {
           </div>
         )}
         <div className="flex gap-3">
-          <button onClick={() => { setCurrentIdx(0); setShowResult(false); setScoreResult(null); durationsRef.current = []; transcriptsRef.current = []; }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
+          <button onClick={() => { setCurrentIdx(0); setShowResult(false); setScoreResult(null); setShowWrongAdd(false); resultsRef.current = []; advancingRef.current = false; }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
           <button onClick={() => router.push('/')} className="flex-1 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium active:bg-gray-50 transition">返回首页</button>
         </div>
       </div>
@@ -140,19 +131,12 @@ export default function WordPage() {
       </div>
 
       <div className="mt-8 mb-4">
-        <Recorder
-          onResult={handleRecordDone}
-          onStart={() => { setIsRecording(true); stt.start(); }}
-          onStop={() => stt.stop()}
-          maxDuration={10}
-        />
+        <Recorder key={currentIdx} onResult={handleRecordDone} maxDuration={10} />
       </div>
+      <p className="text-xs text-gray-400 text-center">先听 🔊 示范 → 点 🎤 录音 → 读完点停止 → 自动下一个</p>
 
-      {sttAvailable && isRecording && (
-        <div className="text-center text-xs text-blue-500 animate-pulse mb-4">🤖 AI 聆听中...</div>
-      )}
-      {!sttAvailable && (
-        <p className="text-xs text-gray-400 text-center mb-4">读完点击停止 → 自动下一个</p>
+      {currentIdx === items.length - 1 && (
+        <button onClick={finishAll} className="mt-3 px-6 py-2 bg-green-500 text-white rounded-lg text-sm">提前结束，查看成绩</button>
       )}
     </div>
   );
