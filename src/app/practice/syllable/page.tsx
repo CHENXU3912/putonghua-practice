@@ -23,7 +23,7 @@ function pickRandom(arr: SyllableItem[], count: number): SyllableItem[] {
 
 export default function SyllablePage() {
   const router = useRouter();
-  const [items] = useState<SyllableItem[]>(() => pickRandom(syllableData as SyllableItem[], 10));
+  const [items, setItems] = useState<SyllableItem[]>(() => pickRandom(syllableData as SyllableItem[], 10));
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
@@ -39,6 +39,20 @@ export default function SyllablePage() {
   const durationsRef = useRef<number[]>([]);
 
   const item = items[currentIdx] ?? null;
+
+  const restartPractice = useCallback(() => {
+    setItems(pickRandom(syllableData as SyllableItem[], 10));
+    setCurrentIdx(0);
+    setShowResult(false);
+    setScoreResult(null);
+    resultsRef.current = [];
+    transcriptsRef.current = [];
+    durationsRef.current = [];
+    setWrongItemIds(new Set());
+    setPhase('recording');
+    setJudgment(null);
+    stt.reset();
+  }, [stt]);
 
   // 录音完成 → 进入判定
   const handleRecordDone = useCallback((_blob: Blob, duration: number) => {
@@ -200,7 +214,7 @@ export default function SyllablePage() {
           </div>
         </div>
         <div className="flex gap-3">
-          <button onClick={() => { setCurrentIdx(0); setShowResult(false); setScoreResult(null); resultsRef.current = []; transcriptsRef.current = []; durationsRef.current = []; setWrongItemIds(new Set()); setPhase('recording'); setJudgment(null); }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
+          <button onClick={restartPractice} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
           <button onClick={() => router.push('/')} className="flex-1 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium active:bg-gray-50 transition">返回首页</button>
         </div>
       </div>

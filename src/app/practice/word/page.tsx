@@ -24,7 +24,7 @@ function pickRandom(arr: WordItem[], count: number): WordItem[] {
 
 export default function WordPage() {
   const router = useRouter();
-  const [items] = useState<WordItem[]>(() => pickRandom(wordData as WordItem[], 10));
+  const [items, setItems] = useState<WordItem[]>(() => pickRandom(wordData as WordItem[], 10));
   const [currentIdx, setCurrentIdx] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
@@ -38,6 +38,20 @@ export default function WordPage() {
   const durationsRef = useRef<number[]>([]);
 
   const item = items[currentIdx] ?? null;
+
+  const restartPractice = useCallback(() => {
+    setItems(pickRandom(wordData as WordItem[], 10));
+    setCurrentIdx(0);
+    setShowResult(false);
+    setScoreResult(null);
+    resultsRef.current = [];
+    transcriptsRef.current = [];
+    durationsRef.current = [];
+    setWrongItemIds(new Set());
+    setPhase('recording');
+    setJudgment(null);
+    stt.reset();
+  }, [stt]);
 
   const handleRecordDone = useCallback((_blob: Blob, duration: number) => {
     durationsRef.current[currentIdx] = duration;
@@ -182,7 +196,7 @@ export default function WordPage() {
           </div>
         </div>
         <div className="flex gap-3">
-          <button onClick={() => { setCurrentIdx(0); setShowResult(false); setScoreResult(null); resultsRef.current = []; transcriptsRef.current = []; durationsRef.current = []; setWrongItemIds(new Set()); setPhase('recording'); setJudgment(null); }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
+          <button onClick={restartPractice} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
           <button onClick={() => router.push('/')} className="flex-1 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium active:bg-gray-50 transition">返回首页</button>
         </div>
       </div>
