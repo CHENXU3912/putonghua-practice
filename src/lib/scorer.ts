@@ -85,6 +85,39 @@ function chineseTextToPinyinSyllables(text: string): string[] {
     .filter(Boolean);
 }
 
+function latinTextToPinyinSyllables(text: string, expectedCount?: number): string[] {
+  const chunks = stripTone(text).match(/[a-zv]+/g) || [];
+  if (chunks.length === 0) return [];
+
+  const exactTokens = chunks
+    .map(normalizePinyinToken)
+    .filter(token => PINYIN_SYLLABLES.has(token));
+
+  if (expectedCount && exactTokens.length === expectedCount) return exactTokens;
+
+  const splitTokens = chunks.flatMap(chunk => {
+    const token = normalizePinyinToken(chunk);
+    if (!token) return [];
+    if (PINYIN_SYLLABLES.has(token)) return [token];
+    return splitPlainPinyin(token);
+  });
+
+  if (expectedCount) {
+    const joinedSplit = splitPlainPinyin(chunks.join(''), expectedCount);
+    if (joinedSplit.length === expectedCount) return joinedSplit;
+  }
+
+  return splitTokens;
+}
+
+function transcriptToPinyinSyllables(text: string, expectedCount?: number): string[] {
+  const tokens = text.match(/[\u4e00-\u9fff]|[A-Za-züÜāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]+/g) || [];
+  return tokens.flatMap(token => {
+    if (CHINESE_CHAR_RE.test(token)) return chineseTextToPinyinSyllables(token);
+    return latinTextToPinyinSyllables(token, expectedCount);
+  });
+}
+
 function targetToPinyinSyllables(targetText: string, targetPinyin?: string): string[] {
   const charCount = [...targetText].filter(char => CHINESE_CHAR_RE.test(char)).length;
   if (targetPinyin && !CHINESE_CHAR_RE.test(targetPinyin)) {
@@ -136,7 +169,7 @@ export function charOrHomophoneMatch(
   if (!key) return false;
 
   // 优先按识别文本逐字转拼音匹配，覆盖题库外同音字和常见多音字。
-  if (chineseTextToPinyinSyllables(transcript).includes(key)) return true;
+  if (transcriptToPinyinSyllables(transcript, 1).includes(key)) return true;
 
   // 兼容旧的题库同音字表。
   const homophones = pinyinMap.get(key);
@@ -159,7 +192,7 @@ export function wordOrHomophoneMatch(
   // 直接匹配
   if (transcript.includes(targetWord)) return true;
   const targetSyllables = targetToPinyinSyllables(targetWord, targetPinyin);
-  const transcriptSyllables = chineseTextToPinyinSyllables(transcript);
+  const transcriptSyllables = transcriptToPinyinSyllables(transcript, targetSyllables.length);
   if (sequenceIncludes(transcriptSyllables, targetSyllables)) return true;
 
   // 兼容旧同音字表：只在每个字都能按同音字找到时通过，避免“任意一个字同音”误判整词正确。
