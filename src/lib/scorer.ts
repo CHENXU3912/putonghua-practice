@@ -116,6 +116,38 @@ export function getMatchRate(expected: string, recognized: string): number {
   return Math.round((result.correct / result.total) * 100);
 }
 
+/** 滑动窗口覆盖率：将原文切成窗口，统计有多少窗口在识别文本中找到 */
+export function getCoverageRate(expected: string, recognized: string, windowSize = 3): number {
+  const exp = cleanText(expected);
+  const rec = cleanText(recognized);
+  if (!exp || !rec) return 0;
+  if (exp.length <= windowSize) {
+    return rec.includes(exp) ? 100 : 0;
+  }
+  let covered = 0;
+  const totalWindows = exp.length - windowSize + 1;
+  for (let i = 0; i < totalWindows; i++) {
+    const win = exp.slice(i, i + windowSize);
+    if (rec.includes(win)) covered++;
+  }
+  return Math.round((covered / totalWindows) * 100);
+}
+
+/** 模糊关键词匹配：每个关键词拆分后检查是否大部分字符出现 */
+export function checkKeywordsFuzzy(transcript: string, keywords: string[]): { found: number; total: number; details: { kw: string; found: boolean; partial: boolean }[] } {
+  const rec = cleanText(transcript);
+  const details = keywords.map(kw => {
+    const found = rec.includes(kw);
+    if (found) return { kw, found: true, partial: false };
+    // 模糊：至少一半的字出现
+    const chars = [...kw];
+    const matched = chars.filter(c => rec.includes(c)).length;
+    return { kw, found: false, partial: matched >= Math.ceil(chars.length / 2) };
+  });
+  const found = details.filter(d => d.found || d.partial).length;
+  return { found, total: keywords.length, details };
+}
+
 /** 检查识别文本中是否包含指定关键词 */
 export function checkKeywords(transcript: string, keywords: string[]): { found: number; total: number; details: { kw: string; found: boolean }[] } {
   const details = keywords.map(kw => ({ kw, found: transcript.includes(kw) }));
@@ -312,10 +344,10 @@ export function scoreArticle(
   const speedScore = calcDurationScore(audioDuration, article.standardDuration);
   const completenessScore = audioDuration >= article.standardDuration * 0.8 ? 100 : Math.round((audioDuration / article.standardDuration) * 100);
 
-  // STT 覆盖率
+  // STT 覆盖率（滑动窗口，不要求逐字对齐）
   let coverageScore = selfRating * 20;
   if (sttTranscript) {
-    const rate = getMatchRate(article.content, sttTranscript);
+    const rate = getCoverageRate(article.content, sttTranscript, 4);
     coverageScore = rate;
   }
 
@@ -325,7 +357,7 @@ export function scoreArticle(
   const suggestions: string[] = [];
   if (speedScore < 60) suggestions.push('朗读语速可以再自然一些，注意控制节奏');
   if (completenessScore < 80) suggestions.push('建议把全文读完整，不要跳读');
-  if (sttTranscript && coverageScore < 60) suggestions.push('识别率偏低，建议先听示范音，逐句跟读');
+  if (sttTranscript && coverageScore < 40) suggestions.push('识别覆盖率偏低，建议放慢语速、逐句朗读');
   if (suggestions.length === 0) suggestions.push('完成得不错，继续保持！');
 
   return {
@@ -357,9 +389,9 @@ export function scoreSpeech(
   const fluencyScore = (selfRating / 5) * 100;
   let outlineScore = (outlineCoverage / 5) * 100;
 
-  // STT 关键词检测
+  // STT 关键词模糊检测
   if (sttTranscript && speech.outline) {
-    const kwResult = checkKeywords(sttTranscript, speech.outline.map(o => o.slice(0, 4)));
+    const kwResult = checkKeywordsFuzzy(sttTranscript, speech.outline.map(o => o.slice(0, 5)));
     outlineScore = Math.round((kwResult.found / kwResult.total) * 100);
   }
 

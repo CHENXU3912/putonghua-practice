@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreArticle, cleanText, getMatchRate } from '@/lib/scorer';
+import { scoreArticle, cleanText, getCoverageRate } from '@/lib/scorer';
 import { saveRecord } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
@@ -63,7 +63,7 @@ export default function ArticlePage() {
         <ScoreDisplay result={scoreResult} />
         {stt.transcript && (
           <div className="bg-white rounded-xl p-4 shadow-sm text-sm">
-            <h3 className="font-medium text-gray-700 mb-2">🤖 AI 识别文本（覆盖率 {getMatchRate(article.content, stt.transcript)}%）</h3>
+            <h3 className="font-medium text-gray-700 mb-2">🤖 AI 识别文本（覆盖率 {getCoverageRate(article.content, stt.transcript, 4)}%）</h3>
             <p className="text-xs text-gray-500 mb-1">识别：{cleanText(stt.transcript).slice(0, 100)}{cleanText(stt.transcript).length > 100 ? '...' : ''}</p>
           </div>
         )}

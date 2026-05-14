@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreSpeech, cleanText, checkKeywords } from '@/lib/scorer';
+import { scoreSpeech, cleanText, checkKeywordsFuzzy } from '@/lib/scorer';
 import { saveRecord } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
@@ -54,7 +54,7 @@ export default function SpeakingPage() {
   }, [speech, audioDuration, selfRating, outlineCoverage, blob, stt.transcript]);
 
   if (showResult && scoreResult) {
-    const kwResult = stt.transcript ? checkKeywords(stt.transcript, speech.outline.map(o => o.slice(0, 4))) : null;
+    const kwResult = stt.transcript ? checkKeywordsFuzzy(stt.transcript, speech.outline.map(o => o.slice(0, 5))) : null;
 
     return (
       <div className="px-4 py-6 space-y-5">
