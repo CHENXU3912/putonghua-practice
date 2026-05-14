@@ -1,5 +1,5 @@
 'use client';
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Recorder from '@/components/Recorder';
@@ -29,6 +29,8 @@ export default function WordPage() {
   const stt = useSpeechRecognition();
   const sttTranscriptRef = useRef('');
   const sttAvailable = isSTTSupported();
+  const [judgeState, setJudgeState] = useState<'idle' | 'judging' | 'correct' | 'wrong'>('idle');
+  const currentTranscriptRef = useRef('');
 
   const item = items[currentIdx] ?? null;
 
@@ -36,17 +38,50 @@ export default function WordPage() {
     lastDurationRef.current = duration;
   }, []);
 
-  const handleSelfRate = useCallback((isCorrect: boolean) => {
+  useEffect(() => {
+    if (stt.state === 'completed' && stt.transcript && judgeState === 'idle') {
+      currentTranscriptRef.current = stt.transcript;
+      setJudgeState('judging');
+    }
+  }, [stt.state, stt.transcript, judgeState]);
+
+  useEffect(() => {
+    if (judgeState !== 'judging' || !item) return;
+    const transcript = cleanText(currentTranscriptRef.current);
+    const isCorrect = transcript.includes(item.word);
+    const duration = lastDurationRef.current || 2.0;
+    setJudgeState(isCorrect ? 'correct' : 'wrong');
+    lastDurationRef.current = 0;
+    const newResult: UserResult = { itemId: item.id, audioDuration: duration, selfRating: isCorrect };
+    const newResults = [...results, newResult];
+    sttTranscriptRef.current += currentTranscriptRef.current;
+
+    const timer = setTimeout(() => {
+      setJudgeState('idle');
+      stt.reset();
+      currentTranscriptRef.current = '';
+      if (currentIdx < items.length - 1) {
+        setResults(newResults);
+        setCurrentIdx(currentIdx + 1);
+      } else {
+        const allTranscript = sttTranscriptRef.current;
+        const s = scoreWord(items, newResults, allTranscript || undefined);
+        setScoreResult(s);
+        setShowResult(true);
+        saveRecord({ type: 'word', questionSummary: `多音节词语练习（${items.length}词）`, questionIds: items.map(i => i.id), audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)), score: s.score, scoreDetail: s.scoreDetail, wrongItems: s.wrongItems, createdAt: Date.now() });
+        doCheckin();
+        if (s.wrongItems.length > 0) setShowWrongAdd(true);
+      }
+    }, 900);
+    return () => clearTimeout(timer);
+  }, [judgeState, item, currentIdx, results, items, stt]); // eslint-disable-line
+
+  const handleManual = useCallback((isCorrect: boolean) => {
     const duration = lastDurationRef.current || 2.0;
     lastDurationRef.current = 0;
     const newResults = [...results, { itemId: item!.id, audioDuration: duration, selfRating: isCorrect }];
     setResults(newResults);
-
-    if (stt.transcript) {
-      sttTranscriptRef.current += stt.transcript;
-      stt.reset();
-    }
-
+    stt.reset();
     if (currentIdx < items.length - 1) {
       setCurrentIdx(currentIdx + 1);
     } else {
@@ -54,58 +89,47 @@ export default function WordPage() {
       const s = scoreWord(items, newResults, allTranscript || undefined);
       setScoreResult(s);
       setShowResult(true);
-
-      saveRecord({
-        type: 'word',
-        questionSummary: `多音节词语练习（${items.length}词）`,
-        questionIds: items.map(i => i.id),
-        audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)),
-        score: s.score,
-        scoreDetail: s.scoreDetail,
-        wrongItems: s.wrongItems,
-        createdAt: Date.now(),
-      });
+      saveRecord({ type: 'word', questionSummary: `多音节词语练习（${items.length}词）`, questionIds: items.map(i => i.id), audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)), score: s.score, scoreDetail: s.scoreDetail, wrongItems: s.wrongItems, createdAt: Date.now() });
       doCheckin();
       if (s.wrongItems.length > 0) setShowWrongAdd(true);
     }
-  }, [currentIdx, items, results, item, stt.transcript, stt.reset]);
+  }, [currentIdx, items, results, item, stt.reset]); // eslint-disable-line
 
-  if (!item) {
-    return (
-      <div className="px-4 py-10 text-center text-gray-400">
-        题库加载中...
-        <div className="mt-4"><Link href="/" className="text-green-500">返回首页</Link></div>
-      </div>
-    );
-  }
+  if (!item) return (<div className="px-4 py-10 text-center text-gray-400">题库加载中...<div className="mt-4"><Link href="/" className="text-green-500">返回首页</Link></div></div>);
 
   if (showResult && scoreResult) {
     return (
       <div className="px-4 py-6 space-y-5">
-        <div className="text-center">
-          <h2 className="text-lg font-bold text-gray-900">练习完成</h2>
-          <p className="text-sm text-gray-400">多音节词语 · {items.length}词</p>
-        </div>
+        <div className="text-center"><h2 className="text-lg font-bold text-gray-900">练习完成</h2><p className="text-sm text-gray-400">多音节词语 · {items.length}词</p></div>
         <ScoreDisplay result={scoreResult} />
-        {sttTranscriptRef.current && (
-          <div className="bg-white rounded-xl p-4 shadow-sm text-sm">
-            <h3 className="font-medium text-gray-700 mb-2">🤖 AI 识别结果</h3>
-            <div className="flex flex-wrap gap-1.5 font-mono">
-              {compareCharByChar(items.map(i => i.word).join(''), sttTranscriptRef.current).details.map((d, i) => (
-                <span key={i} className={`px-1.5 py-0.5 rounded text-sm ${d.ok ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'}`}>{d.char}</span>
-              ))}
-            </div>
-            <p className="text-xs text-gray-400 mt-2">识别文本：{cleanText(sttTranscriptRef.current)}</p>
+        <div className="bg-white rounded-xl p-4 shadow-sm text-sm">
+          <h3 className="font-medium text-gray-700 mb-3">📋 逐词报告</h3>
+          <div className="space-y-2">
+            {items.map((it, i) => {
+              const res = results[i];
+              const ok = res ? res.selfRating : false;
+              return (
+                <div key={it.id} className="flex items-center gap-3 py-1.5 border-b border-gray-50 last:border-0">
+                  <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${ok ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-500'}`}>{ok ? '✓' : '✗'}</span>
+                  <span className="text-base font-bold text-gray-800">{it.word}</span>
+                  <span className="text-sm text-gray-400">{it.pinyin}</span>
+                  <div className="flex flex-wrap gap-1">
+                    {it.errorType.slice(0, 2).map((t, j) => (
+                      <span key={j} className="px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded text-2xs">{t}</span>
+                    ))}
+                  </div>
+                  {!ok && <span className="ml-auto text-red-400 text-xs">需练习</span>}
+                </div>
+              );
+            })}
           </div>
-        )}
+        </div>
         {scoreResult.wrongItems.length > 0 && (
           <div className="bg-white rounded-xl p-4 shadow-sm">
             <h3 className="text-sm font-medium text-gray-700 mb-2">可改进的词语（{scoreResult.wrongItems.length}个）</h3>
             <div className="flex flex-wrap gap-2">
               {scoreResult.wrongItems.map((w, i) => (
-                <span key={i} className="px-3 py-1.5 bg-red-50 text-red-600 rounded-lg text-sm">
-                  {w.content} <span className="text-red-400 text-xs">{w.pinyin}</span>
-                </span>
+                <span key={i} className="px-3 py-1.5 bg-red-50 text-red-600 rounded-lg text-sm">{w.content} <span className="text-red-400 text-xs">{w.pinyin}</span></span>
               ))}
             </div>
           </div>
@@ -117,12 +141,24 @@ export default function WordPage() {
           </div>
         )}
         <div className="flex gap-3">
-          <button onClick={() => { setCurrentIdx(0); setResults([]); setShowResult(false); setScoreResult(null); setShowWrongAdd(false); sttTranscriptRef.current = ''; }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
+          <button onClick={() => { setCurrentIdx(0); setResults([]); setShowResult(false); setScoreResult(null); setShowWrongAdd(false); sttTranscriptRef.current = ''; setJudgeState('idle'); }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
           <button onClick={() => router.push('/')} className="flex-1 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium active:bg-gray-50 transition">返回首页</button>
         </div>
       </div>
     );
   }
+
+  const judgingBlock = (
+    <div className="text-center transition-all duration-300">
+      {judgeState === 'judging' && (
+        <div className="flex items-center justify-center gap-2 text-blue-500"><span className="animate-spin text-lg">⏳</span><span className="text-sm">AI 判定中...</span></div>
+      )}
+      {judgeState === 'correct' && (<div className="animate-bounce text-green-500 text-2xl font-bold">✓ 正确！</div>)}
+      {judgeState === 'wrong' && (
+        <div className="text-red-400 text-sm"><span className="text-lg font-bold">✗ 需要注意</span><div className="text-xs text-gray-400 mt-1">AI 识别：{cleanText(currentTranscriptRef.current) || '未识别到'}</div></div>
+      )}
+    </div>
+  );
 
   return (
     <div className="px-4 py-6 flex flex-col items-center min-h-[80vh]">
@@ -142,30 +178,26 @@ export default function WordPage() {
         <div className="text-xl text-gray-500">{item.pinyin}</div>
         <div className="flex flex-wrap justify-center gap-2">
           {item.errorType.map((t, i) => (
-            <span key={i} className={`px-2.5 py-1 rounded-full text-xs font-medium ${
-              t === '轻声' ? 'bg-gray-200 text-gray-600' : t === '儿化' ? 'bg-blue-100 text-blue-700' :
-              t === '变调' ? 'bg-orange-100 text-orange-700' :
-              t.includes('平舌') || t.includes('翘舌') ? 'bg-purple-100 text-purple-700' : 'bg-green-100 text-green-700'
-            }`}>{t}</span>
+            <span key={i} className={`px-2.5 py-1 rounded-full text-xs font-medium ${t === '轻声' ? 'bg-gray-200 text-gray-600' : t === '儿化' ? 'bg-blue-100 text-blue-700' : t === '变调' ? 'bg-orange-100 text-orange-700' : t.includes('平舌') || t.includes('翘舌') ? 'bg-purple-100 text-purple-700' : 'bg-green-100 text-green-700'}`}>{t}</span>
           ))}
         </div>
         {item.tips && <p className="text-xs text-gray-400 mt-2">{item.tips}</p>}
       </div>
-      <div className="mt-8 mb-4">
-        <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={30} />
-      </div>
-      {sttAvailable && (
-        <div className="mb-2 text-center">
-          {stt.state === 'listening' && <span className="text-xs text-blue-500 animate-pulse">🤖 AI 正在聆听...</span>}
-          {stt.state === 'completed' && stt.transcript && (
-            <span className="text-xs text-gray-500">AI 识别：<span className="font-mono text-green-600">{cleanText(stt.transcript)}</span></span>
-          )}
+
+      <div className="mt-2 mb-2 h-14 flex items-center justify-center">{judgingBlock}</div>
+
+      {judgeState === 'idle' && (
+        <div className="mt-4 mb-4">
+          <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={30} />
         </div>
       )}
-      <div className="flex gap-4 w-full max-w-xs mb-8">
-        <button onClick={() => handleSelfRate(true)} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition text-sm">✓ 读对了</button>
-        <button onClick={() => handleSelfRate(false)} className="flex-1 py-3 border border-red-300 text-red-500 rounded-xl font-medium active:bg-red-50 transition text-sm">✗ 不太对</button>
-      </div>
+
+      {!sttAvailable && judgeState === 'idle' && (
+        <div className="flex gap-4 w-full max-w-xs mb-8">
+          <button onClick={() => handleManual(true)} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition text-sm">✓ 读对了</button>
+          <button onClick={() => handleManual(false)} className="flex-1 py-3 border border-red-300 text-red-500 rounded-xl font-medium active:bg-red-50 transition text-sm">✗ 不太对</button>
+        </div>
+      )}
     </div>
   );
 }
