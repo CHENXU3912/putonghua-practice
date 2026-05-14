@@ -1,11 +1,38 @@
 import type { SyllableItem, WordItem, ArticleItem, SpeechItem, UserResult, ScoreResult, WrongItem } from './types';
+import { pinyin } from 'pinyin-pro';
 
 // ===== 拼音同音字表 =====
+
+const CHINESE_CHAR_RE = /[\u4e00-\u9fff]/;
+const PINYIN_SYLLABLES = new Set([
+  'a','ai','an','ang','ao','ba','bai','ban','bang','bao','bei','ben','beng','bi','bian','biao','bie','bin','bing','bo','bu',
+  'ca','cai','can','cang','cao','ce','cen','ceng','cha','chai','chan','chang','chao','che','chen','cheng','chi','chong','chou','chu','chua','chuai','chuan','chuang','chui','chun','chuo','ci','cong','cou','cu','cuan','cui','cun','cuo',
+  'da','dai','dan','dang','dao','de','dei','den','deng','di','dia','dian','diao','die','ding','diu','dong','dou','du','duan','dui','dun','duo',
+  'e','ei','en','eng','er',
+  'fa','fan','fang','fei','fen','feng','fo','fou','fu',
+  'ga','gai','gan','gang','gao','ge','gei','gen','geng','gong','gou','gu','gua','guai','guan','guang','gui','gun','guo',
+  'ha','hai','han','hang','hao','he','hei','hen','heng','hong','hou','hu','hua','huai','huan','huang','hui','hun','huo',
+  'ji','jia','jian','jiang','jiao','jie','jin','jing','jiong','jiu','ju','juan','jue','jun',
+  'ka','kai','kan','kang','kao','ke','kei','ken','keng','kong','kou','ku','kua','kuai','kuan','kuang','kui','kun','kuo',
+  'la','lai','lan','lang','lao','le','lei','leng','li','lia','lian','liang','liao','lie','lin','ling','liu','lo','long','lou','lu','luan','lun','luo','lv','lve',
+  'ma','mai','man','mang','mao','me','mei','men','meng','mi','mian','miao','mie','min','ming','miu','mo','mou','mu',
+  'na','nai','nan','nang','nao','ne','nei','nen','neng','ni','nian','niang','niao','nie','nin','ning','niu','nong','nou','nu','nuan','nun','nuo','nv','nve',
+  'o','ou',
+  'pa','pai','pan','pang','pao','pei','pen','peng','pi','pian','piao','pie','pin','ping','po','pou','pu',
+  'qi','qia','qian','qiang','qiao','qie','qin','qing','qiong','qiu','qu','quan','que','qun',
+  'ran','rang','rao','re','ren','reng','ri','rong','rou','ru','rua','ruan','rui','run','ruo',
+  'sa','sai','san','sang','sao','se','sen','seng','sha','shai','shan','shang','shao','she','shei','shen','sheng','shi','shou','shu','shua','shuai','shuan','shuang','shui','shun','shuo','si','song','sou','su','suan','sui','sun','suo',
+  'ta','tai','tan','tang','tao','te','tei','teng','ti','tian','tiao','tie','ting','tong','tou','tu','tuan','tui','tun','tuo',
+  'wa','wai','wan','wang','wei','wen','weng','wo','wu',
+  'xi','xia','xian','xiang','xiao','xie','xin','xing','xiong','xiu','xu','xuan','xue','xun',
+  'ya','yan','yang','yao','ye','yi','yin','ying','yo','yong','you','yu','yuan','yue','yun',
+  'za','zai','zan','zang','zao','ze','zei','zen','zeng','zha','zhai','zhan','zhang','zhao','zhe','zhei','zhen','zheng','zhi','zhong','zhou','zhu','zhua','zhuai','zhuan','zhuang','zhui','zhun','zhuo','zi','zong','zou','zu','zuan','zui','zun','zuo',
+]);
 
 /** 去掉拼音声调，例如 sì → si, chuān → chuan */
 export function stripTone(py: string): string {
   if (!py) return '';
-  return py.replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/g, (c) => {
+  return py.toLowerCase().replace(/ü/g, 'v').replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/g, (c) => {
     const map: Record<string, string> = {
       'ā':'a','á':'a','ǎ':'a','à':'a',
       'ē':'e','é':'e','ě':'e','è':'e',
@@ -15,7 +42,71 @@ export function stripTone(py: string): string {
       'ǖ':'v','ǘ':'v','ǚ':'v','ǜ':'v',
     };
     return map[c] || c;
-  }).replace(/[1-4]$/, '');
+  }).replace(/[1-5]/g, '');
+}
+
+function normalizePinyinToken(py: string): string {
+  return stripTone(py).replace(/[^a-zv]/g, '');
+}
+
+function splitPlainPinyin(text: string, expectedCount?: number): string[] {
+  const normalized = normalizePinyinToken(text);
+  if (!normalized) return [];
+
+  const memo = new Map<number, string[][]>();
+  const splitFrom = (start: number): string[][] => {
+    if (start === normalized.length) return [[]];
+    if (memo.has(start)) return memo.get(start)!;
+    const result: string[][] = [];
+    for (let end = Math.min(normalized.length, start + 6); end > start; end--) {
+      const part = normalized.slice(start, end);
+      if (!PINYIN_SYLLABLES.has(part)) continue;
+      for (const rest of splitFrom(end)) result.push([part, ...rest]);
+    }
+    memo.set(start, result);
+    return result;
+  };
+
+  const candidates = splitFrom(0);
+  if (expectedCount) {
+    const exact = candidates.find(c => c.length === expectedCount);
+    if (exact) return exact;
+  }
+  return candidates[0] || [];
+}
+
+function chineseTextToPinyinSyllables(text: string): string[] {
+  return [...cleanText(text)]
+    .filter(char => CHINESE_CHAR_RE.test(char))
+    .map(char => {
+      const result = pinyin(char, { toneType: 'none', type: 'array' }) as string[];
+      return normalizePinyinToken(result[0] || '');
+    })
+    .filter(Boolean);
+}
+
+function targetToPinyinSyllables(targetText: string, targetPinyin?: string): string[] {
+  const charCount = [...targetText].filter(char => CHINESE_CHAR_RE.test(char)).length;
+  if (targetPinyin && !CHINESE_CHAR_RE.test(targetPinyin)) {
+    const parsed = splitPlainPinyin(targetPinyin, charCount);
+    if (parsed.length === charCount) return parsed;
+  }
+  return chineseTextToPinyinSyllables(targetText);
+}
+
+function sequenceIncludes(sequence: string[], target: string[]): boolean {
+  if (target.length === 0 || sequence.length < target.length) return false;
+  for (let i = 0; i <= sequence.length - target.length; i++) {
+    let ok = true;
+    for (let j = 0; j < target.length; j++) {
+      if (sequence[i + j] !== target[j]) {
+        ok = false;
+        break;
+      }
+    }
+    if (ok) return true;
+  }
+  return false;
 }
 
 /** 从题库构建拼音→同音字映射 */
@@ -40,9 +131,14 @@ export function charOrHomophoneMatch(
   if (!transcript) return false;
   // 直接匹配
   if (transcript.includes(targetChar)) return true;
-  // 同音字匹配
-  if (!targetPinyin) return false;
-  const key = stripTone(targetPinyin);
+  const targetSyllables = targetToPinyinSyllables(targetChar, targetPinyin);
+  const key = targetSyllables[0] || normalizePinyinToken(targetPinyin);
+  if (!key) return false;
+
+  // 优先按识别文本逐字转拼音匹配，覆盖题库外同音字和常见多音字。
+  if (chineseTextToPinyinSyllables(transcript).includes(key)) return true;
+
+  // 兼容旧的题库同音字表。
   const homophones = pinyinMap.get(key);
   if (homophones) {
     for (const c of homophones) {
@@ -62,29 +158,19 @@ export function wordOrHomophoneMatch(
   if (!transcript) return false;
   // 直接匹配
   if (transcript.includes(targetWord)) return true;
-  // 如果没有拼音，降级为直接匹配
-  if (!targetPinyin) return false;
-  // 每个字分别匹配
-  const chars = [...targetWord];
-  const allFound = chars.every(c => {
-    // 找这个字在题库中的拼音
-    const py = ''; // 需要从词条中获取每个字的拼音，但词条拼音是整个词的
-    // 简化：直接检查字符
-    return transcript.includes(c);
+  const targetSyllables = targetToPinyinSyllables(targetWord, targetPinyin);
+  const transcriptSyllables = chineseTextToPinyinSyllables(transcript);
+  if (sequenceIncludes(transcriptSyllables, targetSyllables)) return true;
+
+  // 兼容旧同音字表：只在每个字都能按同音字找到时通过，避免“任意一个字同音”误判整词正确。
+  const chars = [...targetWord].filter(c => CHINESE_CHAR_RE.test(c));
+  if (chars.length === 0) return false;
+  return chars.every((c, index) => {
+    if (transcript.includes(c)) return true;
+    const key = targetSyllables[index];
+    const homophones = key ? pinyinMap.get(key) : undefined;
+    return !!homophones && [...homophones].some(h => transcript.includes(h));
   });
-  if (allFound) return true;
-  // 至少识别到部分同音字
-  const anyHomophone = chars.some(c => {
-    for (const [key, set] of pinyinMap) {
-      if (set.has(c)) {
-        for (const h of set) {
-          if (h !== c && transcript.includes(h)) return true;
-        }
-      }
-    }
-    return false;
-  });
-  return anyHomophone;
 }
 
 // ===== 文本比对工具 =====
@@ -98,7 +184,6 @@ export function cleanText(s: string): string {
 export function compareCharByChar(expected: string, recognized: string): { total: number; correct: number; details: { char: string; ok: boolean }[] } {
   const exp = cleanText(expected);
   const rec = cleanText(recognized);
-  const maxLen = Math.max(exp.length, rec.length);
   const details: { char: string; ok: boolean }[] = [];
   let correct = 0;
   for (let i = 0; i < exp.length; i++) {
@@ -204,6 +289,7 @@ export function scoreSyllable(
   const totalCount = items.length;
   let sttCorrectCount = 0;
   let sttDetails: { char: string; ok: boolean }[] = [];
+  const hasPerItemJudgment = userResults.length >= totalCount;
 
   if (sttTranscript) {
     // 拼接期望文本
@@ -218,7 +304,9 @@ export function scoreSyllable(
   const hasSTT = sttTranscript && sttTranscript.length > 0;
 
   // STT 匹配率 或 自评准确率
-  const matchScore = hasSTT
+  const matchScore = hasPerItemJudgment
+    ? Math.round((selfCorrectCount / totalCount) * 100)
+    : hasSTT
     ? Math.round((sttCorrectCount / totalCount) * 100)
     : Math.round((selfCorrectCount / totalCount) * 100);
 
@@ -233,7 +321,18 @@ export function scoreSyllable(
   const wrongItems: WrongItem[] = [];
   const errorTypes: string[] = [];
 
-  if (hasSTT && sttDetails.length > 0) {
+  if (hasPerItemJudgment) {
+    userResults.forEach((r, i) => {
+      if (!r.selfRating && items[i]) {
+        wrongItems.push({
+          content: items[i].char,
+          pinyin: items[i].pinyin,
+          errorType: items[i].errorType,
+        });
+        errorTypes.push(...items[i].errorType);
+      }
+    });
+  } else if (hasSTT && sttDetails.length > 0) {
     sttDetails.forEach((d, i) => {
       if (!d.ok && items[i]) {
         wrongItems.push({
@@ -276,6 +375,7 @@ export function scoreWord(
   const totalCount = items.length;
   let sttCorrectCount = 0;
   let sttDetails: { char: string; ok: boolean }[] = [];
+  const hasPerItemJudgment = userResults.length >= totalCount;
 
   if (sttTranscript) {
     const expected = items.map(i => i.word).join('');
@@ -286,7 +386,9 @@ export function scoreWord(
 
   const selfCorrectCount = userResults.filter(r => r.selfRating).length;
   const hasSTT = sttTranscript && sttTranscript.length > 0;
-  const matchScore = hasSTT
+  const matchScore = hasPerItemJudgment
+    ? Math.round((selfCorrectCount / totalCount) * 100)
+    : hasSTT
     ? Math.round((sttCorrectCount / totalCount) * 100)
     : Math.round((selfCorrectCount / totalCount) * 100);
 
@@ -300,7 +402,18 @@ export function scoreWord(
   const wrongItems: WrongItem[] = [];
   const errorTypes: string[] = [];
 
-  if (hasSTT && sttDetails.length > 0) {
+  if (hasPerItemJudgment) {
+    userResults.forEach((r, i) => {
+      if (!r.selfRating && items[i]) {
+        wrongItems.push({
+          content: items[i].word,
+          pinyin: items[i].pinyin,
+          errorType: items[i].errorType,
+        });
+        errorTypes.push(...items[i].errorType);
+      }
+    });
+  } else if (hasSTT && sttDetails.length > 0) {
     sttDetails.forEach((d, i) => {
       if (!d.ok && items[i]) {
         wrongItems.push({
