@@ -180,7 +180,7 @@ export default function SyllablePage() {
 
       {/* 录音 + STT */}
       <div className="mt-8 mb-4">
-        <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={10} />
+        <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={30} />
       </div>
 
       {/* AI 识别状态 */}

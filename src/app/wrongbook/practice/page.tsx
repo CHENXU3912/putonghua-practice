@@ -107,7 +107,7 @@ export default function WrongBookPracticePage() {
       </div>
 
       <div className="mt-8 mb-4">
-        <Recorder maxDuration={10} />
+        <Recorder maxDuration={30} />
       </div>
 
       <div className="flex gap-4 w-full max-w-xs mb-8">

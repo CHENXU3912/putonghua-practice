@@ -152,7 +152,7 @@ export default function WordPage() {
         {item.tips && <p className="text-xs text-gray-400 mt-2">{item.tips}</p>}
       </div>
       <div className="mt-8 mb-4">
-        <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={15} />
+        <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={30} />
       </div>
       {sttAvailable && (
         <div className="mb-2 text-center">
