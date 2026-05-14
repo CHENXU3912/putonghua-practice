@@ -2,414 +2,480 @@
   {
     "id": "w001",
     "word": "损坏",
-    "pinyin": "sǔnhuài",
+    "pinyin": "sǔn huài",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
+      "f/h混淆",
       "前鼻音",
-      "常用字"
+      "声调(三声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w002",
     "word": "昆虫",
-    "pinyin": "chong",
+    "pinyin": "kūn chóng",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w003",
     "word": "兴奋",
-    "pinyin": "xīngfèn",
+    "pinyin": "xīng fèn",
     "difficulty": "medium",
     "errorType": [
+      "f/h混淆",
+      "前鼻音",
       "后鼻音",
-      "前鼻音"
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w004",
     "word": "恶劣",
-    "pinyin": "èliè",
-    "difficulty": "easy",
+    "pinyin": "è liè",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "边音(l)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w005",
     "word": "挂帅",
-    "pinyin": "guàshuài",
-    "difficulty": "easy",
+    "pinyin": "guà shuài",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "翘舌音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w006",
     "word": "针鼻儿",
-    "pinyin": "bier",
+    "pinyin": "zhēn bí ér",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
       "前鼻音",
+      "儿化",
+      "声调(一声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w007",
     "word": "排斥",
-    "pinyin": "排chì",
+    "pinyin": "pái chì",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "翘舌音"
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w008",
     "word": "采取",
-    "pinyin": "采取",
+    "pinyin": "cǎi qǔ",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w009",
     "word": "利索",
-    "pinyin": "利suǒ",
+    "pinyin": "lì suǒ",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "平舌音"
+      "平舌音",
+      "边音(l)",
+      "声调(四声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w010",
     "word": "荒谬",
-    "pinyin": "荒mìu",
-    "difficulty": "easy",
+    "pinyin": "huāng miù",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w011",
     "word": "少女",
-    "pinyin": "shao",
+    "pinyin": "shào nǚ",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "鼻音(n)",
       "声调(四声)",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w012",
     "word": "电磁波",
-    "pinyin": "电cíbō",
+    "pinyin": "diàn cí bō",
     "difficulty": "medium",
     "errorType": [
+      "平舌音",
       "前鼻音",
-      "常用字"
+      "声调(四声)",
+      "声调(二声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w013",
     "word": "愿望",
-    "pinyin": "愿望",
-    "difficulty": "easy",
+    "pinyin": "yuàn wàng",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w014",
     "word": "恰当",
-    "pinyin": "qià当",
+    "pinyin": "qià dàng",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "前鼻音"
+      "后鼻音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w015",
     "word": "若干",
-    "pinyin": "gan",
+    "pinyin": "ruò gān",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "翘舌音",
+      "前鼻音",
+      "声调(四声)",
       "声调(一声)"
     ]
   },
   {
     "id": "w016",
     "word": "加塞儿",
-    "pinyin": "加塞ér",
+    "pinyin": "jiā sāi ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "平舌音",
+      "儿化",
+      "声调(一声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w017",
     "word": "浪费",
-    "pinyin": "浪fèi",
-    "difficulty": "easy",
+    "pinyin": "làng fèi",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "边音(l)",
+      "f/h混淆",
+      "后鼻音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w018",
     "word": "苦衷",
-    "pinyin": "kǔzhōng",
+    "pinyin": "kǔ zhōng",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "后鼻音",
       "声调(三声)",
-      "常用字"
+      "声调(一声)"
     ]
   },
   {
     "id": "w019",
     "word": "降低",
-    "pinyin": "jiàngdī",
+    "pinyin": "jiàng dī",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
       "声调(一声)"
     ]
   },
   {
     "id": "w020",
     "word": "夜晚",
-    "pinyin": "wan",
+    "pinyin": "yè wǎn",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "前鼻音",
+      "声调(四声)",
       "声调(三声)"
     ]
   },
   {
     "id": "w021",
     "word": "小熊儿",
-    "pinyin": "xiaoer",
+    "pinyin": "xiǎo xióng ér",
     "difficulty": "medium",
     "errorType": [
+      "后鼻音",
+      "儿化",
       "声调(三声)",
-      "常用字",
       "声调(二声)"
     ]
   },
   {
     "id": "w022",
     "word": "存留",
-    "pinyin": "存留",
+    "pinyin": "cún liú",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
+      "边音(l)",
       "前鼻音",
-      "常用字"
+      "声调(二声)"
     ]
   },
   {
     "id": "w023",
     "word": "上午",
-    "pinyin": "shang",
+    "pinyin": "shàng wǔ",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "后鼻音",
       "声调(四声)",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w024",
     "word": "按钮",
-    "pinyin": "按nǐu",
+    "pinyin": "àn niǔ",
     "difficulty": "medium",
     "errorType": [
+      "鼻音(n)",
       "前鼻音",
-      "常用字"
+      "声调(四声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w025",
     "word": "佛教",
-    "pinyin": "fó教",
-    "difficulty": "easy",
+    "pinyin": "fó jiào",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "f/h混淆",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w026",
     "word": "新娘",
-    "pinyin": "xin",
+    "pinyin": "xīn niáng",
     "difficulty": "medium",
     "errorType": [
+      "鼻音(n)",
       "前鼻音",
+      "后鼻音",
       "声调(一声)",
-      "常用字"
+      "声调(二声)"
     ]
   },
   {
     "id": "w027",
     "word": "逗乐儿",
-    "pinyin": "leer",
+    "pinyin": "dòu lè ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "边音(l)",
-      "声调(四声)"
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w028",
     "word": "全面",
-    "pinyin": "全面",
-    "difficulty": "easy",
+    "pinyin": "quán miàn",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w029",
     "word": "包括",
-    "pinyin": "包括",
-    "difficulty": "easy",
+    "pinyin": "bāo kuò",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w030",
     "word": "不用",
-    "pinyin": "buyong",
-    "difficulty": "easy",
+    "pinyin": "bú yòng",
+    "difficulty": "medium",
     "errorType": [
+      "后鼻音",
+      "声调(二声)",
       "声调(四声)"
     ]
   },
   {
     "id": "w031",
     "word": "培养",
-    "pinyin": "培养",
-    "difficulty": "easy",
+    "pinyin": "péi yǎng",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "后鼻音",
+      "声调(二声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w032",
     "word": "编纂",
-    "pinyin": "编zuǎn",
-    "difficulty": "easy",
+    "pinyin": "biān zuǎn",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w033",
     "word": "扎实",
-    "pinyin": "zhā实",
+    "pinyin": "zhā shi",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "翘舌音"
+      "翘舌音",
+      "声调(一声)"
     ]
   },
   {
     "id": "w034",
     "word": "推测",
-    "pinyin": "tuīcè",
+    "pinyin": "tuī cè",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "平舌音"
+      "平舌音",
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w035",
     "word": "吵嘴",
-    "pinyin": "chǎo嘴",
-    "difficulty": "easy",
+    "pinyin": "chǎo zuǐ",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "翘舌音",
+      "平舌音",
+      "声调(三声)"
     ]
   },
   {
     "id": "w036",
     "word": "均匀",
-    "pinyin": "均yún",
-    "difficulty": "easy",
+    "pinyin": "jūn yún",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w037",
     "word": "收成",
-    "pinyin": "cheng",
+    "pinyin": "shōu chéng",
     "difficulty": "medium",
     "errorType": [
       "翘舌音",
       "后鼻音",
+      "声调(一声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w038",
     "word": "然而",
-    "pinyin": "raner",
+    "pinyin": "rán ér",
     "difficulty": "medium",
     "errorType": [
       "翘舌音",
+      "前鼻音",
       "声调(二声)"
     ]
   },
   {
     "id": "w039",
     "word": "满口",
-    "pinyin": "mankou",
-    "difficulty": "easy",
+    "pinyin": "mǎn kǒu",
+    "difficulty": "medium",
     "errorType": [
+      "前鼻音",
       "声调(三声)"
     ]
   },
   {
     "id": "w040",
     "word": "怪异",
-    "pinyin": "guàiyì",
+    "pinyin": "guài yì",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "声调(四声)"
     ]
   },
   {
     "id": "w041",
     "word": "听话",
-    "pinyin": "ting",
+    "pinyin": "tīng huà",
     "difficulty": "medium",
     "errorType": [
+      "f/h混淆",
       "后鼻音",
       "声调(一声)",
-      "常用字"
+      "声调(四声)"
     ]
   },
   {
     "id": "w042",
     "word": "大学生",
-    "pinyin": "daxuesheng",
+    "pinyin": "dà xué shēng",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "后鼻音",
       "声调(四声)",
       "声调(二声)",
       "声调(一声)"
@@ -418,9 +484,10 @@
   {
     "id": "w043",
     "word": "发作",
-    "pinyin": "fazuo",
+    "pinyin": "fā zuò",
     "difficulty": "medium",
     "errorType": [
+      "平舌音",
       "f/h混淆",
       "声调(一声)",
       "声调(四声)"
@@ -429,112 +496,126 @@
   {
     "id": "w044",
     "word": "侵略",
-    "pinyin": "qīnlvè",
+    "pinyin": "qīn lvè",
     "difficulty": "medium",
     "errorType": [
+      "边音(l)",
       "前鼻音",
-      "常用字"
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w045",
     "word": "钢铁",
-    "pinyin": "gāngtiě",
-    "difficulty": "easy",
+    "pinyin": "gāng tiě",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w046",
     "word": "孩子",
-    "pinyin": "háizǐ",
+    "pinyin": "hái zi",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "平舌音",
-      "声调(三声)"
+      "f/h混淆",
+      "声调(二声)"
     ]
   },
   {
     "id": "w047",
     "word": "光荣",
-    "pinyin": "guang",
+    "pinyin": "guāng róng",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "后鼻音",
       "声调(一声)",
-      "常用字"
+      "声调(二声)"
     ]
   },
   {
     "id": "w048",
     "word": "前仆后继",
-    "pinyin": "qianhou",
+    "pinyin": "qián pū hòu jì",
     "difficulty": "medium",
     "errorType": [
+      "f/h混淆",
+      "前鼻音",
       "声调(二声)",
-      "常用字",
-      "f/h混淆"
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w049",
     "word": "参考",
-    "pinyin": "参考",
+    "pinyin": "cān kǎo",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
       "前鼻音",
-      "常用字"
+      "声调(一声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w050",
     "word": "船长",
-    "pinyin": "chuanchang",
-    "difficulty": "easy",
+    "pinyin": "chuán cháng",
+    "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
       "声调(二声)"
     ]
   },
   {
     "id": "w051",
     "word": "艺术家",
-    "pinyin": "jia",
+    "pinyin": "yì shù jiā",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "翘舌音",
+      "声调(四声)",
       "声调(一声)"
     ]
   },
   {
     "id": "w052",
     "word": "聪明",
-    "pinyin": "ming",
+    "pinyin": "cōng ming",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "平舌音",
       "后鼻音",
-      "声调(二声)"
+      "声调(一声)"
     ]
   },
   {
     "id": "w053",
     "word": "她们",
-    "pinyin": "men",
-    "difficulty": "easy",
+    "pinyin": "tā men",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "声调(一声)"
     ]
   },
   {
     "id": "w054",
     "word": "红军",
-    "pinyin": "hongjun",
+    "pinyin": "hóng jūn",
     "difficulty": "medium",
     "errorType": [
       "f/h混淆",
+      "前鼻音",
+      "后鼻音",
       "声调(二声)",
       "声调(一声)"
     ]
@@ -542,247 +623,282 @@
   {
     "id": "w055",
     "word": "煤炭",
-    "pinyin": "煤炭",
-    "difficulty": "easy",
+    "pinyin": "méi tàn",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w056",
     "word": "工厂",
-    "pinyin": "gong",
+    "pinyin": "gōng chǎng",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
       "后鼻音",
       "声调(一声)",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w057",
     "word": "发烧",
-    "pinyin": "fā烧",
+    "pinyin": "fā shāo",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
       "f/h混淆",
-      "声调(一声)",
-      "常用字"
+      "声调(一声)"
     ]
   },
   {
     "id": "w058",
     "word": "嘟囔",
-    "pinyin": "嘟囔",
-    "difficulty": "easy",
+    "pinyin": "dū nāng",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "鼻音(n)",
+      "后鼻音",
+      "声调(一声)"
     ]
   },
   {
     "id": "w059",
     "word": "黄瓜",
-    "pinyin": "huang",
+    "pinyin": "huáng guā",
     "difficulty": "medium",
     "errorType": [
       "f/h混淆",
+      "后鼻音",
       "声调(二声)",
-      "常用字"
+      "声调(一声)"
     ]
   },
   {
     "id": "w060",
     "word": "效率",
-    "pinyin": "效率",
-    "difficulty": "easy",
+    "pinyin": "xiào lǜ",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "边音(l)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w061",
     "word": "别针儿",
-    "pinyin": "别针ér",
+    "pinyin": "bié zhēn ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "翘舌音",
       "前鼻音",
-      "声调(二声)"
+      "儿化",
+      "声调(二声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w062",
     "word": "责怪",
-    "pinyin": "责guài",
+    "pinyin": "zé guài",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
-      "常用字"
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w063",
     "word": "大娘",
-    "pinyin": "dà娘",
+    "pinyin": "dà niáng",
     "difficulty": "medium",
     "errorType": [
+      "鼻音(n)",
+      "后鼻音",
       "声调(四声)",
-      "常用字"
+      "声调(二声)"
     ]
   },
   {
     "id": "w064",
     "word": "喷洒",
-    "pinyin": "喷洒",
+    "pinyin": "pēn sǎ",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "平舌音"
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w065",
     "word": "保温",
-    "pinyin": "保温",
+    "pinyin": "bǎo wēn",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "前鼻音"
+      "前鼻音",
+      "声调(三声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w066",
     "word": "产品",
-    "pinyin": "产品",
-    "difficulty": "easy",
+    "pinyin": "chǎn pǐn",
+    "difficulty": "medium",
     "errorType": [
-      "前鼻音"
+      "翘舌音",
+      "前鼻音",
+      "声调(三声)"
     ]
   },
   {
     "id": "w067",
     "word": "佛学",
-    "pinyin": "xue",
+    "pinyin": "fó xué",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "f/h混淆",
       "声调(二声)"
     ]
   },
   {
     "id": "w068",
     "word": "童话",
-    "pinyin": "童huà",
+    "pinyin": "tóng huà",
     "difficulty": "medium",
     "errorType": [
+      "f/h混淆",
       "后鼻音",
-      "常用字"
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w069",
     "word": "男女",
-    "pinyin": "nan",
+    "pinyin": "nán nǚ",
     "difficulty": "medium",
     "errorType": [
       "鼻音(n)",
+      "前鼻音",
       "声调(二声)",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w070",
     "word": "做活儿",
-    "pinyin": "做活ér",
+    "pinyin": "zuò huó ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "平舌音",
+      "f/h混淆",
+      "儿化",
+      "声调(四声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w071",
     "word": "缘故",
-    "pinyin": "缘故",
-    "difficulty": "easy",
+    "pinyin": "yuán gù",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w072",
     "word": "谬论",
-    "pinyin": "mìu论",
-    "difficulty": "easy",
+    "pinyin": "miù lùn",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "边音(l)",
+      "前鼻音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w073",
     "word": "穷困",
-    "pinyin": "qíong困",
+    "pinyin": "qióng kùn",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "前鼻音"
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w074",
     "word": "今日",
-    "pinyin": "今rì",
+    "pinyin": "jīn rì",
     "difficulty": "medium",
     "errorType": [
-      "前鼻音",
       "翘舌音",
+      "前鼻音",
+      "声调(一声)",
       "声调(四声)"
     ]
   },
   {
     "id": "w075",
     "word": "完整",
-    "pinyin": "完整",
+    "pinyin": "wán zhěng",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "后鼻音"
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w076",
     "word": "决定性",
-    "pinyin": "决定性",
+    "pinyin": "jué dìng xìng",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "前鼻音",
-      "后鼻音"
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w077",
     "word": "斜坡",
-    "pinyin": "xie",
+    "pinyin": "xié pō",
     "difficulty": "medium",
     "errorType": [
       "声调(二声)",
-      "常用字"
+      "声调(一声)"
     ]
   },
   {
     "id": "w078",
     "word": "疲倦",
-    "pinyin": "疲倦",
-    "difficulty": "easy",
+    "pinyin": "pí juàn",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w079",
     "word": "爱国",
-    "pinyin": "aiguo",
+    "pinyin": "ài guó",
     "difficulty": "medium",
     "errorType": [
       "声调(四声)",
@@ -792,112 +908,124 @@
   {
     "id": "w080",
     "word": "能量",
-    "pinyin": "neng",
+    "pinyin": "néng liàng",
     "difficulty": "medium",
     "errorType": [
-      "后鼻音",
       "鼻音(n)",
-      "声调(二声)"
+      "边音(l)",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w081",
     "word": "英雄",
-    "pinyin": "yīng雄",
+    "pinyin": "yīng xióng",
     "difficulty": "medium",
     "errorType": [
       "后鼻音",
-      "常用字"
+      "声调(一声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w082",
     "word": "口罩儿",
-    "pinyin": "kouer",
+    "pinyin": "kǒu zhào ér",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "儿化",
       "声调(三声)",
-      "常用字",
+      "声调(四声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w083",
     "word": "让位",
-    "pinyin": "让位",
+    "pinyin": "ràng wèi",
     "difficulty": "medium",
     "errorType": [
       "翘舌音",
-      "常用字"
+      "后鼻音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w084",
     "word": "叶子",
-    "pinyin": "叶zǐ",
+    "pinyin": "yè zi",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "平舌音",
-      "声调(三声)"
+      "声调(四声)"
     ]
   },
   {
     "id": "w085",
     "word": "封锁",
-    "pinyin": "封锁",
+    "pinyin": "fēng suǒ",
     "difficulty": "medium",
     "errorType": [
+      "平舌音",
+      "f/h混淆",
       "后鼻音",
-      "平舌音"
+      "声调(一声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w086",
     "word": "核算",
-    "pinyin": "核算",
+    "pinyin": "hé suàn",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "平舌音"
+      "平舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w087",
     "word": "而且",
-    "pinyin": "ér且",
+    "pinyin": "ér qiě",
     "difficulty": "medium",
     "errorType": [
       "声调(二声)",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w088",
     "word": "转脸",
-    "pinyin": "lian",
+    "pinyin": "zhuǎn liǎn",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "翘舌音",
       "边音(l)",
+      "前鼻音",
       "声调(三声)"
     ]
   },
   {
     "id": "w089",
     "word": "人群",
-    "pinyin": "ren",
+    "pinyin": "rén qún",
     "difficulty": "medium",
     "errorType": [
       "翘舌音",
-      "声调(二声)",
-      "前鼻音"
+      "前鼻音",
+      "声调(二声)"
     ]
   },
   {
     "id": "w090",
     "word": "飞快",
-    "pinyin": "feikuai",
+    "pinyin": "fēi kuài",
     "difficulty": "medium",
     "errorType": [
       "f/h混淆",
@@ -908,310 +1036,349 @@
   {
     "id": "w091",
     "word": "牙签儿",
-    "pinyin": "牙签ér",
+    "pinyin": "yá qiān ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "声调(二声)"
+      "前鼻音",
+      "儿化",
+      "声调(二声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w092",
     "word": "丢掉",
-    "pinyin": "丢掉",
-    "difficulty": "easy",
+    "pinyin": "diū diào",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w093",
     "word": "往来",
-    "pinyin": "lai",
+    "pinyin": "wǎng lái",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "边音(l)",
+      "后鼻音",
+      "声调(三声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w094",
     "word": "罪恶",
-    "pinyin": "罪è",
+    "pinyin": "zuì è",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
-      "常用字"
+      "声调(四声)"
     ]
   },
   {
     "id": "w095",
     "word": "首饰",
-    "pinyin": "首饰",
+    "pinyin": "shǒu shì",
     "difficulty": "medium",
     "errorType": [
       "翘舌音",
-      "常用字"
+      "声调(三声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w096",
     "word": "此起彼伏",
-    "pinyin": "此起彼伏",
+    "pinyin": "cǐ qǐ bǐ fú",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
-      "常用字"
+      "f/h混淆",
+      "声调(三声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w097",
     "word": "电压",
-    "pinyin": "电压",
+    "pinyin": "diàn yā",
     "difficulty": "medium",
     "errorType": [
       "前鼻音",
-      "常用字"
+      "声调(四声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w098",
     "word": "火候",
-    "pinyin": "huo",
+    "pinyin": "huǒ hòu",
     "difficulty": "medium",
     "errorType": [
       "f/h混淆",
       "声调(三声)",
-      "常用字"
+      "声调(四声)"
     ]
   },
   {
     "id": "w099",
     "word": "争论",
-    "pinyin": "争论",
+    "pinyin": "zhēng lùn",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "前鼻音",
       "后鼻音",
-      "常用字"
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w100",
     "word": "拥有难怪",
-    "pinyin": "you",
+    "pinyin": "yōng yǒu nán guài",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "声调(三声)"
+      "鼻音(n)",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w101",
     "word": "被窝儿",
-    "pinyin": "被窝ér",
+    "pinyin": "bèi wō ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "儿化",
+      "声调(四声)",
+      "声调(一声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w102",
     "word": "维持",
-    "pinyin": "维持",
+    "pinyin": "wéi chí",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "翘舌音"
+      "翘舌音",
+      "声调(二声)"
     ]
   },
   {
     "id": "w103",
     "word": "跨度",
-    "pinyin": "跨度",
-    "difficulty": "easy",
+    "pinyin": "kuà dù",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "声调(四声)"
     ]
   },
   {
     "id": "w104",
     "word": "谬误",
-    "pinyin": "mìu误",
-    "difficulty": "easy",
+    "pinyin": "miù wù",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "声调(四声)"
     ]
   },
   {
     "id": "w105",
     "word": "贫穷",
-    "pinyin": "贫qíong",
-    "difficulty": "easy",
+    "pinyin": "pín qióng",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
     ]
   },
   {
     "id": "w106",
     "word": "资格",
-    "pinyin": "资格",
+    "pinyin": "zī gé",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
-      "常用字"
+      "声调(一声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w107",
     "word": "媒人",
-    "pinyin": "ren",
+    "pinyin": "méi rén",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "翘舌音",
+      "前鼻音",
       "声调(二声)"
     ]
   },
   {
     "id": "w108",
     "word": "规律",
-    "pinyin": "规律",
-    "difficulty": "easy",
+    "pinyin": "guī lǜ",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "边音(l)",
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w109",
     "word": "情况",
-    "pinyin": "qing",
+    "pinyin": "qíng kuàng",
     "difficulty": "medium",
     "errorType": [
       "后鼻音",
       "声调(二声)",
-      "常用字"
+      "声调(四声)"
     ]
   },
   {
     "id": "w110",
     "word": "客气",
-    "pinyin": "客气",
-    "difficulty": "easy",
+    "pinyin": "kè qì",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "声调(四声)"
     ]
   },
   {
     "id": "w111",
     "word": "军阀",
-    "pinyin": "jun",
+    "pinyin": "jūn fá",
     "difficulty": "medium",
     "errorType": [
+      "f/h混淆",
+      "前鼻音",
       "声调(一声)",
-      "常用字"
+      "声调(二声)"
     ]
   },
   {
     "id": "w112",
     "word": "名称",
-    "pinyin": "名称",
+    "pinyin": "míng chēng",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
       "后鼻音",
-      "前鼻音"
+      "声调(二声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w113",
     "word": "教师",
-    "pinyin": "shi",
+    "pinyin": "jiào shī",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "翘舌音",
+      "声调(四声)",
       "声调(一声)"
     ]
   },
   {
     "id": "w114",
     "word": "缺少",
-    "pinyin": "shao",
+    "pinyin": "quē shǎo",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "声调(四声)"
+      "翘舌音",
+      "声调(一声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w115",
     "word": "从而",
-    "pinyin": "从ér",
+    "pinyin": "cóng ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "平舌音",
+      "后鼻音",
       "声调(二声)"
     ]
   },
   {
     "id": "w116",
     "word": "好歹",
-    "pinyin": "hao",
+    "pinyin": "hǎo dǎi",
     "difficulty": "medium",
     "errorType": [
       "f/h混淆",
-      "声调(三声)",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w117",
     "word": "乡村",
-    "pinyin": "乡村",
+    "pinyin": "xiāng cūn",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "前鼻音"
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)"
     ]
   },
   {
     "id": "w118",
     "word": "佛寺",
-    "pinyin": "fó寺",
+    "pinyin": "fó sì",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "平舌音"
+      "平舌音",
+      "f/h混淆",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w119",
     "word": "合作社",
-    "pinyin": "zuo",
+    "pinyin": "hé zuò shè",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "翘舌音",
+      "平舌音",
+      "f/h混淆",
+      "声调(二声)",
       "声调(四声)"
     ]
   },
   {
     "id": "w120",
     "word": "上层",
-    "pinyin": "shang",
+    "pinyin": "shàng céng",
     "difficulty": "medium",
     "errorType": [
-      "声调(四声)",
+      "翘舌音",
       "平舌音",
-      "后鼻音"
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w121",
     "word": "跳高儿",
-    "pinyin": "tiaogaoer",
+    "pinyin": "tiào gāo ér",
     "difficulty": "medium",
     "errorType": [
+      "儿化",
       "声调(四声)",
       "声调(一声)",
       "声调(二声)"
@@ -1220,142 +1387,159 @@
   {
     "id": "w122",
     "word": "东欧",
-    "pinyin": "dong",
+    "pinyin": "dōng ōu",
     "difficulty": "medium",
     "errorType": [
-      "前鼻音",
-      "声调(一声)",
-      "常用字"
+      "后鼻音",
+      "声调(一声)"
     ]
   },
   {
     "id": "w123",
     "word": "撇开",
-    "pinyin": "kai",
+    "pinyin": "piē kāi",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "声调(一声)"
     ]
   },
   {
     "id": "w124",
     "word": "选拔",
-    "pinyin": "选拔",
-    "difficulty": "easy",
+    "pinyin": "xuǎn bá",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "前鼻音",
+      "声调(三声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w125",
     "word": "妇女",
-    "pinyin": "妇nǚ",
-    "difficulty": "easy",
+    "pinyin": "fù nǚ",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "鼻音(n)",
+      "f/h混淆",
+      "声调(四声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w126",
     "word": "小瓮儿",
-    "pinyin": "xiaoer",
+    "pinyin": "xiǎo wèng ér",
     "difficulty": "medium",
     "errorType": [
+      "后鼻音",
+      "儿化",
       "声调(三声)",
-      "常用字",
+      "声调(四声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w127",
     "word": "云端",
-    "pinyin": "yun",
+    "pinyin": "yún duān",
     "difficulty": "medium",
     "errorType": [
+      "前鼻音",
       "声调(二声)",
-      "常用字"
+      "声调(一声)"
     ]
   },
   {
     "id": "w128",
     "word": "头脑",
-    "pinyin": "tou",
+    "pinyin": "tóu nǎo",
     "difficulty": "medium",
     "errorType": [
+      "鼻音(n)",
       "声调(二声)",
-      "常用字"
+      "声调(三声)"
     ]
   },
   {
     "id": "w129",
     "word": "温柔",
-    "pinyin": "温柔",
+    "pinyin": "wēn róu",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
       "前鼻音",
-      "翘舌音"
+      "声调(一声)",
+      "声调(二声)"
     ]
   },
   {
     "id": "w130",
     "word": "诊所",
-    "pinyin": "诊所",
+    "pinyin": "zhěn suǒ",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
-      "平舌音"
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "声调(三声)"
     ]
   },
   {
     "id": "w131",
     "word": "水灾",
-    "pinyin": "shui",
+    "pinyin": "shuǐ zāi",
     "difficulty": "medium",
     "errorType": [
       "翘舌音",
+      "平舌音",
       "声调(三声)",
-      "平舌音"
+      "声调(一声)"
     ]
   },
   {
     "id": "w132",
     "word": "蒜瓣儿",
-    "pinyin": "suànbànér",
+    "pinyin": "suàn bàn ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "平舌音",
       "前鼻音",
+      "儿化",
+      "声调(四声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w133",
     "word": "昂然",
-    "pinyin": "ran",
+    "pinyin": "áng rán",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "翘舌音",
+      "前鼻音",
+      "后鼻音",
       "声调(二声)"
     ]
   },
   {
     "id": "w134",
     "word": "状态",
-    "pinyin": "状态",
-    "difficulty": "easy",
+    "pinyin": "zhuàng tài",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w135",
     "word": "处理",
-    "pinyin": "处lǐ",
+    "pinyin": "chǔ lǐ",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "翘舌音",
       "边音(l)",
       "声调(三声)"
     ]
@@ -1363,151 +1547,7006 @@
   {
     "id": "w136",
     "word": "临终",
-    "pinyin": "临终",
+    "pinyin": "lín zhōng",
     "difficulty": "medium",
     "errorType": [
+      "翘舌音",
+      "边音(l)",
       "前鼻音",
-      "常用字"
+      "后鼻音",
+      "声调(二声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w137",
     "word": "专家凉快",
-    "pinyin": "jiakuai",
+    "pinyin": "zhuān jiā liáng kuai",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "翘舌音",
+      "边音(l)",
+      "前鼻音",
+      "后鼻音",
       "声调(一声)",
-      "声调(四声)"
+      "声调(二声)"
     ]
   },
   {
     "id": "w138",
     "word": "潜移默化",
-    "pinyin": "潜移默化",
-    "difficulty": "easy",
+    "pinyin": "qián yí mò huà",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w139",
     "word": "沙漠",
-    "pinyin": "shā漠",
-    "difficulty": "easy",
+    "pinyin": "shā mò",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "翘舌音",
+      "声调(一声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w140",
     "word": "主人翁",
-    "pinyin": "ren",
+    "pinyin": "zhǔ rén wēng",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
       "翘舌音",
-      "声调(二声)"
+      "前鼻音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(二声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w141",
     "word": "去年",
-    "pinyin": "qunian",
+    "pinyin": "qù nián",
     "difficulty": "medium",
     "errorType": [
-      "声调(四声)",
       "鼻音(n)",
+      "前鼻音",
+      "声调(四声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w142",
     "word": "红娘",
-    "pinyin": "hong",
+    "pinyin": "hóng niáng",
     "difficulty": "medium",
     "errorType": [
+      "鼻音(n)",
       "f/h混淆",
-      "声调(二声)",
-      "常用字"
+      "后鼻音",
+      "声调(二声)"
     ]
   },
   {
     "id": "w143",
     "word": "似乎",
-    "pinyin": "似乎",
+    "pinyin": "sì hū",
     "difficulty": "medium",
     "errorType": [
       "平舌音",
-      "常用字"
+      "f/h混淆",
+      "声调(四声)",
+      "声调(一声)"
     ]
   },
   {
     "id": "w144",
     "word": "平民",
-    "pinyin": "pingmin",
+    "pinyin": "píng mín",
     "difficulty": "medium",
     "errorType": [
+      "前鼻音",
       "后鼻音",
-      "声调(二声)",
-      "前鼻音"
+      "声调(二声)"
     ]
   },
   {
     "id": "w145",
     "word": "群落",
-    "pinyin": "qún落",
+    "pinyin": "qún luò",
     "difficulty": "medium",
     "errorType": [
+      "边音(l)",
       "前鼻音",
-      "常用字"
+      "声调(二声)",
+      "声调(四声)"
     ]
   },
   {
     "id": "w146",
     "word": "穷苦",
-    "pinyin": "qíongkǔ",
+    "pinyin": "qióng kǔ",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "后鼻音",
+      "声调(二声)",
       "声调(三声)"
     ]
   },
   {
     "id": "w147",
     "word": "肚脐儿",
-    "pinyin": "肚脐ér",
+    "pinyin": "dù qí ér",
     "difficulty": "medium",
     "errorType": [
-      "常用字",
+      "儿化",
+      "声调(四声)",
       "声调(二声)"
     ]
   },
   {
     "id": "w148",
     "word": "设备",
-    "pinyin": "设备",
-    "difficulty": "easy",
+    "pinyin": "shè bèi",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "翘舌音",
+      "声调(四声)"
     ]
   },
   {
     "id": "w149",
     "word": "旋转",
-    "pinyin": "旋转",
-    "difficulty": "easy",
+    "pinyin": "xuán zhuǎn",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
     ]
   },
   {
     "id": "w150",
     "word": "接洽",
-    "pinyin": "接洽",
-    "difficulty": "easy",
+    "pinyin": "jiē qià",
+    "difficulty": "medium",
     "errorType": [
-      "常用字"
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w151",
+    "word": "拥有",
+    "pinyin": "yōng yǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w152",
+    "word": "难怪",
+    "pinyin": "nán guài",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w153",
+    "word": "专家",
+    "pinyin": "zhuān jiā",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w154",
+    "word": "凉快",
+    "pinyin": "liáng kuai",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w155",
+    "word": "包涵",
+    "pinyin": "bāo hán",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w156",
+    "word": "干脆",
+    "pinyin": "gān cuì",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w157",
+    "word": "日益",
+    "pinyin": "rì yì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w158",
+    "word": "障碍",
+    "pinyin": "zhàng ài",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w159",
+    "word": "测量",
+    "pinyin": "cè liáng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w160",
+    "word": "婴儿",
+    "pinyin": "yīng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "儿化",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w161",
+    "word": "开玩笑",
+    "pinyin": "kāi wán xiào",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w162",
+    "word": "铁索",
+    "pinyin": "tiě suǒ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w163",
+    "word": "脑子",
+    "pinyin": "nǎo zǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w164",
+    "word": "配偶",
+    "pinyin": "pèi ǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w165",
+    "word": "作怪",
+    "pinyin": "zuò guài",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w166",
+    "word": "伤员",
+    "pinyin": "shāng yuán",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w167",
+    "word": "利用",
+    "pinyin": "lì yòng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w168",
+    "word": "打垮",
+    "pinyin": "dǎ kuǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w169",
+    "word": "痛快",
+    "pinyin": "tòng kuài",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w170",
+    "word": "略微",
+    "pinyin": "lvè wēi",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w171",
+    "word": "邮戳儿",
+    "pinyin": "yóu chuō ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "儿化",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w172",
+    "word": "创造",
+    "pinyin": "chuàng zào",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w173",
+    "word": "票据",
+    "pinyin": "piào jù",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w174",
+    "word": "苍白",
+    "pinyin": "cāng bái",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w175",
+    "word": "沸腾",
+    "pinyin": "fèi téng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w176",
+    "word": "佛经",
+    "pinyin": "fó jīng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w177",
+    "word": "酒盅儿",
+    "pinyin": "jiǔ zhōng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w178",
+    "word": "坚持",
+    "pinyin": "jiān chí",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w179",
+    "word": "整个",
+    "pinyin": "zhěng gè",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w180",
+    "word": "霜冻",
+    "pinyin": "shuāng dòng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w181",
+    "word": "分成",
+    "pinyin": "fēn chéng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w182",
+    "word": "先生",
+    "pinyin": "xiān shēng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w183",
+    "word": "绿化",
+    "pinyin": "lǜ huà",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "f/h混淆",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w184",
+    "word": "角色",
+    "pinyin": "jué sè",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w185",
+    "word": "导体",
+    "pinyin": "dǎo tǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w186",
+    "word": "扇面儿",
+    "pinyin": "shàn miàn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w187",
+    "word": "宾馆",
+    "pinyin": "bīn guǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w188",
+    "word": "循环",
+    "pinyin": "xún huán",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w189",
+    "word": "下跌",
+    "pinyin": "xià diē",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w190",
+    "word": "困难",
+    "pinyin": "kùn nán",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w191",
+    "word": "规矩",
+    "pinyin": "guī jǔ",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w192",
+    "word": "作家",
+    "pinyin": "zuò jiā",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w193",
+    "word": "战略",
+    "pinyin": "zhàn lvè",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w194",
+    "word": "增强",
+    "pinyin": "zēng qiáng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w195",
+    "word": "谩骂",
+    "pinyin": "màn mà",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w196",
+    "word": "细菌",
+    "pinyin": "xì jūn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w197",
+    "word": "篡改",
+    "pinyin": "cuàn gǎi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w198",
+    "word": "火锅儿",
+    "pinyin": "huǒ guō ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "儿化",
+      "声调(三声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w199",
+    "word": "履行",
+    "pinyin": "lǚ xíng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w200",
+    "word": "魅力",
+    "pinyin": "mèi lì",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w201",
+    "word": "穷尽",
+    "pinyin": "qióng jìn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w202",
+    "word": "飞船",
+    "pinyin": "fēi chuán",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w203",
+    "word": "动画片",
+    "pinyin": "dòng huà piàn",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w204",
+    "word": "丧失",
+    "pinyin": "sàng shī",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w205",
+    "word": "钟表",
+    "pinyin": "zhōng biǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w206",
+    "word": "衰弱",
+    "pinyin": "shuāi ruò",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w207",
+    "word": "拳头",
+    "pinyin": "quán tou",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w208",
+    "word": "佛法",
+    "pinyin": "fó fǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w209",
+    "word": "腐朽",
+    "pinyin": "fǔ xiǔ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w210",
+    "word": "医院",
+    "pinyin": "yī yuàn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w211",
+    "word": "政委",
+    "pinyin": "zhèng wěi",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w212",
+    "word": "确定",
+    "pinyin": "què dìng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w213",
+    "word": "从此",
+    "pinyin": "cóng cǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w214",
+    "word": "天鹅",
+    "pinyin": "tiān é",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w215",
+    "word": "因而",
+    "pinyin": "yīn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w216",
+    "word": "贫困",
+    "pinyin": "pín kùn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w217",
+    "word": "脖颈儿",
+    "pinyin": "bó gěng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "儿化",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w218",
+    "word": "尿素",
+    "pinyin": "niào sù",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w219",
+    "word": "节日",
+    "pinyin": "jié rì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w220",
+    "word": "有趣",
+    "pinyin": "yǒu qù",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w221",
+    "word": "爽朗",
+    "pinyin": "shuǎng lǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w222",
+    "word": "来往",
+    "pinyin": "lái wǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w223",
+    "word": "认真",
+    "pinyin": "rèn zhēn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w224",
+    "word": "稳当",
+    "pinyin": "wěn dāng",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w225",
+    "word": "寻找",
+    "pinyin": "xún zhǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w226",
+    "word": "热爱",
+    "pinyin": "rè ài",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w227",
+    "word": "分裂",
+    "pinyin": "fēn liè",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w228",
+    "word": "葡萄糖",
+    "pinyin": "pú táo táng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w229",
+    "word": "报酬",
+    "pinyin": "bào chóu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w230",
+    "word": "黑暗",
+    "pinyin": "hēi àn",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w231",
+    "word": "门口儿",
+    "pinyin": "mén kǒu ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w232",
+    "word": "拍子",
+    "pinyin": "pāi zi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w233",
+    "word": "不快",
+    "pinyin": "bú kuài",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w234",
+    "word": "吹奏典雅",
+    "pinyin": "chuī zòu diǎn yǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w235",
+    "word": "大褂儿",
+    "pinyin": "dà guà ér",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w236",
+    "word": "为了",
+    "pinyin": "wèi le",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w237",
+    "word": "森林",
+    "pinyin": "sēn lín",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "边音(l)",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w238",
+    "word": "夸张",
+    "pinyin": "kuā zhāng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w239",
+    "word": "华贵",
+    "pinyin": "huá guì",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w240",
+    "word": "手绢儿",
+    "pinyin": "shǒu juàn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w241",
+    "word": "舞女",
+    "pinyin": "wǔ nǚ",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w242",
+    "word": "创造性",
+    "pinyin": "chuàng zào xìng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w243",
+    "word": "翱翔",
+    "pinyin": "áo xiáng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w244",
+    "word": "描述",
+    "pinyin": "miáo shù",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w245",
+    "word": "下降",
+    "pinyin": "xià jiàng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w246",
+    "word": "佛典",
+    "pinyin": "fó diǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w247",
+    "word": "猫头鹰",
+    "pinyin": "māo tóu yīng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w248",
+    "word": "完备",
+    "pinyin": "wán bèi",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w249",
+    "word": "快艇",
+    "pinyin": "kuài tǐng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w250",
+    "word": "叛变",
+    "pinyin": "pàn biàn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w251",
+    "word": "灰色",
+    "pinyin": "huī sè",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w252",
+    "word": "皎洁",
+    "pinyin": "jiǎo jié",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w253",
+    "word": "功能",
+    "pinyin": "gōng néng",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w254",
+    "word": "状元",
+    "pinyin": "zhuàng yuán",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w255",
+    "word": "彼此",
+    "pinyin": "bǐ cǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w256",
+    "word": "恰如",
+    "pinyin": "qià rú",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w257",
+    "word": "培育",
+    "pinyin": "péi yù",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w258",
+    "word": "丰硕",
+    "pinyin": "fēng shuò",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w259",
+    "word": "红火",
+    "pinyin": "hóng huǒ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w260",
+    "word": "迫使",
+    "pinyin": "pò shǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w261",
+    "word": "油田",
+    "pinyin": "yóu tián",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w262",
+    "word": "群体",
+    "pinyin": "qún tǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w263",
+    "word": "上课",
+    "pinyin": "shàng kè",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w264",
+    "word": "牛顿",
+    "pinyin": "niú dùn",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w265",
+    "word": "撒谎",
+    "pinyin": "sā huǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w266",
+    "word": "胸脯",
+    "pinyin": "xiōng pú",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w267",
+    "word": "程序",
+    "pinyin": "chéng xù",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w268",
+    "word": "翅膀",
+    "pinyin": "chì bǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w269",
+    "word": "农村",
+    "pinyin": "nóng cūn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w270",
+    "word": "在这儿",
+    "pinyin": "zài zhè ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w271",
+    "word": "外力",
+    "pinyin": "wài lì",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w272",
+    "word": "底子",
+    "pinyin": "dǐ zi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w273",
+    "word": "命运",
+    "pinyin": "mìng yùn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w274",
+    "word": "展览",
+    "pinyin": "zhǎn lǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w275",
+    "word": "刀刃儿",
+    "pinyin": "dāo rèn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "儿化",
+      "声调(一声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w276",
+    "word": "缺乏",
+    "pinyin": "quē fá",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w277",
+    "word": "背后",
+    "pinyin": "bèi hòu",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w278",
+    "word": "特别",
+    "pinyin": "tè bié",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w279",
+    "word": "冲刷",
+    "pinyin": "chōng shuā",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w280",
+    "word": "农民",
+    "pinyin": "nóng mín",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w281",
+    "word": "胆固醇",
+    "pinyin": "dǎn gù chún",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(三声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w282",
+    "word": "馒头",
+    "pinyin": "mán tou",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w283",
+    "word": "浅显",
+    "pinyin": "qiǎn xiǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w284",
+    "word": "加速",
+    "pinyin": "jiā sù",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w285",
+    "word": "所有制",
+    "pinyin": "suǒ yǒu zhì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w286",
+    "word": "标准",
+    "pinyin": "biāo zhǔn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w287",
+    "word": "恰好",
+    "pinyin": "qià hǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w288",
+    "word": "配套",
+    "pinyin": "pèi tào",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w289",
+    "word": "藏身",
+    "pinyin": "cáng shēn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w290",
+    "word": "快乐",
+    "pinyin": "kuài lè",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w291",
+    "word": "双方",
+    "pinyin": "shuāng fāng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w292",
+    "word": "明确",
+    "pinyin": "míng què",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w293",
+    "word": "军队",
+    "pinyin": "jūn duì",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w294",
+    "word": "未来",
+    "pinyin": "wèi lái",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w295",
+    "word": "四周",
+    "pinyin": "sì zhōu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w296",
+    "word": "挨个儿",
+    "pinyin": "āi gè er",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w297",
+    "word": "跳蚤",
+    "pinyin": "tiào zao",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w298",
+    "word": "力量",
+    "pinyin": "lì liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w299",
+    "word": "胡同儿",
+    "pinyin": "hú tòng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "儿化",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w300",
+    "word": "蜗牛",
+    "pinyin": "wō niú",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w301",
+    "word": "昂贵",
+    "pinyin": "áng guì",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w302",
+    "word": "仍然",
+    "pinyin": "réng rán",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w303",
+    "word": "原因",
+    "pinyin": "yuán yīn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w304",
+    "word": "小鞋儿",
+    "pinyin": "xiǎo xié ér",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w305",
+    "word": "麻醉",
+    "pinyin": "má zuì",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w306",
+    "word": "穷人",
+    "pinyin": "qióng rén",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w307",
+    "word": "富翁",
+    "pinyin": "fù wēng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w308",
+    "word": "雨点儿",
+    "pinyin": "yǔ diǎn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w309",
+    "word": "遵循",
+    "pinyin": "zūn xún",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w310",
+    "word": "何况",
+    "pinyin": "hé kuàng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w311",
+    "word": "陡坡",
+    "pinyin": "dǒu pō",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w312",
+    "word": "轻而易举",
+    "pinyin": "qīng ér yì jǔ",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w313",
+    "word": "丢人",
+    "pinyin": "diū rén",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w314",
+    "word": "含量",
+    "pinyin": "hán liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "f/h混淆",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w315",
+    "word": "村庄",
+    "pinyin": "cūn zhuāng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w316",
+    "word": "开花",
+    "pinyin": "kāi huā",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w317",
+    "word": "灯泡儿",
+    "pinyin": "dēng pào ér",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "儿化",
+      "声调(一声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w318",
+    "word": "特色",
+    "pinyin": "tè sè",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w319",
+    "word": "定额",
+    "pinyin": "dìng é",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w320",
+    "word": "观赏",
+    "pinyin": "guān shǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w321",
+    "word": "部分",
+    "pinyin": "bù fen",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w322",
+    "word": "捐税",
+    "pinyin": "juān shuì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w323",
+    "word": "收缩",
+    "pinyin": "shōu suō",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w324",
+    "word": "鬼脸",
+    "pinyin": "guǐ liǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w325",
+    "word": "趋势",
+    "pinyin": "qū shì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w326",
+    "word": "拐弯儿",
+    "pinyin": "guǎi wān ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w327",
+    "word": "内容",
+    "pinyin": "nèi róng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "鼻音(n)",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w328",
+    "word": "爆发",
+    "pinyin": "bào fā",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w329",
+    "word": "原材料",
+    "pinyin": "yuán cái liào",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "边音(l)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w330",
+    "word": "创办",
+    "pinyin": "chuàng bàn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w331",
+    "word": "抓紧",
+    "pinyin": "zhuā jǐn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w332",
+    "word": "盛怒",
+    "pinyin": "shèng nù",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "鼻音(n)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w333",
+    "word": "运用",
+    "pinyin": "yùn yòng",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w334",
+    "word": "美景",
+    "pinyin": "měi jǐng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w335",
+    "word": "面子",
+    "pinyin": "miàn zi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w336",
+    "word": "压迫",
+    "pinyin": "yā pò",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w337",
+    "word": "必需品",
+    "pinyin": "bì xū pǐn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w338",
+    "word": "一直",
+    "pinyin": "yì zhí",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w339",
+    "word": "启程",
+    "pinyin": "qǐ chéng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w340",
+    "word": "棒槌",
+    "pinyin": "bàng chuí",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w341",
+    "word": "山峰",
+    "pinyin": "shān fēng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w342",
+    "word": "罪孽",
+    "pinyin": "zuì niè",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w343",
+    "word": "刺激",
+    "pinyin": "cì jī",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w344",
+    "word": "无穷",
+    "pinyin": "wú qióng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w345",
+    "word": "打听",
+    "pinyin": "dǎ tīng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w346",
+    "word": "通讯",
+    "pinyin": "tōng xùn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w347",
+    "word": "木偶",
+    "pinyin": "mù ǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w348",
+    "word": "天下",
+    "pinyin": "tiān xià",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w349",
+    "word": "就算",
+    "pinyin": "jiù suàn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w350",
+    "word": "构造",
+    "pinyin": "gòu zào",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w351",
+    "word": "宣传",
+    "pinyin": "xuān chuán",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w352",
+    "word": "衰变",
+    "pinyin": "shuāi biàn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w353",
+    "word": "外省",
+    "pinyin": "wài shěng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w354",
+    "word": "频率",
+    "pinyin": "pín lǜ",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w355",
+    "word": "捏造",
+    "pinyin": "niē zào",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w356",
+    "word": "棉球儿",
+    "pinyin": "mián qiú ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w357",
+    "word": "耽误",
+    "pinyin": "dān wù",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w358",
+    "word": "橄榄",
+    "pinyin": "gǎn lǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w359",
+    "word": "疟疾",
+    "pinyin": "nvè ji",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w360",
+    "word": "打嗝儿",
+    "pinyin": "dǎ gé ér",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w361",
+    "word": "运行",
+    "pinyin": "yùn xíng",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w362",
+    "word": "重量",
+    "pinyin": "zhòng liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w363",
+    "word": "嫂子",
+    "pinyin": "sǎo zi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w364",
+    "word": "历史",
+    "pinyin": "lì shǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w365",
+    "word": "勇猛",
+    "pinyin": "yǒng měng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w366",
+    "word": "身份",
+    "pinyin": "shēn fèn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w367",
+    "word": "挖潜",
+    "pinyin": "wā qián",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w368",
+    "word": "奥秘",
+    "pinyin": "ào mì",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w369",
+    "word": "锦标赛",
+    "pinyin": "jǐn biāo sài",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(三声)",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w370",
+    "word": "方向",
+    "pinyin": "fāng xiàng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w371",
+    "word": "安慰",
+    "pinyin": "ān wèi",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w372",
+    "word": "心眼儿",
+    "pinyin": "xīn yǎn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(一声)",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w373",
+    "word": "存活",
+    "pinyin": "cún huó",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w374",
+    "word": "持续",
+    "pinyin": "chí xù",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w375",
+    "word": "柔和",
+    "pinyin": "róu hé",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w376",
+    "word": "哺乳",
+    "pinyin": "bǔ rǔ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w377",
+    "word": "盘算",
+    "pinyin": "pán suàn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w378",
+    "word": "创伤",
+    "pinyin": "chuāng shāng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w379",
+    "word": "害怕",
+    "pinyin": "hài pà",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w380",
+    "word": "家庭",
+    "pinyin": "jiā tíng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w381",
+    "word": "收购",
+    "pinyin": "shōu gòu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w382",
+    "word": "以内",
+    "pinyin": "yǐ nèi",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w383",
+    "word": "挫折",
+    "pinyin": "cuò zhé",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w384",
+    "word": "儿童",
+    "pinyin": "ér tóng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "儿化",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w385",
+    "word": "摸黑儿",
+    "pinyin": "mō hēi ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "儿化",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w386",
+    "word": "决定",
+    "pinyin": "jué dìng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w387",
+    "word": "摧毁",
+    "pinyin": "cuī huǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w388",
+    "word": "军人",
+    "pinyin": "jūn rén",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w389",
+    "word": "作风",
+    "pinyin": "zuò fēng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w390",
+    "word": "糖尿病",
+    "pinyin": "táng niào bìng",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w391",
+    "word": "原料",
+    "pinyin": "yuán liào",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w392",
+    "word": "倘使",
+    "pinyin": "tǎng shǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w393",
+    "word": "苍翠",
+    "pinyin": "cāng cuì",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w394",
+    "word": "强求",
+    "pinyin": "qiǎng qiú",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w395",
+    "word": "蒙古包",
+    "pinyin": "měng gǔ bāo",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w396",
+    "word": "粉末儿",
+    "pinyin": "fěn mò ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w397",
+    "word": "情怀",
+    "pinyin": "qíng huái",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w398",
+    "word": "合同",
+    "pinyin": "hé tong",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w399",
+    "word": "财产",
+    "pinyin": "cái chǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w400",
+    "word": "手脚",
+    "pinyin": "shǒu jiǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w401",
+    "word": "灭亡",
+    "pinyin": "miè wáng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w402",
+    "word": "起飞",
+    "pinyin": "qǐ fēi",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w403",
+    "word": "跨越",
+    "pinyin": "kuà yuè",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w404",
+    "word": "挂念",
+    "pinyin": "guà niàn",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w405",
+    "word": "高傲",
+    "pinyin": "gāo ào",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w406",
+    "word": "柴火",
+    "pinyin": "chái huǒ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w407",
+    "word": "亏损",
+    "pinyin": "kuī sǔn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w408",
+    "word": "犯罪",
+    "pinyin": "fàn zuì",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w409",
+    "word": "决议",
+    "pinyin": "jué yì",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w410",
+    "word": "增加",
+    "pinyin": "zēng jiā",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w411",
+    "word": "作用",
+    "pinyin": "zuò yòng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w412",
+    "word": "个体",
+    "pinyin": "gè tǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w413",
+    "word": "上下",
+    "pinyin": "shàng xià",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w414",
+    "word": "危害",
+    "pinyin": "wēi hài",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w415",
+    "word": "斥责",
+    "pinyin": "chì zé",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w416",
+    "word": "砂轮儿",
+    "pinyin": "shā lún ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "前鼻音",
+      "儿化",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w417",
+    "word": "大多数",
+    "pinyin": "dà duō shù",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w418",
+    "word": "思想",
+    "pinyin": "sī xiǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w419",
+    "word": "本子",
+    "pinyin": "běn zi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w420",
+    "word": "状况",
+    "pinyin": "zhuàng kuàng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w421",
+    "word": "柔软",
+    "pinyin": "róu ruǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w422",
+    "word": "训练",
+    "pinyin": "xùn liàn",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w423",
+    "word": "药品",
+    "pinyin": "yào pǐn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w424",
+    "word": "政党",
+    "pinyin": "zhèng dǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w425",
+    "word": "定律",
+    "pinyin": "dìng lǜ",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w426",
+    "word": "人均",
+    "pinyin": "rén jūn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w427",
+    "word": "没谱儿",
+    "pinyin": "méi pǔ er",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w428",
+    "word": "胸口",
+    "pinyin": "xiōng kǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w429",
+    "word": "走访",
+    "pinyin": "zǒu fǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w430",
+    "word": "迅速",
+    "pinyin": "xùn sù",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w431",
+    "word": "手枪",
+    "pinyin": "shǒu qiāng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w432",
+    "word": "垫底儿",
+    "pinyin": "diàn dǐ ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w433",
+    "word": "国民",
+    "pinyin": "guó mín",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w434",
+    "word": "特征",
+    "pinyin": "tè zhēng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w435",
+    "word": "招牌",
+    "pinyin": "zhāo pái",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w436",
+    "word": "小朋友",
+    "pinyin": "xiǎo péng yǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w437",
+    "word": "溶洞",
+    "pinyin": "róng dòng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w438",
+    "word": "考虑",
+    "pinyin": "kǎo lǜ",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w439",
+    "word": "春天",
+    "pinyin": "chūn tiān",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w440",
+    "word": "精确",
+    "pinyin": "jīng què",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w441",
+    "word": "内在",
+    "pinyin": "nèi zài",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w442",
+    "word": "叫好儿",
+    "pinyin": "jiào hǎo ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "儿化",
+      "声调(四声)",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w443",
+    "word": "苍穹",
+    "pinyin": "cāng qióng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w444",
+    "word": "审美",
+    "pinyin": "shěn měi",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w445",
+    "word": "海关",
+    "pinyin": "hǎi guān",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w446",
+    "word": "如下",
+    "pinyin": "rú xià",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w447",
+    "word": "人文",
+    "pinyin": "rén wén",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w448",
+    "word": "玻璃",
+    "pinyin": "bō lí",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w449",
+    "word": "打扮",
+    "pinyin": "dǎ bàn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w450",
+    "word": "恩情",
+    "pinyin": "ēn qíng",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w451",
+    "word": "豆芽儿",
+    "pinyin": "dòu yá ér",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w452",
+    "word": "职能",
+    "pinyin": "zhí néng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "鼻音(n)",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w453",
+    "word": "将军",
+    "pinyin": "jiāng jūn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w454",
+    "word": "来宾",
+    "pinyin": "lái bīn",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w455",
+    "word": "圆舞曲",
+    "pinyin": "yuán wǔ qǔ",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w456",
+    "word": "挎包",
+    "pinyin": "kuà bāo",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w457",
+    "word": "磁场",
+    "pinyin": "cí chǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w458",
+    "word": "自以为是",
+    "pinyin": "zì yǐ wéi shì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(四声)",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w459",
+    "word": "超额",
+    "pinyin": "chāo é",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w460",
+    "word": "开水",
+    "pinyin": "kāi shuǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w461",
+    "word": "帮忙",
+    "pinyin": "bāng máng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w462",
+    "word": "加油儿",
+    "pinyin": "jiā yóu ér",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w463",
+    "word": "繁杂",
+    "pinyin": "fán zá",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w464",
+    "word": "遭受",
+    "pinyin": "zāo shòu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w465",
+    "word": "症状",
+    "pinyin": "zhèng zhuàng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w466",
+    "word": "休息",
+    "pinyin": "xiū xi",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w467",
+    "word": "健全",
+    "pinyin": "jiàn quán",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w468",
+    "word": "亏本",
+    "pinyin": "kuī běn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w469",
+    "word": "肺活量",
+    "pinyin": "fèi huó liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "f/h混淆",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w470",
+    "word": "完美",
+    "pinyin": "wán měi",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w471",
+    "word": "群众",
+    "pinyin": "qún zhòng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w472",
+    "word": "随后",
+    "pinyin": "suí hòu",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w473",
+    "word": "村民",
+    "pinyin": "cūn mín",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w474",
+    "word": "石头",
+    "pinyin": "shí tou",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w475",
+    "word": "快速",
+    "pinyin": "kuài sù",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w476",
+    "word": "照样",
+    "pinyin": "zhào yàng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w477",
+    "word": "飘忽",
+    "pinyin": "piāo hū",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w478",
+    "word": "层次",
+    "pinyin": "céng cì",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w479",
+    "word": "兴衰",
+    "pinyin": "xīng shuāi",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w480",
+    "word": "融洽",
+    "pinyin": "róng qià",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w481",
+    "word": "创作",
+    "pinyin": "chuàng zuò",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w482",
+    "word": "金子",
+    "pinyin": "jīn zǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w483",
+    "word": "虐待",
+    "pinyin": "nvè dài",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w484",
+    "word": "为难",
+    "pinyin": "wéi nán",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w485",
+    "word": "理解",
+    "pinyin": "lǐ jiě",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w486",
+    "word": "告别",
+    "pinyin": "gào bié",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w487",
+    "word": "打算",
+    "pinyin": "dǎ suàn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w488",
+    "word": "笔杆儿",
+    "pinyin": "bǐ gǎn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w489",
+    "word": "应用",
+    "pinyin": "yìng yòng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w490",
+    "word": "体温",
+    "pinyin": "tǐ wēn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w491",
+    "word": "宁肯",
+    "pinyin": "nìng kěn",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w492",
+    "word": "宣布",
+    "pinyin": "xuān bù",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w493",
+    "word": "日夜",
+    "pinyin": "rì yè",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w494",
+    "word": "挂钩",
+    "pinyin": "guà gōu",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w495",
+    "word": "冷暖",
+    "pinyin": "lěng nuǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "边音(l)",
+      "前鼻音",
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w496",
+    "word": "漫长",
+    "pinyin": "màn cháng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w497",
+    "word": "拍摄",
+    "pinyin": "pāi shè",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w498",
+    "word": "耳膜儿",
+    "pinyin": "ěr mó ér",
+    "difficulty": "medium",
+    "errorType": [
+      "儿化",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w499",
+    "word": "牌楼",
+    "pinyin": "pái lóu",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w500",
+    "word": "大量",
+    "pinyin": "dà liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w501",
+    "word": "起草",
+    "pinyin": "qǐ cǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w502",
+    "word": "吹牛",
+    "pinyin": "chuī niú",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "鼻音(n)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w503",
+    "word": "收音机",
+    "pinyin": "shōu yīn jī",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w504",
+    "word": "品种",
+    "pinyin": "pǐn zhǒng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w505",
+    "word": "比赛",
+    "pinyin": "bǐ sài",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w506",
+    "word": "上面",
+    "pinyin": "shàng miàn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w507",
+    "word": "恰巧",
+    "pinyin": "qià qiǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w508",
+    "word": "推算",
+    "pinyin": "tuī suàn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w509",
+    "word": "躲闪",
+    "pinyin": "duǒ shǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w510",
+    "word": "小葱儿",
+    "pinyin": "xiǎo cōng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w511",
+    "word": "军事",
+    "pinyin": "jūn shì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w512",
+    "word": "平原",
+    "pinyin": "píng yuán",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w513",
+    "word": "褂子",
+    "pinyin": "guà zǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w514",
+    "word": "随便",
+    "pinyin": "suí biàn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w515",
+    "word": "盗贼",
+    "pinyin": "dào zéi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w516",
+    "word": "政权",
+    "pinyin": "zhèng quán",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w517",
+    "word": "外在",
+    "pinyin": "wài zài",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w518",
+    "word": "蛋清儿",
+    "pinyin": "dàn qīng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w519",
+    "word": "模型",
+    "pinyin": "mó xíng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w520",
+    "word": "方略",
+    "pinyin": "fāng lvè",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w521",
+    "word": "眉头",
+    "pinyin": "méi tóu",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w522",
+    "word": "衣服",
+    "pinyin": "yī fu",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w523",
+    "word": "如此",
+    "pinyin": "rú cǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w524",
+    "word": "科学",
+    "pinyin": "kē xué",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w525",
+    "word": "昨天",
+    "pinyin": "zuó tiān",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w526",
+    "word": "喇叭",
+    "pinyin": "lǎ ba",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w527",
+    "word": "价值",
+    "pinyin": "jià zhí",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w528",
+    "word": "旺盛",
+    "pinyin": "wàng shèng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w529",
+    "word": "纯真",
+    "pinyin": "chún zhēn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w530",
+    "word": "唱歌儿",
+    "pinyin": "chàng gē ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w531",
+    "word": "恶化",
+    "pinyin": "è huà",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w532",
+    "word": "火罐儿",
+    "pinyin": "huǒ guàn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w533",
+    "word": "安居乐业",
+    "pinyin": "ān jū lè yè",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w534",
+    "word": "教训",
+    "pinyin": "jiào xùn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w535",
+    "word": "思维",
+    "pinyin": "sī wéi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w536",
+    "word": "语文",
+    "pinyin": "yǔ wén",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w537",
+    "word": "赶趟儿",
+    "pinyin": "gǎn tàng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w538",
+    "word": "美好",
+    "pinyin": "měi hǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w539",
+    "word": "谋略",
+    "pinyin": "móu lvè",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w540",
+    "word": "表演",
+    "pinyin": "biǎo yǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w541",
+    "word": "写法",
+    "pinyin": "xiě fǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w542",
+    "word": "财政",
+    "pinyin": "cái zhèng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w543",
+    "word": "红色",
+    "pinyin": "hóng sè",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w544",
+    "word": "同情",
+    "pinyin": "tóng qíng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w545",
+    "word": "上升",
+    "pinyin": "shàng shēng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w546",
+    "word": "抓阄儿",
+    "pinyin": "zhuā jiū ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "儿化",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w547",
+    "word": "逃窜",
+    "pinyin": "táo cuàn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w548",
+    "word": "和平",
+    "pinyin": "hé píng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w549",
+    "word": "傻子",
+    "pinyin": "shǎ zǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w550",
+    "word": "赛场",
+    "pinyin": "sài chǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w551",
+    "word": "割让",
+    "pinyin": "gē ràng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w552",
+    "word": "衰落",
+    "pinyin": "shuāi luò",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w553",
+    "word": "折磨",
+    "pinyin": "zhé mó",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w554",
+    "word": "避雷针",
+    "pinyin": "bì léi zhēn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w555",
+    "word": "队伍",
+    "pinyin": "duì wu",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w556",
+    "word": "质量",
+    "pinyin": "zhì liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w557",
+    "word": "增产",
+    "pinyin": "zēng chǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w558",
+    "word": "旷工",
+    "pinyin": "kuàng gōng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w559",
+    "word": "多寡",
+    "pinyin": "duō guǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w560",
+    "word": "片面",
+    "pinyin": "piàn miàn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w561",
+    "word": "夏天",
+    "pinyin": "xià tiān",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w562",
+    "word": "参议院",
+    "pinyin": "cān yì yuàn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w563",
+    "word": "看待创造",
+    "pinyin": "kàn dài chuàng zào",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w564",
+    "word": "怀念",
+    "pinyin": "huái niàn",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w565",
+    "word": "记事儿",
+    "pinyin": "jì shì ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w566",
+    "word": "典雅",
+    "pinyin": "diǎn yǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w567",
+    "word": "窘迫",
+    "pinyin": "jiǒng pò",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w568",
+    "word": "骆驼",
+    "pinyin": "luò tuó",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w569",
+    "word": "权力",
+    "pinyin": "quán lì",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w570",
+    "word": "明年",
+    "pinyin": "míng nián",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w571",
+    "word": "棉花",
+    "pinyin": "mián huā",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w572",
+    "word": "街坊",
+    "pinyin": "jiē fāng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w573",
+    "word": "饭盒儿",
+    "pinyin": "fàn hé ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w574",
+    "word": "傍晚",
+    "pinyin": "bàng wǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w575",
+    "word": "人民",
+    "pinyin": "rén mín",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w576",
+    "word": "追随",
+    "pinyin": "zhuī suí",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w577",
+    "word": "生存",
+    "pinyin": "shēng cún",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w578",
+    "word": "小巧",
+    "pinyin": "xiǎo qiǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w579",
+    "word": "八卦",
+    "pinyin": "bā guà",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w580",
+    "word": "牛仔裤",
+    "pinyin": "niú zǎi kù",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "声调(二声)",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w581",
+    "word": "太空",
+    "pinyin": "tài kōng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w582",
+    "word": "茧子",
+    "pinyin": "jiǎn zǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w583",
+    "word": "动员",
+    "pinyin": "dòng yuán",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w584",
+    "word": "文章",
+    "pinyin": "wén zhāng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w585",
+    "word": "戏法儿",
+    "pinyin": "xì fǎ ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "儿化",
+      "声调(四声)",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w586",
+    "word": "颓丧",
+    "pinyin": "tuí sàng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w587",
+    "word": "正好",
+    "pinyin": "zhèng hǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w588",
+    "word": "冠军",
+    "pinyin": "guàn jūn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w589",
+    "word": "深层",
+    "pinyin": "shēn céng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w590",
+    "word": "铁丝",
+    "pinyin": "tiě sī",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w591",
+    "word": "仇恨",
+    "pinyin": "chóu hèn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w592",
+    "word": "夏季",
+    "pinyin": "xià jì",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w593",
+    "word": "衰老",
+    "pinyin": "shuāi lǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w594",
+    "word": "偶尔",
+    "pinyin": "ǒu ěr",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w595",
+    "word": "佛像",
+    "pinyin": "fó xiàng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w596",
+    "word": "听众",
+    "pinyin": "tīng zhòng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w597",
+    "word": "失去",
+    "pinyin": "shī qù",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w598",
+    "word": "王国",
+    "pinyin": "wáng guó",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w599",
+    "word": "月亮",
+    "pinyin": "yuè liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w600",
+    "word": "商品",
+    "pinyin": "shāng pǐn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w601",
+    "word": "恳求",
+    "pinyin": "kěn qiú",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w602",
+    "word": "蛋白质",
+    "pinyin": "dàn bái zhì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w603",
+    "word": "民俗",
+    "pinyin": "mín sú",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w604",
+    "word": "蛾子",
+    "pinyin": "é zi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w605",
+    "word": "美女",
+    "pinyin": "měi nǚ",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w606",
+    "word": "燃料",
+    "pinyin": "rán liào",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w607",
+    "word": "作品",
+    "pinyin": "zuò pǐn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w608",
+    "word": "社会学",
+    "pinyin": "shè huì xué",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w609",
+    "word": "奠定",
+    "pinyin": "diàn dìng",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w610",
+    "word": "纪律",
+    "pinyin": "jì lǜ",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w611",
+    "word": "折腾",
+    "pinyin": "zhē teng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w612",
+    "word": "快要",
+    "pinyin": "kuài yào",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w613",
+    "word": "宝塔",
+    "pinyin": "bǎo tǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w614",
+    "word": "适用",
+    "pinyin": "shì yòng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w615",
+    "word": "照片",
+    "pinyin": "zhào piàn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w616",
+    "word": "广博",
+    "pinyin": "guǎng bó",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w617",
+    "word": "掠夺",
+    "pinyin": "lvè duó",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w618",
+    "word": "全局",
+    "pinyin": "quán jú",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w619",
+    "word": "辨证",
+    "pinyin": "biàn zhèng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w620",
+    "word": "范围",
+    "pinyin": "fàn wéi",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w621",
+    "word": "后跟儿",
+    "pinyin": "hòu gēn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w622",
+    "word": "优良",
+    "pinyin": "yōu liáng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w623",
+    "word": "从来",
+    "pinyin": "cóng lái",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w624",
+    "word": "共鸣",
+    "pinyin": "gòng míng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w625",
+    "word": "完成",
+    "pinyin": "wán chéng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w626",
+    "word": "非法",
+    "pinyin": "fēi fǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w627",
+    "word": "刷新",
+    "pinyin": "shuā xīn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w628",
+    "word": "灭火",
+    "pinyin": "miè huǒ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w629",
+    "word": "可以",
+    "pinyin": "kě yǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w630",
+    "word": "加强",
+    "pinyin": "jiā qiáng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w631",
+    "word": "小说儿",
+    "pinyin": "xiǎo shuō ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "儿化",
+      "声调(三声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w632",
+    "word": "地质",
+    "pinyin": "dì zhì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w633",
+    "word": "脑袋",
+    "pinyin": "nǎo dài",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w634",
+    "word": "退让",
+    "pinyin": "tuì ràng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w635",
+    "word": "仍旧",
+    "pinyin": "réng jiù",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w636",
+    "word": "花样儿",
+    "pinyin": "huā yàng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "儿化",
+      "声调(一声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w637",
+    "word": "开会",
+    "pinyin": "kāi huì",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w638",
+    "word": "下去",
+    "pinyin": "xià qù",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w639",
+    "word": "僧尼",
+    "pinyin": "sēng ní",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "鼻音(n)",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w640",
+    "word": "鬼子",
+    "pinyin": "guǐ zi",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w641",
+    "word": "窈窕",
+    "pinyin": "yǎo tiǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w642",
+    "word": "深海",
+    "pinyin": "shēn hǎi",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w643",
+    "word": "抓获",
+    "pinyin": "zhuā huò",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w644",
+    "word": "涅槃",
+    "pinyin": "niè pán",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w645",
+    "word": "福气",
+    "pinyin": "fú qì",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w646",
+    "word": "差别",
+    "pinyin": "chā bié",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w647",
+    "word": "懊恼",
+    "pinyin": "ào nǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w648",
+    "word": "平均",
+    "pinyin": "píng jūn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w649",
+    "word": "红外线",
+    "pinyin": "hóng wài xiàn",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w650",
+    "word": "职工",
+    "pinyin": "zhí gōng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w651",
+    "word": "顺手",
+    "pinyin": "shùn shǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w652",
+    "word": "波长",
+    "pinyin": "bō cháng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w653",
+    "word": "专门",
+    "pinyin": "zhuān mén",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w654",
+    "word": "两边",
+    "pinyin": "liǎng biān",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w655",
+    "word": "决心",
+    "pinyin": "jué xīn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w656",
+    "word": "惨死",
+    "pinyin": "cǎn sǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w657",
+    "word": "幼儿园",
+    "pinyin": "yòu ér yuán",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w658",
+    "word": "尊重",
+    "pinyin": "zūn zhòng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w659",
+    "word": "合群儿",
+    "pinyin": "hé qún ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "儿化",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w660",
+    "word": "吃饭",
+    "pinyin": "chī fàn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w661",
+    "word": "国家",
+    "pinyin": "guó jiā",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w662",
+    "word": "沙发",
+    "pinyin": "shā fā",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w663",
+    "word": "创新",
+    "pinyin": "chuàng xīn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w664",
+    "word": "混合",
+    "pinyin": "hùn hé",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w665",
+    "word": "镇压",
+    "pinyin": "zhèn yā",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w666",
+    "word": "存在",
+    "pinyin": "cún zài",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w667",
+    "word": "眯缝",
+    "pinyin": "mī feng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w668",
+    "word": "难受",
+    "pinyin": "nán shòu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "鼻音(n)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w669",
+    "word": "平日",
+    "pinyin": "píng rì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w670",
+    "word": "总归",
+    "pinyin": "zǒng guī",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w671",
+    "word": "你们",
+    "pinyin": "nǐ men",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w672",
+    "word": "线圈",
+    "pinyin": "xiàn quān",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w673",
+    "word": "篡夺",
+    "pinyin": "cuàn duó",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w674",
+    "word": "科学家",
+    "pinyin": "kē xué jiā",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w675",
+    "word": "预防",
+    "pinyin": "yù fáng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w676",
+    "word": "玩意儿",
+    "pinyin": "wán yì ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w677",
+    "word": "需求",
+    "pinyin": "xū qiú",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w678",
+    "word": "对偶",
+    "pinyin": "duì ǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w679",
+    "word": "衰败",
+    "pinyin": "shuāi bài",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w680",
+    "word": "懊悔",
+    "pinyin": "ào huǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w681",
+    "word": "能源",
+    "pinyin": "néng yuán",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w682",
+    "word": "数量",
+    "pinyin": "shù liàng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w683",
+    "word": "搜查",
+    "pinyin": "sōu chá",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w684",
+    "word": "瓜瓤儿",
+    "pinyin": "guā ráng ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "儿化",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w685",
+    "word": "强化",
+    "pinyin": "qiáng huà",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w686",
+    "word": "功率",
+    "pinyin": "gōng lǜ",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w687",
+    "word": "生产",
+    "pinyin": "shēng chǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w688",
+    "word": "面条儿",
+    "pinyin": "miàn tiáo ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w689",
+    "word": "了解",
+    "pinyin": "liǎo jiě",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w690",
+    "word": "照射",
+    "pinyin": "zhào shè",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w691",
+    "word": "只好",
+    "pinyin": "zhǐ hǎo",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "f/h混淆",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w692",
+    "word": "情不自禁",
+    "pinyin": "qíng bú zì jīn",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w693",
+    "word": "党委",
+    "pinyin": "dǎng wěi",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w694",
+    "word": "奇怪",
+    "pinyin": "qí guài",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w695",
+    "word": "口哨儿",
+    "pinyin": "kǒu shào ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "儿化",
+      "声调(三声)",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w696",
+    "word": "采访",
+    "pinyin": "cǎi fǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "后鼻音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w697",
+    "word": "完全",
+    "pinyin": "wán quán",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w698",
+    "word": "墨汁儿",
+    "pinyin": "mò zhī ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "儿化",
+      "声调(四声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w699",
+    "word": "后悔",
+    "pinyin": "hòu huǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(四声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w700",
+    "word": "石油",
+    "pinyin": "shí yóu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w701",
+    "word": "下面",
+    "pinyin": "xià miàn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w702",
+    "word": "濒临",
+    "pinyin": "bīn lín",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w703",
+    "word": "专程",
+    "pinyin": "zhuān chéng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w704",
+    "word": "帮手",
+    "pinyin": "bāng shǒu",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w705",
+    "word": "脚跟",
+    "pinyin": "jiǎo gēn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w706",
+    "word": "夸奖",
+    "pinyin": "kuā jiǎng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w707",
+    "word": "评价",
+    "pinyin": "píng jià",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w708",
+    "word": "仙女",
+    "pinyin": "xiān nǚ",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w709",
+    "word": "村子",
+    "pinyin": "cūn zǐ",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w710",
+    "word": "桥梁",
+    "pinyin": "qiáo liáng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w711",
+    "word": "服务员",
+    "pinyin": "fú wù yuán",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w712",
+    "word": "央求",
+    "pinyin": "yāng qiú",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w713",
+    "word": "古兰经",
+    "pinyin": "gǔ lán jīng",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "前鼻音",
+      "后鼻音",
+      "声调(三声)",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w714",
+    "word": "号码儿",
+    "pinyin": "hào mǎ ér",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "儿化",
+      "声调(四声)",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w715",
+    "word": "傲然",
+    "pinyin": "ào rán",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w716",
+    "word": "不可思议",
+    "pinyin": "bù kě sī yì",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "声调(四声)",
+      "声调(三声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w717",
+    "word": "闺女",
+    "pinyin": "guī nǚ",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w718",
+    "word": "胸骨",
+    "pinyin": "xiōng gǔ",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(一声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w719",
+    "word": "没准儿",
+    "pinyin": "méi zhǔn ér",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "儿化",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w720",
+    "word": "花瓶",
+    "pinyin": "huā píng",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w721",
+    "word": "另外",
+    "pinyin": "lìng wài",
+    "difficulty": "medium",
+    "errorType": [
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w722",
+    "word": "国王",
+    "pinyin": "guó wáng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w723",
+    "word": "麻烦",
+    "pinyin": "má fán",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "前鼻音",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w724",
+    "word": "巍峨",
+    "pinyin": "wēi é",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w725",
+    "word": "妨害",
+    "pinyin": "fáng hài",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "后鼻音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w726",
+    "word": "送别",
+    "pinyin": "sòng bié",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w727",
+    "word": "金丝猴",
+    "pinyin": "jīn sī hóu",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "f/h混淆",
+      "前鼻音",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w728",
+    "word": "苗条",
+    "pinyin": "miáo tiáo",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w729",
+    "word": "上来",
+    "pinyin": "shàng lái",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w730",
+    "word": "水獭",
+    "pinyin": "shuǐ tǎ",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w731",
+    "word": "顶牛儿",
+    "pinyin": "dǐng niú ér",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "后鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w732",
+    "word": "橡皮",
+    "pinyin": "xiàng pí",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w733",
+    "word": "调动",
+    "pinyin": "diào dòng",
+    "difficulty": "medium",
+    "errorType": [
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w734",
+    "word": "万岁",
+    "pinyin": "wàn suì",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "前鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w735",
+    "word": "坎肩儿",
+    "pinyin": "kǎn jiān ér",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "儿化",
+      "声调(三声)",
+      "声调(一声)",
+      "声调(二声)"
+    ]
+  },
+  {
+    "id": "w736",
+    "word": "政策",
+    "pinyin": "zhèng cè",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "后鼻音",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w737",
+    "word": "山川",
+    "pinyin": "shān chuān",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w738",
+    "word": "全身",
+    "pinyin": "quán shēn",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "前鼻音",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w739",
+    "word": "迟到",
+    "pinyin": "chí dào",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w740",
+    "word": "操纵",
+    "pinyin": "cāo zòng",
+    "difficulty": "medium",
+    "errorType": [
+      "平舌音",
+      "后鼻音",
+      "声调(一声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w741",
+    "word": "体育馆",
+    "pinyin": "tǐ yù guǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "前鼻音",
+      "声调(三声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w742",
+    "word": "会计",
+    "pinyin": "kuài jì",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w743",
+    "word": "节约",
+    "pinyin": "jié yuē",
+    "difficulty": "medium",
+    "errorType": [
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w744",
+    "word": "无非",
+    "pinyin": "wú fēi",
+    "difficulty": "medium",
+    "errorType": [
+      "f/h混淆",
+      "声调(二声)",
+      "声调(一声)"
+    ]
+  },
+  {
+    "id": "w745",
+    "word": "博士",
+    "pinyin": "bó shì",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w746",
+    "word": "筹备",
+    "pinyin": "chóu bèi",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "声调(二声)",
+      "声调(四声)"
+    ]
+  },
+  {
+    "id": "w747",
+    "word": "难免",
+    "pinyin": "nán miǎn",
+    "difficulty": "medium",
+    "errorType": [
+      "鼻音(n)",
+      "前鼻音",
+      "声调(二声)",
+      "声调(三声)"
+    ]
+  },
+  {
+    "id": "w748",
+    "word": "自力更生",
+    "pinyin": "zì lì gēng shēng",
+    "difficulty": "medium",
+    "errorType": [
+      "翘舌音",
+      "平舌音",
+      "边音(l)",
+      "后鼻音",
+      "声调(四声)",
+      "声调(一声)"
     ]
   }
 ]
