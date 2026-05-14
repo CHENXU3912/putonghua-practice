@@ -3,10 +3,12 @@ import { useState, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Recorder from '@/components/Recorder';
+import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreWord } from '@/lib/scorer';
+import { scoreWord, compareCharByChar, cleanText } from '@/lib/scorer';
 import { saveRecord } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
+import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
 import type { WordItem, UserResult, ScoreResult } from '@/lib/types';
 import wordData from '@/data/word.json';
 
@@ -24,6 +26,9 @@ export default function WordPage() {
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
   const [showWrongAdd, setShowWrongAdd] = useState(false);
   const lastDurationRef = useRef(0);
+  const stt = useSpeechRecognition();
+  const sttTranscriptRef = useRef('');
+  const sttAvailable = isSTTSupported();
 
   const item = items[currentIdx] ?? null;
 
@@ -37,10 +42,16 @@ export default function WordPage() {
     const newResults = [...results, { itemId: item!.id, audioDuration: duration, selfRating: isCorrect }];
     setResults(newResults);
 
+    if (stt.transcript) {
+      sttTranscriptRef.current += stt.transcript;
+      stt.reset();
+    }
+
     if (currentIdx < items.length - 1) {
       setCurrentIdx(currentIdx + 1);
     } else {
-      const s = scoreWord(items, newResults);
+      const allTranscript = sttTranscriptRef.current;
+      const s = scoreWord(items, newResults, allTranscript || undefined);
       setScoreResult(s);
       setShowResult(true);
 
@@ -57,7 +68,7 @@ export default function WordPage() {
       doCheckin();
       if (s.wrongItems.length > 0) setShowWrongAdd(true);
     }
-  }, [currentIdx, items, results, item]);
+  }, [currentIdx, items, results, item, stt.transcript, stt.reset]);
 
   if (!item) {
     return (
@@ -76,9 +87,20 @@ export default function WordPage() {
           <p className="text-sm text-gray-400">多音节词语 · {items.length}词</p>
         </div>
         <ScoreDisplay result={scoreResult} />
+        {sttTranscriptRef.current && (
+          <div className="bg-white rounded-xl p-4 shadow-sm text-sm">
+            <h3 className="font-medium text-gray-700 mb-2">🤖 AI 识别结果</h3>
+            <div className="flex flex-wrap gap-1.5 font-mono">
+              {compareCharByChar(items.map(i => i.word).join(''), sttTranscriptRef.current).details.map((d, i) => (
+                <span key={i} className={`px-1.5 py-0.5 rounded text-sm ${d.ok ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-600'}`}>{d.char}</span>
+              ))}
+            </div>
+            <p className="text-xs text-gray-400 mt-2">识别文本：{cleanText(sttTranscriptRef.current)}</p>
+          </div>
+        )}
         {scoreResult.wrongItems.length > 0 && (
           <div className="bg-white rounded-xl p-4 shadow-sm">
-            <h3 className="text-sm font-medium text-gray-700 mb-2">本次可改进的词语（{scoreResult.wrongItems.length}个）</h3>
+            <h3 className="text-sm font-medium text-gray-700 mb-2">可改进的词语（{scoreResult.wrongItems.length}个）</h3>
             <div className="flex flex-wrap gap-2">
               {scoreResult.wrongItems.map((w, i) => (
                 <span key={i} className="px-3 py-1.5 bg-red-50 text-red-600 rounded-lg text-sm">
@@ -90,12 +112,12 @@ export default function WordPage() {
         )}
         {showWrongAdd && (
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 text-center">
-            <p className="text-sm text-orange-700 mb-3">建议将以上词语加入错音本</p>
+            <p className="text-sm text-orange-700 mb-3">建议加入错音本反复练习</p>
             <Link href="/wrongbook" className="inline-block px-5 py-2 bg-orange-500 text-white rounded-lg text-sm font-medium">前往错音本</Link>
           </div>
         )}
         <div className="flex gap-3">
-          <button onClick={() => { setCurrentIdx(0); setResults([]); setShowResult(false); setScoreResult(null); setShowWrongAdd(false); }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
+          <button onClick={() => { setCurrentIdx(0); setResults([]); setShowResult(false); setScoreResult(null); setShowWrongAdd(false); sttTranscriptRef.current = ''; }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
           <button onClick={() => router.push('/')} className="flex-1 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium active:bg-gray-50 transition">返回首页</button>
         </div>
       </div>
@@ -113,24 +135,33 @@ export default function WordPage() {
         <div className="h-full bg-green-500 rounded-full transition-all duration-300" style={{ width: `${(currentIdx / items.length) * 100}%` }} />
       </div>
       <div className="flex-1 flex flex-col items-center justify-center gap-4">
-        <div className="text-5xl font-bold text-gray-900 text-center">{item.word}</div>
+        <div className="flex items-center gap-3">
+          <div className="text-5xl font-bold text-gray-900 text-center">{item.word}</div>
+          <TTSButton text={item.word} size="sm" />
+        </div>
         <div className="text-xl text-gray-500">{item.pinyin}</div>
         <div className="flex flex-wrap justify-center gap-2">
           {item.errorType.map((t, i) => (
             <span key={i} className={`px-2.5 py-1 rounded-full text-xs font-medium ${
-              t === '轻声' ? 'bg-gray-200 text-gray-600' :
-              t === '儿化' ? 'bg-blue-100 text-blue-700' :
+              t === '轻声' ? 'bg-gray-200 text-gray-600' : t === '儿化' ? 'bg-blue-100 text-blue-700' :
               t === '变调' ? 'bg-orange-100 text-orange-700' :
-              t.includes('平舌') || t.includes('翘舌') ? 'bg-purple-100 text-purple-700' :
-              'bg-green-100 text-green-700'
+              t.includes('平舌') || t.includes('翘舌') ? 'bg-purple-100 text-purple-700' : 'bg-green-100 text-green-700'
             }`}>{t}</span>
           ))}
         </div>
         {item.tips && <p className="text-xs text-gray-400 mt-2">{item.tips}</p>}
       </div>
       <div className="mt-8 mb-4">
-        <Recorder maxDuration={15} onResult={handleRecord} />
+        <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={15} />
       </div>
+      {sttAvailable && (
+        <div className="mb-2 text-center">
+          {stt.state === 'listening' && <span className="text-xs text-blue-500 animate-pulse">🤖 AI 正在聆听...</span>}
+          {stt.state === 'completed' && stt.transcript && (
+            <span className="text-xs text-gray-500">AI 识别：<span className="font-mono text-green-600">{cleanText(stt.transcript)}</span></span>
+          )}
+        </div>
+      )}
       <div className="flex gap-4 w-full max-w-xs mb-8">
         <button onClick={() => handleSelfRate(true)} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition text-sm">✓ 读对了</button>
         <button onClick={() => handleSelfRate(false)} className="flex-1 py-3 border border-red-300 text-red-500 rounded-xl font-medium active:bg-red-50 transition text-sm">✗ 不太对</button>

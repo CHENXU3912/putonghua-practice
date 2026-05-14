@@ -1,6 +1,40 @@
 import type { SyllableItem, WordItem, ArticleItem, SpeechItem, UserResult, ScoreResult, WrongItem } from './types';
 
-function clamp(v: number, min: number, max: number) { return Math.max(min, Math.min(max, v)); }
+// ===== 文本比对工具 =====
+
+/** 清理文本：去掉标点、空格 */
+export function cleanText(s: string): string {
+  return s.replace(/[，。！？、；：""''《》（）—…\s\.\,\!\?\;\:\"'\(\)\[\]]/g, '');
+}
+
+/** 逐字比对识别文本和期望文本，返回每个位置是否正确 */
+export function compareCharByChar(expected: string, recognized: string): { total: number; correct: number; details: { char: string; ok: boolean }[] } {
+  const exp = cleanText(expected);
+  const rec = cleanText(recognized);
+  const maxLen = Math.max(exp.length, rec.length);
+  const details: { char: string; ok: boolean }[] = [];
+  let correct = 0;
+  for (let i = 0; i < exp.length; i++) {
+    const ok = i < rec.length && exp[i] === rec[i];
+    if (ok) correct++;
+    details.push({ char: exp[i], ok });
+  }
+  return { total: exp.length, correct, details };
+}
+
+/** 计算识别文本与期望文本的匹配率 */
+export function getMatchRate(expected: string, recognized: string): number {
+  const result = compareCharByChar(expected, recognized);
+  if (result.total === 0) return 100;
+  return Math.round((result.correct / result.total) * 100);
+}
+
+/** 检查识别文本中是否包含指定关键词 */
+export function checkKeywords(transcript: string, keywords: string[]): { found: number; total: number; details: { kw: string; found: boolean }[] } {
+  const details = keywords.map(kw => ({ kw, found: transcript.includes(kw) }));
+  const found = details.filter(d => d.found).length;
+  return { found, total: keywords.length, details };
+}
 
 function calcDurationScore(actual: number, expected: number): number {
   if (expected <= 0 || actual <= 0) return 50;
@@ -41,120 +75,189 @@ function genSuggestions(errorTypes: string[], grade: string): string[] {
   return s;
 }
 
-// ===== 单音节评分 =====
+// ===== 单音节评分（支持 STT 自动识别） =====
 
 export function scoreSyllable(
   items: SyllableItem[],
-  userResults: UserResult[]
+  userResults: UserResult[],
+  sttTranscript?: string
 ): ScoreResult {
   const totalCount = items.length;
-  const correctCount = userResults.filter(r => r.selfRating).length;
-  const completenessScore = Math.round((correctCount / totalCount) * 100);
+  let sttCorrectCount = 0;
+  let sttDetails: { char: string; ok: boolean }[] = [];
+
+  if (sttTranscript) {
+    // 拼接期望文本
+    const expected = items.map(i => i.char).join('');
+    const cmp = compareCharByChar(expected, sttTranscript);
+    sttCorrectCount = cmp.correct;
+    sttDetails = cmp.details;
+  }
+
+  // 自评（降级用）
+  const selfCorrectCount = userResults.filter(r => r.selfRating).length;
+  const hasSTT = sttTranscript && sttTranscript.length > 0;
+
+  // STT 匹配率 或 自评准确率
+  const matchScore = hasSTT
+    ? Math.round((sttCorrectCount / totalCount) * 100)
+    : Math.round((selfCorrectCount / totalCount) * 100);
 
   const totalExpectedDuration = totalCount * 1.5;
   const totalActualDuration = userResults.reduce((s, r) => s + r.audioDuration, 0);
   const durationScore = calcDurationScore(totalActualDuration, totalExpectedDuration);
 
-  const score = Math.round(durationScore * 0.3 + completenessScore * 0.4 + completenessScore * 0.3);
+  // STT 权重更高（40% vs 自评 30%）
+  const score = Math.round(durationScore * 0.3 + matchScore * 0.4 + matchScore * 0.3);
   const grade = toGrade(score);
 
   const wrongItems: WrongItem[] = [];
   const errorTypes: string[] = [];
-  userResults.forEach((r, i) => {
-    if (!r.selfRating && items[i]) {
-      wrongItems.push({
-        content: items[i].char,
-        pinyin: items[i].pinyin,
-        errorType: items[i].errorType,
-      });
-      errorTypes.push(...items[i].errorType);
-    }
-  });
+
+  if (hasSTT && sttDetails.length > 0) {
+    sttDetails.forEach((d, i) => {
+      if (!d.ok && items[i]) {
+        wrongItems.push({
+          content: items[i].char,
+          pinyin: items[i].pinyin,
+          errorType: items[i].errorType,
+        });
+        errorTypes.push(...items[i].errorType);
+      }
+    });
+  } else {
+    userResults.forEach((r, i) => {
+      if (!r.selfRating && items[i]) {
+        wrongItems.push({
+          content: items[i].char,
+          pinyin: items[i].pinyin,
+          errorType: items[i].errorType,
+        });
+        errorTypes.push(...items[i].errorType);
+      }
+    });
+  }
 
   return {
     score,
-    scoreDetail: { durationScore, completenessScore, selfRatingScore: completenessScore },
+    scoreDetail: { durationScore, completenessScore: matchScore, selfRatingScore: matchScore },
     grade,
     suggestions: genSuggestions(errorTypes, grade),
     wrongItems,
   };
 }
 
-// ===== 多音节评分 =====
+// ===== 多音节评分（支持 STT） =====
 
 export function scoreWord(
   items: WordItem[],
-  userResults: UserResult[]
+  userResults: UserResult[],
+  sttTranscript?: string
 ): ScoreResult {
   const totalCount = items.length;
-  const correctCount = userResults.filter(r => r.selfRating).length;
-  const completenessScore = Math.round((correctCount / totalCount) * 100);
+  let sttCorrectCount = 0;
+  let sttDetails: { char: string; ok: boolean }[] = [];
+
+  if (sttTranscript) {
+    const expected = items.map(i => i.word).join('');
+    const cmp = compareCharByChar(expected, sttTranscript);
+    sttCorrectCount = cmp.correct;
+    sttDetails = cmp.details;
+  }
+
+  const selfCorrectCount = userResults.filter(r => r.selfRating).length;
+  const hasSTT = sttTranscript && sttTranscript.length > 0;
+  const matchScore = hasSTT
+    ? Math.round((sttCorrectCount / totalCount) * 100)
+    : Math.round((selfCorrectCount / totalCount) * 100);
 
   const totalExpectedDuration = totalCount * 2.0;
   const totalActualDuration = userResults.reduce((s, r) => s + r.audioDuration, 0);
   const durationScore = calcDurationScore(totalActualDuration, totalExpectedDuration);
 
-  const score = Math.round(durationScore * 0.3 + completenessScore * 0.4 + completenessScore * 0.3);
+  const score = Math.round(durationScore * 0.3 + matchScore * 0.4 + matchScore * 0.3);
   const grade = toGrade(score);
 
   const wrongItems: WrongItem[] = [];
   const errorTypes: string[] = [];
-  userResults.forEach((r, i) => {
-    if (!r.selfRating && items[i]) {
-      wrongItems.push({
-        content: items[i].word,
-        pinyin: items[i].pinyin,
-        errorType: items[i].errorType,
-      });
-      errorTypes.push(...items[i].errorType);
-    }
-  });
+
+  if (hasSTT && sttDetails.length > 0) {
+    sttDetails.forEach((d, i) => {
+      if (!d.ok && items[i]) {
+        wrongItems.push({
+          content: items[i].word,
+          pinyin: items[i].pinyin,
+          errorType: items[i].errorType,
+        });
+        errorTypes.push(...items[i].errorType);
+      }
+    });
+  } else {
+    userResults.forEach((r, i) => {
+      if (!r.selfRating && items[i]) {
+        wrongItems.push({
+          content: items[i].word,
+          pinyin: items[i].pinyin,
+          errorType: items[i].errorType,
+        });
+        errorTypes.push(...items[i].errorType);
+      }
+    });
+  }
 
   return {
     score,
-    scoreDetail: { durationScore, completenessScore, selfRatingScore: completenessScore },
+    scoreDetail: { durationScore, completenessScore: matchScore, selfRatingScore: matchScore },
     grade,
     suggestions: genSuggestions(errorTypes, grade),
     wrongItems,
   };
 }
 
-// ===== 短文朗读评分 =====
+// ===== 短文朗读评分（支持 STT 覆盖率） =====
 
 export function scoreArticle(
   article: ArticleItem,
   audioDuration: number,
-  selfRating: 1 | 2 | 3 | 4 | 5
+  selfRating: 1 | 2 | 3 | 4 | 5,
+  sttTranscript?: string
 ): ScoreResult {
   const speedScore = calcDurationScore(audioDuration, article.standardDuration);
   const completenessScore = audioDuration >= article.standardDuration * 0.8 ? 100 : Math.round((audioDuration / article.standardDuration) * 100);
-  const selfScore = (selfRating / 5) * 100;
 
-  const score = Math.round(speedScore * 0.3 + completenessScore * 0.4 + selfScore * 0.3);
+  // STT 覆盖率
+  let coverageScore = selfRating * 20;
+  if (sttTranscript) {
+    const rate = getMatchRate(article.content, sttTranscript);
+    coverageScore = rate;
+  }
+
+  const score = Math.round(speedScore * 0.3 + completenessScore * 0.3 + coverageScore * 0.4);
   const grade = toGrade(score);
 
-  const errorTypes: string[] = [];
   const suggestions: string[] = [];
   if (speedScore < 60) suggestions.push('朗读语速可以再自然一些，注意控制节奏');
   if (completenessScore < 80) suggestions.push('建议把全文读完整，不要跳读');
+  if (sttTranscript && coverageScore < 60) suggestions.push('识别率偏低，建议先听示范音，逐句跟读');
   if (suggestions.length === 0) suggestions.push('完成得不错，继续保持！');
 
   return {
     score,
-    scoreDetail: { durationScore: speedScore, completenessScore, selfRatingScore: selfScore },
+    scoreDetail: { durationScore: speedScore, completenessScore, fluencyScore: coverageScore, selfRatingScore: selfRating * 20 },
     grade,
     suggestions,
     wrongItems: [],
   };
 }
 
-// ===== 命题说话评分 =====
+// ===== 命题说话评分（支持 STT 关键词检测） =====
 
 export function scoreSpeech(
-  _speech: SpeechItem,
+  speech: SpeechItem,
   audioDuration: number,
   selfRating: 1 | 2 | 3 | 4 | 5,
-  outlineCoverage: 1 | 2 | 3 | 4 | 5
+  outlineCoverage: 1 | 2 | 3 | 4 | 5,
+  sttTranscript?: string
 ): ScoreResult {
   const targetDuration = 180;
   let durationScore: number;
@@ -165,7 +268,13 @@ export function scoreSpeech(
   else durationScore = 20;
 
   const fluencyScore = (selfRating / 5) * 100;
-  const outlineScore = (outlineCoverage / 5) * 100;
+  let outlineScore = (outlineCoverage / 5) * 100;
+
+  // STT 关键词检测
+  if (sttTranscript && speech.outline) {
+    const kwResult = checkKeywords(sttTranscript, speech.outline.map(o => o.slice(0, 4)));
+    outlineScore = Math.round((kwResult.found / kwResult.total) * 100);
+  }
 
   const score = Math.round(durationScore * 0.5 + fluencyScore * 0.25 + outlineScore * 0.25);
   const grade = toGrade(score);
@@ -173,7 +282,7 @@ export function scoreSpeech(
   const suggestions: string[] = [];
   if (audioDuration < 120) suggestions.push('建议说满3分钟，充分展开话题以锻炼表达能力');
   else if (audioDuration < 150) suggestions.push('可以再多说一会儿，尽量接近3分钟');
-  if (outlineCoverage < 3) suggestions.push('建议围绕提纲展开，确保覆盖主要要点');
+  if (outlineCoverage < 3 || outlineScore < 60) suggestions.push('建议围绕提纲展开，确保覆盖主要要点');
   if (suggestions.length === 0) suggestions.push('完成得不错，继续保持！');
 
   return {

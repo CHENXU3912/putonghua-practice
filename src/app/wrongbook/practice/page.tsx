@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Recorder from '@/components/Recorder';
+import TTSButton from '@/components/TTSButton';
 import { getWrongBookItems, updateWrongBookItem } from '@/lib/db';
 import type { WrongBookItem } from '@/lib/types';
 
@@ -89,7 +90,10 @@ export default function WrongBookPracticePage() {
       </div>
 
       <div className="flex-1 flex flex-col items-center justify-center gap-4">
-        <div className="text-5xl font-bold text-gray-900">{item!.content}</div>
+        <div className="flex items-center gap-3">
+          <div className="text-5xl font-bold text-gray-900">{item!.content}</div>
+          <TTSButton text={item!.content} size="sm" />
+        </div>
         <div className="text-xl text-gray-500">{item!.pinyin}</div>
         <div className="flex flex-wrap justify-center gap-2">
           {item!.errorType.map((t, i) => (

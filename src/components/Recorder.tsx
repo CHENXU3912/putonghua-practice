@@ -4,12 +4,19 @@ import { useEffect } from 'react';
 
 interface Props {
   onResult?: (blob: Blob, duration: number) => void;
+  onStart?: () => void;
+  onStop?: () => void;
   maxDuration?: number;
   className?: string;
 }
 
-export default function Recorder({ onResult, maxDuration = 300, className = '' }: Props) {
+export default function Recorder({ onResult, onStart, onStop, maxDuration = 300, className = '' }: Props) {
   const { state, duration, blob, blobUrl, error, supported, start, stop, reset } = useRecorder();
+
+  useEffect(() => {
+    if (state === 'recording' && onStart) onStart();
+    if ((state === 'completed' || state === 'error') && onStop) onStop();
+  }, [state]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (maxDuration > 0 && duration >= maxDuration && state === 'recording') {
