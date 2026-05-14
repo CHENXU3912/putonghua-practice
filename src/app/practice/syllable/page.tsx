@@ -21,64 +21,50 @@ export default function SyllablePage() {
   const router = useRouter();
   const [items] = useState<SyllableItem[]>(() => pickRandom(syllableData as SyllableItem[], 10));
   const [currentIdx, setCurrentIdx] = useState(0);
-  const [results, setResults] = useState<UserResult[]>([]);
+  // 每个字的录音时长
+  const durationsRef = useRef<number[]>([]);
+  // 每个字的 STT 文本
+  const transcriptsRef = useRef<string[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
-  const [showWrongAdd, setShowWrongAdd] = useState(false);
-  const lastDurationRef = useRef(0);
+  const [isRecording, setIsRecording] = useState(false);
   const stt = useSpeechRecognition();
-  const sttTranscriptRef = useRef('');
   const sttAvailable = isSTTSupported();
-  // 每个字的判定结果：'idle' | 'judging' | 'correct' | 'wrong'
-  const [judgeState, setJudgeState] = useState<'idle' | 'judging' | 'correct' | 'wrong'>('idle');
-  const currentTranscriptRef = useRef('');
 
   const item = items[currentIdx] ?? null;
 
-  const handleRecord = useCallback((_blob: Blob, duration: number) => {
-    lastDurationRef.current = duration;
-  }, []);
-
-  // 录音停止后，等待 STT 结果自动判定
-  useEffect(() => {
-    if (stt.state === 'completed' && stt.transcript && judgeState === 'idle') {
-      currentTranscriptRef.current = stt.transcript;
-      setJudgeState('judging');
+  // 录音完成回调：存储时长，自动跳下一个
+  const handleRecordDone = useCallback((_blob: Blob, duration: number) => {
+    durationsRef.current[currentIdx] = duration;
+    // 收集 STT 识别文本
+    if (stt.transcript) {
+      transcriptsRef.current[currentIdx] = cleanText(stt.transcript);
     }
-  }, [stt.state, stt.transcript, judgeState]);
+    stt.reset();
+    setIsRecording(false);
 
-  // 自动判定逻辑
-  useEffect(() => {
-    if (judgeState !== 'judging' || !item) return;
+    if (currentIdx < items.length - 1) {
+      setTimeout(() => setCurrentIdx(currentIdx + 1), 400);
+    } else {
+      // 全部完成
+      setTimeout(() => {
+        const newResults: UserResult[] = items.map((it, i) => ({
+          itemId: it.id,
+          audioDuration: durationsRef.current[i] || 1.5,
+          selfRating: true, // 默认值，STT 覆盖
+        }));
+        const joinedTranscript = transcriptsRef.current.filter(Boolean).join('');
+        // 用 STT 逐字比对
+        const expected = items.map(i => i.char).join('');
+        const cmp = compareCharByChar(expected, joinedTranscript);
+        // 更新 selfRating 为 STT 结果
+        cmp.details.forEach((d, i) => {
+          if (newResults[i]) newResults[i].selfRating = d.ok;
+        });
 
-    const transcript = cleanText(currentTranscriptRef.current);
-    const isCorrect = transcript.includes(item.char);
-    const duration = lastDurationRef.current || 1.5;
-
-    setJudgeState(isCorrect ? 'correct' : 'wrong');
-    lastDurationRef.current = 0;
-
-    // 记录结果
-    const newResult: UserResult = { itemId: item.id, audioDuration: duration, selfRating: isCorrect };
-    const newResults = [...results, newResult];
-    sttTranscriptRef.current += currentTranscriptRef.current;
-
-    // 延迟后自动跳转
-    const timer = setTimeout(() => {
-      setJudgeState('idle');
-      stt.reset();
-      currentTranscriptRef.current = '';
-
-      if (currentIdx < items.length - 1) {
-        setResults(newResults);
-        setCurrentIdx(currentIdx + 1);
-      } else {
-        // 全部完成
-        const allTranscript = sttTranscriptRef.current;
-        const s = scoreSyllable(items, newResults, allTranscript || undefined);
+        const s = scoreSyllable(items, newResults, joinedTranscript || undefined);
         setScoreResult(s);
         setShowResult(true);
-
         saveRecord({
           type: 'syllable',
           questionSummary: `单音节字词练习（${items.length}字）`,
@@ -90,33 +76,9 @@ export default function SyllablePage() {
           createdAt: Date.now(),
         });
         doCheckin();
-        if (s.wrongItems.length > 0) setShowWrongAdd(true);
-      }
-    }, 900);
-
-    return () => clearTimeout(timer);
-  }, [judgeState, item, currentIdx, results, items, stt]); // eslint-disable-line
-
-  // 手动判定（STT 不可用时降级）
-  const handleManual = useCallback((isCorrect: boolean) => {
-    const duration = lastDurationRef.current || 1.5;
-    lastDurationRef.current = 0;
-    const newResults = [...results, { itemId: item!.id, audioDuration: duration, selfRating: isCorrect }];
-    setResults(newResults);
-    stt.reset();
-
-    if (currentIdx < items.length - 1) {
-      setCurrentIdx(currentIdx + 1);
-    } else {
-      const allTranscript = sttTranscriptRef.current;
-      const s = scoreSyllable(items, newResults, allTranscript || undefined);
-      setScoreResult(s);
-      setShowResult(true);
-      saveRecord({ type: 'syllable', questionSummary: `单音节字词练习（${items.length}字）`, questionIds: items.map(i => i.id), audioDuration: Math.round(newResults.reduce((sum, r) => sum + r.audioDuration, 0)), score: s.score, scoreDetail: s.scoreDetail, wrongItems: s.wrongItems, createdAt: Date.now() });
-      doCheckin();
-      if (s.wrongItems.length > 0) setShowWrongAdd(true);
+      }, 300);
     }
-  }, [currentIdx, items, results, item, stt.reset]); // eslint-disable-line
+  }, [currentIdx, items, stt.transcript, stt.reset]);
 
   if (!item) {
     return (<div className="px-4 py-10 text-center text-gray-400">题库加载中...<div className="mt-4"><Link href="/" className="text-green-500">返回首页</Link></div></div>);
@@ -130,13 +92,12 @@ export default function SyllablePage() {
           <p className="text-sm text-gray-400">单音节字词 · {items.length}字</p>
         </div>
         <ScoreDisplay result={scoreResult} />
-        {/* 逐字比对 */}
+        {/* 逐字报告 */}
         <div className="bg-white rounded-xl p-4 shadow-sm text-sm">
           <h3 className="font-medium text-gray-700 mb-3">📋 逐字报告</h3>
           <div className="space-y-2">
             {items.map((it, i) => {
-              const res = results[i];
-              const ok = res ? res.selfRating : false;
+              const ok = scoreResult.wrongItems.findIndex(w => w.content === it.char) === -1;
               return (
                 <div key={it.id} className="flex items-center gap-3 py-1.5 border-b border-gray-50 last:border-0">
                   <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${ok ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-500'}`}>
@@ -156,48 +117,18 @@ export default function SyllablePage() {
           </div>
         </div>
         {scoreResult.wrongItems.length > 0 && (
-          <div className="bg-white rounded-xl p-4 shadow-sm">
-            <h3 className="text-sm font-medium text-gray-700 mb-2">可改进的字词（{scoreResult.wrongItems.length}个）</h3>
-            <div className="flex flex-wrap gap-2">
-              {scoreResult.wrongItems.map((w, i) => (
-                <span key={i} className="px-3 py-1.5 bg-red-50 text-red-600 rounded-lg text-sm">{w.content} <span className="text-red-400 text-xs">{w.pinyin}</span></span>
-              ))}
-            </div>
-          </div>
-        )}
-        {showWrongAdd && (
           <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 text-center">
             <p className="text-sm text-orange-700 mb-3">建议加入错音本反复练习</p>
             <Link href="/wrongbook" className="inline-block px-5 py-2 bg-orange-500 text-white rounded-lg text-sm font-medium">前往错音本</Link>
           </div>
         )}
         <div className="flex gap-3">
-          <button onClick={() => { setCurrentIdx(0); setResults([]); setShowResult(false); setScoreResult(null); setShowWrongAdd(false); sttTranscriptRef.current = ''; setJudgeState('idle'); }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
+          <button onClick={() => { setCurrentIdx(0); setShowResult(false); setScoreResult(null); durationsRef.current = []; transcriptsRef.current = []; }} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition">再来一组</button>
           <button onClick={() => router.push('/')} className="flex-1 py-3 border border-gray-300 text-gray-700 rounded-xl font-medium active:bg-gray-50 transition">返回首页</button>
         </div>
       </div>
     );
   }
-
-  const judgingBlock = (
-    <div className="text-center transition-all duration-300">
-      {judgeState === 'judging' && (
-        <div className="flex items-center justify-center gap-2 text-blue-500">
-          <span className="animate-spin text-lg">⏳</span>
-          <span className="text-sm">AI 判定中...</span>
-        </div>
-      )}
-      {judgeState === 'correct' && (
-        <div className="animate-bounce text-green-500 text-2xl font-bold">✓ 正确！</div>
-      )}
-      {judgeState === 'wrong' && (
-        <div className="text-red-400 text-sm">
-          <span className="text-lg font-bold">✗ 需要注意</span>
-          <div className="text-xs text-gray-400 mt-1">AI 识别：{cleanText(currentTranscriptRef.current) || '未识别到'}</div>
-        </div>
-      )}
-    </div>
-  );
 
   return (
     <div className="px-4 py-6 flex flex-col items-center min-h-[80vh]">
@@ -231,24 +162,22 @@ export default function SyllablePage() {
         {item.tips && <p className="text-xs text-gray-400 mt-2">{item.tips}</p>}
       </div>
 
-      {/* 判定结果 */}
-      <div className="mt-2 mb-2 h-14 flex items-center justify-center">
-        {judgingBlock}
+      {/* 录音 */}
+      <div className="mt-8 mb-4">
+        <Recorder
+          onResult={handleRecordDone}
+          onStart={() => { setIsRecording(true); stt.start(); }}
+          onStop={() => stt.stop()}
+          maxDuration={10}
+        />
       </div>
 
-      {/* 录音 + STT */}
-      {judgeState === 'idle' && (
-        <div className="mt-4 mb-4">
-          <Recorder onResult={handleRecord} onStart={() => stt.start()} onStop={() => stt.stop()} maxDuration={30} />
-        </div>
+      {/* STT 实时反馈 */}
+      {sttAvailable && isRecording && (
+        <div className="text-center text-xs text-blue-500 animate-pulse mb-4">🤖 AI 聆听中...</div>
       )}
-
-      {/* 手动判定（STT 不可用时） */}
-      {!sttAvailable && judgeState === 'idle' && (
-        <div className="flex gap-4 w-full max-w-xs mb-8">
-          <button onClick={() => handleManual(true)} className="flex-1 py-3 bg-green-500 text-white rounded-xl font-medium active:bg-green-600 transition text-sm">✓ 读对了</button>
-          <button onClick={() => handleManual(false)} className="flex-1 py-3 border border-red-300 text-red-500 rounded-xl font-medium active:bg-red-50 transition text-sm">✗ 不太对</button>
-        </div>
+      {!sttAvailable && (
+        <p className="text-xs text-gray-400 text-center mb-4">读完点击停止 → 自动下一个</p>
       )}
     </div>
   );
