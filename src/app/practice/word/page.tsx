@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreWord, cleanText, wordOrHomophoneMatch, buildPinyinMap } from '@/lib/scorer';
+import { scoreWord, cleanText, wordOrHomophoneMatch, buildPinyinMap, isUnusableForeignTranscript } from '@/lib/scorer';
 import { saveRecord, addWrongBookItem } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
@@ -15,6 +15,7 @@ import syllableData from '@/data/syllable.json';
 import type { SyllableItem } from '@/lib/types';
 
 const pinyinMap = buildPinyinMap(syllableData as SyllableItem[]);
+type Judgment = { correct: boolean | null; transcript: string; reason?: 'foreign' | 'unsupported' };
 
 function pickRandom(arr: WordItem[], count: number): WordItem[] {
   const shuffled = [...arr].sort(() => Math.random() - 0.5);
@@ -29,7 +30,7 @@ export default function WordPage() {
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
   const [wrongItemIds, setWrongItemIds] = useState<Set<number>>(new Set());
   const [phase, setPhase] = useState<'recording' | 'judging' | 'judged'>('recording');
-  const [judgment, setJudgment] = useState<{ correct: boolean; transcript: string } | null>(null);
+  const [judgment, setJudgment] = useState<Judgment | null>(null);
   const stt = useSpeechRecognition();
   const sttAvailable = isSTTSupported();
   const resultsRef = useRef<UserResult[]>([]);
@@ -44,7 +45,7 @@ export default function WordPage() {
       setPhase('judging');
     } else {
       setPhase('judged');
-      setJudgment(null);
+      setJudgment({ correct: null, transcript: '', reason: 'unsupported' });
     }
   }, [currentIdx, sttAvailable]);
 
@@ -53,6 +54,11 @@ export default function WordPage() {
     if (stt.state === 'completed') {
       const transcript = cleanText(stt.transcript || '');
       transcriptsRef.current[currentIdx] = transcript;
+      if (isUnusableForeignTranscript(transcript, [...item!.word].length)) {
+        setJudgment({ correct: null, transcript, reason: 'foreign' });
+        setPhase('judged');
+        return;
+      }
       const correct = wordOrHomophoneMatch(pinyinMap, item!.word, item!.pinyin, transcript);
       setJudgment({ correct, transcript });
       setPhase('judged');
@@ -69,6 +75,7 @@ export default function WordPage() {
   }, [phase, currentIdx]);
 
   const handleNext = useCallback(async () => {
+    if (judgment?.correct === null) return;
     const isCorrect = judgment?.correct ?? false;
     resultsRef.current[currentIdx] = {
       itemId: item!.id,
@@ -220,13 +227,13 @@ export default function WordPage() {
 
         {phase === 'judged' && (
           <div className="flex flex-col items-center gap-4 py-4">
-            {judgment?.correct ? (
+            {judgment?.correct === true ? (
               <div className="text-center">
                 <div className="text-4xl mb-2">✅</div>
                 <div className="text-xl font-bold text-green-600">正确</div>
                 {judgment.transcript && <div className="text-xs text-gray-400 mt-1">AI 识别：{judgment.transcript}</div>}
               </div>
-            ) : judgment && !judgment.correct ? (
+            ) : judgment?.correct === false ? (
               <div className="text-center">
                 <div className="text-4xl mb-2">❌</div>
                 <div className="text-xl font-bold text-red-500">需注意</div>
@@ -242,8 +249,12 @@ export default function WordPage() {
             ) : (
               <div className="text-center">
                 <div className="text-4xl mb-2">🤔</div>
-                <div className="text-lg font-bold text-gray-600">请自行判定</div>
-                <div className="text-xs text-gray-400 mt-1">AI 不支持此浏览器</div>
+                <div className="text-lg font-bold text-gray-600">请手动确认</div>
+                {judgment?.reason === 'foreign' ? (
+                  <div className="text-xs text-gray-500 mt-1">AI 识别成英文：{judgment.transcript}</div>
+                ) : (
+                  <div className="text-xs text-gray-400 mt-1">AI 无法可靠判定本题</div>
+                )}
                 <div className="flex gap-3 mt-3">
                   <button onClick={() => { setJudgment({ correct: true, transcript: '' }); }} className="px-6 py-2 bg-green-500 text-white rounded-lg font-bold active:bg-green-600">✓ 正确</button>
                   <button onClick={() => { setJudgment({ correct: false, transcript: '' }); }} className="px-6 py-2 border-2 border-red-300 text-red-500 rounded-lg font-bold active:bg-red-50">✗ 错误</button>
@@ -251,7 +262,7 @@ export default function WordPage() {
               </div>
             )}
 
-            <button onClick={handleNext} className="mt-2 px-10 py-3 bg-green-500 text-white rounded-xl font-bold text-lg active:bg-green-600 transition shadow-md">
+            <button disabled={judgment?.correct === null} onClick={handleNext} className="mt-2 px-10 py-3 bg-green-500 text-white rounded-xl font-bold text-lg active:bg-green-600 transition shadow-md disabled:bg-gray-300 disabled:shadow-none">
               {currentIdx < items.length - 1 ? '下一题 →' : '完成，查看成绩'}
             </button>
           </div>

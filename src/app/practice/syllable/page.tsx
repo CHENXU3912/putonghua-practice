@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreSyllable, cleanText, charOrHomophoneMatch, buildPinyinMap } from '@/lib/scorer';
+import { scoreSyllable, cleanText, charOrHomophoneMatch, buildPinyinMap, isUnusableForeignTranscript } from '@/lib/scorer';
 import { saveRecord, addWrongBookItem } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
@@ -14,6 +14,7 @@ import syllableData from '@/data/syllable.json';
 
 // 模块级缓存：拼音同音字映射
 const pinyinMap = buildPinyinMap(syllableData as SyllableItem[]);
+type Judgment = { correct: boolean | null; transcript: string; reason?: 'foreign' | 'unsupported' };
 
 function pickRandom(arr: SyllableItem[], count: number): SyllableItem[] {
   const shuffled = [...arr].sort(() => Math.random() - 0.5);
@@ -29,7 +30,7 @@ export default function SyllablePage() {
   const [wrongItemIds, setWrongItemIds] = useState<Set<number>>(new Set());
   // 录音 + 判定状态机
   const [phase, setPhase] = useState<'recording' | 'judging' | 'judged'>('recording');
-  const [judgment, setJudgment] = useState<{ correct: boolean; transcript: string } | null>(null);
+  const [judgment, setJudgment] = useState<Judgment | null>(null);
   const stt = useSpeechRecognition();
   const sttAvailable = isSTTSupported();
   // 存储结果
@@ -48,7 +49,7 @@ export default function SyllablePage() {
     } else {
       // 不支持 STT，显示手动判定
       setPhase('judged');
-      setJudgment(null);
+      setJudgment({ correct: null, transcript: '', reason: 'unsupported' });
     }
   }, [currentIdx, sttAvailable]);
 
@@ -58,6 +59,11 @@ export default function SyllablePage() {
     if (stt.state === 'completed') {
       const transcript = cleanText(stt.transcript || '');
       transcriptsRef.current[currentIdx] = transcript;
+      if (isUnusableForeignTranscript(transcript, 1)) {
+        setJudgment({ correct: null, transcript, reason: 'foreign' });
+        setPhase('judged');
+        return;
+      }
       const correct = charOrHomophoneMatch(pinyinMap, item!.char, item!.pinyin, transcript);
       setJudgment({ correct, transcript });
       setPhase('judged');
@@ -76,6 +82,7 @@ export default function SyllablePage() {
 
   // 用户点"下一题"
   const handleNext = useCallback(async () => {
+    if (judgment?.correct === null) return;
     const isCorrect = judgment?.correct ?? false;
     resultsRef.current[currentIdx] = {
       itemId: item!.id,
@@ -255,13 +262,13 @@ export default function SyllablePage() {
 
         {phase === 'judged' && (
           <div className="flex flex-col items-center gap-4 py-4">
-            {judgment?.correct ? (
+            {judgment?.correct === true ? (
               <div className="text-center">
                 <div className="text-4xl mb-2">✅</div>
                 <div className="text-xl font-bold text-green-600">正确</div>
                 {judgment.transcript && <div className="text-xs text-gray-400 mt-1">AI 识别：{judgment.transcript}</div>}
               </div>
-            ) : judgment && !judgment.correct ? (
+            ) : judgment?.correct === false ? (
               <div className="text-center">
                 <div className="text-4xl mb-2">❌</div>
                 <div className="text-xl font-bold text-red-500">需注意</div>
@@ -277,8 +284,12 @@ export default function SyllablePage() {
             ) : (
               <div className="text-center">
                 <div className="text-4xl mb-2">🤔</div>
-                <div className="text-lg font-bold text-gray-600">请自行判定</div>
-                <div className="text-xs text-gray-400 mt-1">AI 不支持此浏览器</div>
+                <div className="text-lg font-bold text-gray-600">请手动确认</div>
+                {judgment?.reason === 'foreign' ? (
+                  <div className="text-xs text-gray-500 mt-1">AI 识别成英文：{judgment.transcript}</div>
+                ) : (
+                  <div className="text-xs text-gray-400 mt-1">AI 无法可靠判定本题</div>
+                )}
                 <div className="flex gap-3 mt-3">
                   <button onClick={() => { setJudgment({ correct: true, transcript: '' }); }} className="px-6 py-2 bg-green-500 text-white rounded-lg font-bold active:bg-green-600">✓ 正确</button>
                   <button onClick={() => { setJudgment({ correct: false, transcript: '' }); }} className="px-6 py-2 border-2 border-red-300 text-red-500 rounded-lg font-bold active:bg-red-50">✗ 错误</button>
@@ -286,7 +297,7 @@ export default function SyllablePage() {
               </div>
             )}
 
-            <button onClick={handleNext} className="mt-2 px-10 py-3 bg-green-500 text-white rounded-xl font-bold text-lg active:bg-green-600 transition shadow-md">
+            <button disabled={judgment?.correct === null} onClick={handleNext} className="mt-2 px-10 py-3 bg-green-500 text-white rounded-xl font-bold text-lg active:bg-green-600 transition shadow-md disabled:bg-gray-300 disabled:shadow-none">
               {currentIdx < items.length - 1 ? '下一题 →' : '完成，查看成绩'}
             </button>
           </div>

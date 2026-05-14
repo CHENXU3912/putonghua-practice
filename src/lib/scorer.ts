@@ -118,6 +118,15 @@ function transcriptToPinyinSyllables(text: string, expectedCount?: number): stri
   });
 }
 
+export function isUnusableForeignTranscript(text: string, expectedCount = 1): boolean {
+  const cleaned = cleanText(text);
+  if (!cleaned) return false;
+  const hasChinese = CHINESE_CHAR_RE.test(cleaned);
+  const hasLatin = /[A-Za-z]/.test(cleaned);
+  if (hasChinese || !hasLatin) return false;
+  return transcriptToPinyinSyllables(cleaned, expectedCount).length === 0;
+}
+
 function targetToPinyinSyllables(targetText: string, targetPinyin?: string): string[] {
   const charCount = [...targetText].filter(char => CHINESE_CHAR_RE.test(char)).length;
   if (targetPinyin && !CHINESE_CHAR_RE.test(targetPinyin)) {
