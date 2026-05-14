@@ -5,12 +5,16 @@ import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreWord, cleanText } from '@/lib/scorer';
+import { scoreWord, cleanText, wordOrHomophoneMatch, buildPinyinMap } from '@/lib/scorer';
 import { saveRecord, addWrongBookItem } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
 import type { WordItem, UserResult, ScoreResult } from '@/lib/types';
 import wordData from '@/data/word.json';
+import syllableData from '@/data/syllable.json';
+import type { SyllableItem } from '@/lib/types';
+
+const pinyinMap = buildPinyinMap(syllableData as SyllableItem[]);
 
 function pickRandom(arr: WordItem[], count: number): WordItem[] {
   const shuffled = [...arr].sort(() => Math.random() - 0.5);
@@ -49,7 +53,7 @@ export default function WordPage() {
     if (stt.state === 'completed') {
       const transcript = cleanText(stt.transcript || '');
       transcriptsRef.current[currentIdx] = transcript;
-      const correct = transcript.includes(item!.word);
+      const correct = wordOrHomophoneMatch(pinyinMap, item!.word, item!.pinyin, transcript);
       setJudgment({ correct, transcript });
       setPhase('judged');
     }

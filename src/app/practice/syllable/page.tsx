@@ -5,12 +5,15 @@ import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreSyllable, cleanText } from '@/lib/scorer';
+import { scoreSyllable, cleanText, charOrHomophoneMatch, buildPinyinMap } from '@/lib/scorer';
 import { saveRecord, addWrongBookItem } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
 import type { SyllableItem, UserResult, ScoreResult } from '@/lib/types';
 import syllableData from '@/data/syllable.json';
+
+// 模块级缓存：拼音同音字映射
+const pinyinMap = buildPinyinMap(syllableData as SyllableItem[]);
 
 function pickRandom(arr: SyllableItem[], count: number): SyllableItem[] {
   const shuffled = [...arr].sort(() => Math.random() - 0.5);
@@ -55,7 +58,7 @@ export default function SyllablePage() {
     if (stt.state === 'completed') {
       const transcript = cleanText(stt.transcript || '');
       transcriptsRef.current[currentIdx] = transcript;
-      const correct = transcript.includes(item!.char);
+      const correct = charOrHomophoneMatch(pinyinMap, item!.char, item!.pinyin, transcript);
       setJudgment({ correct, transcript });
       setPhase('judged');
     }

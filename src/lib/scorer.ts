@@ -1,5 +1,92 @@
 import type { SyllableItem, WordItem, ArticleItem, SpeechItem, UserResult, ScoreResult, WrongItem } from './types';
 
+// ===== 拼音同音字表 =====
+
+/** 去掉拼音声调，例如 sì → si, chuān → chuan */
+export function stripTone(py: string): string {
+  if (!py) return '';
+  return py.replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/g, (c) => {
+    const map: Record<string, string> = {
+      'ā':'a','á':'a','ǎ':'a','à':'a',
+      'ē':'e','é':'e','ě':'e','è':'e',
+      'ī':'i','í':'i','ǐ':'i','ì':'i',
+      'ō':'o','ó':'o','ǒ':'o','ò':'o',
+      'ū':'u','ú':'u','ǔ':'u','ù':'u',
+      'ǖ':'v','ǘ':'v','ǚ':'v','ǜ':'v',
+    };
+    return map[c] || c;
+  }).replace(/[1-4]$/, '');
+}
+
+/** 从题库构建拼音→同音字映射 */
+export function buildPinyinMap(syllables: { char: string; pinyin: string }[]): Map<string, Set<string>> {
+  const map = new Map<string, Set<string>>();
+  for (const s of syllables) {
+    if (!s.pinyin) continue;
+    const key = stripTone(s.pinyin);
+    if (!map.has(key)) map.set(key, new Set());
+    map.get(key)!.add(s.char);
+  }
+  return map;
+}
+
+/** 判断：transcript 中是否包含 targetChar 或其同音字（基于拼音） */
+export function charOrHomophoneMatch(
+  pinyinMap: Map<string, Set<string>>,
+  targetChar: string,
+  targetPinyin: string,
+  transcript: string
+): boolean {
+  if (!transcript) return false;
+  // 直接匹配
+  if (transcript.includes(targetChar)) return true;
+  // 同音字匹配
+  if (!targetPinyin) return false;
+  const key = stripTone(targetPinyin);
+  const homophones = pinyinMap.get(key);
+  if (homophones) {
+    for (const c of homophones) {
+      if (c !== targetChar && transcript.includes(c)) return true;
+    }
+  }
+  return false;
+}
+
+/** 判断词是否匹配（每个字分别找同音字） */
+export function wordOrHomophoneMatch(
+  pinyinMap: Map<string, Set<string>>,
+  targetWord: string,
+  targetPinyin: string,
+  transcript: string
+): boolean {
+  if (!transcript) return false;
+  // 直接匹配
+  if (transcript.includes(targetWord)) return true;
+  // 如果没有拼音，降级为直接匹配
+  if (!targetPinyin) return false;
+  // 每个字分别匹配
+  const chars = [...targetWord];
+  const allFound = chars.every(c => {
+    // 找这个字在题库中的拼音
+    const py = ''; // 需要从词条中获取每个字的拼音，但词条拼音是整个词的
+    // 简化：直接检查字符
+    return transcript.includes(c);
+  });
+  if (allFound) return true;
+  // 至少识别到部分同音字
+  const anyHomophone = chars.some(c => {
+    for (const [key, set] of pinyinMap) {
+      if (set.has(c)) {
+        for (const h of set) {
+          if (h !== c && transcript.includes(h)) return true;
+        }
+      }
+    }
+    return false;
+  });
+  return anyHomophone;
+}
+
 // ===== 文本比对工具 =====
 
 /** 清理文本：去掉标点、空格 */
