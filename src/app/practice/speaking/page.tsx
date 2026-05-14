@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreSpeech, cleanText, checkKeywordsFuzzy } from '@/lib/scorer';
+import { scoreSpeech, cleanText, checkKeywordsFuzzy, getSpeechReview } from '@/lib/scorer';
 import { saveRecord } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
@@ -55,6 +55,7 @@ export default function SpeakingPage() {
 
   if (showResult && scoreResult) {
     const kwResult = stt.transcript ? checkKeywordsFuzzy(stt.transcript, speech.outline.map(o => o.slice(0, 5))) : null;
+    const speechReview = getSpeechReview(speech, stt.transcript || '', audioDuration);
 
     return (
       <div className="px-4 py-6 space-y-5">
@@ -63,6 +64,34 @@ export default function SpeakingPage() {
           <p className="text-sm text-gray-400">{speech.title}</p>
         </div>
         <ScoreDisplay result={scoreResult} />
+
+        <div className="bg-white rounded-xl p-4 shadow-sm text-sm space-y-3">
+          <h3 className="font-medium text-gray-700">表达诊断</h3>
+          <div className="grid grid-cols-3 gap-2 text-center">
+            <div className="bg-blue-50 rounded-lg p-2">
+              <div className="text-lg font-bold text-blue-600">{Math.floor(audioDuration / 60)}:{String(audioDuration % 60).padStart(2, '0')}</div>
+              <div className="text-xs text-gray-500">{speechReview.durationLabel}</div>
+            </div>
+            <div className="bg-green-50 rounded-lg p-2">
+              <div className="text-lg font-bold text-green-600">{speechReview.recognizedChars}</div>
+              <div className="text-xs text-gray-500">识别字数</div>
+            </div>
+            <div className="bg-orange-50 rounded-lg p-2">
+              <div className="text-lg font-bold text-orange-600">{speechReview.charsPerMinute}</div>
+              <div className="text-xs text-gray-500">字/分钟</div>
+            </div>
+          </div>
+          <div className="space-y-2">
+            {speechReview.outline.map((item, i) => (
+              <div key={i} className={`flex items-start gap-2 rounded-lg px-3 py-2 ${item.found || item.partial ? 'bg-green-50' : 'bg-gray-50'}`}>
+                <span className={`mt-0.5 font-bold ${item.found || item.partial ? 'text-green-600' : 'text-gray-300'}`}>
+                  {item.found ? '✓' : item.partial ? '≈' : '•'}
+                </span>
+                <span className={item.found || item.partial ? 'text-gray-700' : 'text-gray-400'}>{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {stt.transcript && (
           <div className="bg-white rounded-xl p-4 shadow-sm text-sm space-y-2">

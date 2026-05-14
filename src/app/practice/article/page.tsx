@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Recorder from '@/components/Recorder';
 import TTSButton from '@/components/TTSButton';
 import ScoreDisplay from '@/components/ScoreDisplay';
-import { scoreArticle, cleanText, getCoverageRate } from '@/lib/scorer';
+import { scoreArticle, cleanText, getCoverageRate, getArticleReadingReport } from '@/lib/scorer';
 import { saveRecord } from '@/lib/db';
 import { doCheckin } from '@/lib/storage';
 import { useSpeechRecognition, isSTTSupported } from '@/hooks/useSpeechRecognition';
@@ -54,6 +54,8 @@ export default function ArticlePage() {
   }, [article, audioDuration, selfRating, blob, stt.transcript]);
 
   if (showResult && scoreResult) {
+    const readingReport = stt.transcript ? getArticleReadingReport(article.content, stt.transcript) : null;
+
     return (
       <div className="px-4 py-6 space-y-5">
         <div className="text-center">
@@ -62,9 +64,53 @@ export default function ArticlePage() {
         </div>
         <ScoreDisplay result={scoreResult} />
         {stt.transcript && (
-          <div className="bg-white rounded-xl p-4 shadow-sm text-sm">
-            <h3 className="font-medium text-gray-700 mb-2">🤖 AI 识别文本（覆盖率 {getCoverageRate(article.content, stt.transcript, 4)}%）</h3>
-            <p className="text-xs text-gray-500 mb-1">识别：{cleanText(stt.transcript).slice(0, 100)}{cleanText(stt.transcript).length > 100 ? '...' : ''}</p>
+          <div className="bg-white rounded-xl p-4 shadow-sm text-sm space-y-3">
+            <div className="flex items-center justify-between">
+              <h3 className="font-medium text-gray-700">逐字朗读报告</h3>
+              <span className="text-xs text-gray-400">覆盖率 {getCoverageRate(article.content, stt.transcript, 4)}%</span>
+            </div>
+            {readingReport && (
+              <>
+                <div className="grid grid-cols-3 gap-2 text-center">
+                  <div className="bg-green-50 rounded-lg p-2">
+                    <div className="text-lg font-bold text-green-600">{readingReport.matched}</div>
+                    <div className="text-xs text-gray-500">匹配字数</div>
+                  </div>
+                  <div className="bg-red-50 rounded-lg p-2">
+                    <div className="text-lg font-bold text-red-500">{readingReport.missed}</div>
+                    <div className="text-xs text-gray-500">漏读/疑错</div>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-2">
+                    <div className="text-lg font-bold text-blue-600">{readingReport.accuracy}%</div>
+                    <div className="text-xs text-gray-500">顺序匹配</div>
+                  </div>
+                </div>
+
+                {readingReport.missedSamples.length > 0 && (
+                  <div className="text-xs text-red-500">
+                    疑似漏读：{readingReport.missedSamples.join('、')}
+                  </div>
+                )}
+
+                <div className="max-h-56 overflow-y-auto rounded-lg border border-gray-100 p-3 leading-8 text-base">
+                  {readingReport.details.map((item, i) => (
+                    <span
+                      key={`${item.char}-${i}`}
+                      className={
+                        item.status === 'match'
+                          ? 'text-green-700 bg-green-50'
+                          : item.status === 'miss'
+                            ? 'text-red-600 bg-red-50 underline decoration-red-300'
+                            : 'text-gray-400'
+                      }
+                    >
+                      {item.char}
+                    </span>
+                  ))}
+                </div>
+              </>
+            )}
+            <p className="text-xs text-gray-500">AI识别：{cleanText(stt.transcript).slice(0, 140)}{cleanText(stt.transcript).length > 140 ? '...' : ''}</p>
           </div>
         )}
         {blobUrl && (

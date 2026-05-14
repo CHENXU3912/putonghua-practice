@@ -278,6 +278,68 @@ function getOrderedMatchRate(expected: string, recognized: string): number {
   return Math.round((prev[recognized.length] / expected.length) * 100);
 }
 
+export function getArticleReadingReport(expected: string, recognized: string): {
+  total: number;
+  matched: number;
+  missed: number;
+  accuracy: number;
+  recognizedText: string;
+  details: { char: string; status: 'match' | 'miss' | 'punct' }[];
+  missedSamples: string[];
+} {
+  const exp = cleanText(expected);
+  const rec = cleanText(recognized);
+  const rows = Array.from({ length: exp.length + 1 }, () => new Array(rec.length + 1).fill(0));
+
+  for (let i = 1; i <= exp.length; i++) {
+    for (let j = 1; j <= rec.length; j++) {
+      rows[i][j] = exp[i - 1] === rec[j - 1]
+        ? rows[i - 1][j - 1] + 1
+        : Math.max(rows[i - 1][j], rows[i][j - 1]);
+    }
+  }
+
+  const matchedIndexes = new Set<number>();
+  let i = exp.length;
+  let j = rec.length;
+  while (i > 0 && j > 0) {
+    if (exp[i - 1] === rec[j - 1]) {
+      matchedIndexes.add(i - 1);
+      i--;
+      j--;
+    } else if (rows[i - 1][j] >= rows[i][j - 1]) {
+      i--;
+    } else {
+      j--;
+    }
+  }
+
+  let cleanIndex = 0;
+  const details = [...expected].map(char => {
+    if (!cleanText(char)) return { char, status: 'punct' as const };
+    const status = matchedIndexes.has(cleanIndex) ? 'match' as const : 'miss' as const;
+    cleanIndex++;
+    return { char, status };
+  });
+
+  const matched = matchedIndexes.size;
+  const missed = Math.max(0, exp.length - matched);
+  const missedSamples = details
+    .filter(item => item.status === 'miss')
+    .map(item => item.char)
+    .slice(0, 30);
+
+  return {
+    total: exp.length,
+    matched,
+    missed,
+    accuracy: exp.length ? Math.round((matched / exp.length) * 100) : 0,
+    recognizedText: rec,
+    details,
+    missedSamples,
+  };
+}
+
 /** 模糊关键词匹配：每个关键词拆分后检查是否大部分字符出现 */
 export function checkKeywordsFuzzy(transcript: string, keywords: string[]): { found: number; total: number; details: { kw: string; found: boolean; partial: boolean }[] } {
   const rec = cleanText(transcript);
@@ -298,6 +360,38 @@ export function checkKeywords(transcript: string, keywords: string[]): { found: 
   const details = keywords.map(kw => ({ kw, found: transcript.includes(kw) }));
   const found = details.filter(d => d.found).length;
   return { found, total: keywords.length, details };
+}
+
+export function getSpeechReview(
+  speech: SpeechItem,
+  transcript: string,
+  audioDuration: number
+): {
+  recognizedChars: number;
+  charsPerMinute: number;
+  durationLabel: string;
+  outline: { text: string; found: boolean; partial: boolean }[];
+} {
+  const rec = cleanText(transcript);
+  const minutes = Math.max(audioDuration / 60, 0.1);
+  const keywords = speech.outline.map(item => item.slice(0, 8));
+  const result = checkKeywordsFuzzy(transcript, keywords);
+  const durationLabel = audioDuration >= 150
+    ? '时长充足'
+    : audioDuration >= 120
+      ? '接近要求'
+      : '时长偏短';
+
+  return {
+    recognizedChars: rec.length,
+    charsPerMinute: Math.round(rec.length / minutes),
+    durationLabel,
+    outline: result.details.map((item, index) => ({
+      text: speech.outline[index],
+      found: item.found,
+      partial: item.partial,
+    })),
+  };
 }
 
 function calcDurationScore(actual: number, expected: number): number {
