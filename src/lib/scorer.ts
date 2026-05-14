@@ -257,7 +257,25 @@ export function getCoverageRate(expected: string, recognized: string, windowSize
     const win = exp.slice(i, i + windowSize);
     if (rec.includes(win)) covered++;
   }
-  return Math.round((covered / totalWindows) * 100);
+  const windowRate = Math.round((covered / totalWindows) * 100);
+  return Math.max(windowRate, getOrderedMatchRate(exp, rec));
+}
+
+function getOrderedMatchRate(expected: string, recognized: string): number {
+  const prev = new Array(recognized.length + 1).fill(0);
+  const curr = new Array(recognized.length + 1).fill(0);
+  for (let i = 1; i <= expected.length; i++) {
+    for (let j = 1; j <= recognized.length; j++) {
+      curr[j] = expected[i - 1] === recognized[j - 1]
+        ? prev[j - 1] + 1
+        : Math.max(prev[j], curr[j - 1]);
+    }
+    for (let j = 0; j <= recognized.length; j++) {
+      prev[j] = curr[j];
+      curr[j] = 0;
+    }
+  }
+  return Math.round((prev[recognized.length] / expected.length) * 100);
 }
 
 /** 模糊关键词匹配：每个关键词拆分后检查是否大部分字符出现 */
@@ -503,7 +521,7 @@ export function scoreArticle(
   let coverageScore = selfRating * 20;
   if (sttTranscript) {
     const rate = getCoverageRate(article.content, sttTranscript, 4);
-    coverageScore = rate;
+    coverageScore = Math.max(coverageScore, rate);
   }
 
   const score = Math.round(speedScore * 0.3 + completenessScore * 0.3 + coverageScore * 0.4);
@@ -547,7 +565,7 @@ export function scoreSpeech(
   // STT 关键词模糊检测
   if (sttTranscript && speech.outline) {
     const kwResult = checkKeywordsFuzzy(sttTranscript, speech.outline.map(o => o.slice(0, 5)));
-    outlineScore = Math.round((kwResult.found / kwResult.total) * 100);
+    outlineScore = Math.max(outlineScore, Math.round((kwResult.found / kwResult.total) * 100));
   }
 
   const score = Math.round(durationScore * 0.5 + fluencyScore * 0.25 + outlineScore * 0.25);
